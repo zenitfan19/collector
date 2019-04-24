@@ -15,9 +15,44 @@ html(lang="en")
     section.main
       section.compare
         .compare-top
-          h1.compare-top__title Лицензии <span class="compare-top__title_bold"><span class="compare-top__title_red">1С</span>-Битрикс</span>
+          h1(data-compare-condition="first").compare-top__title Лицензии <span class="compare-top__title_bold"><span class="compare-top__title_red">1С</span>-Битрикс</span>
           div(data-compare-condition="first").compare-top__btn Сравнить лицензии
+          h1(data-compare-condition="second").compare-top__title Сравнение лицензий
+          div(data-compare-condition="second").compare-top__btn Перейти к таблице
         .compare-main(data-compare-main-condition="first")
+          .compare-main-match
+            .compare-main-match__add
+              img(src="assets/images/add.svg", alt="add")
+            .compare-main-match-select.compare-main-match-select_first
+              .top-select(data-top-select="visible" data-top-active="deactive")
+                p.top-select__p 
+                img(src="assets/images/arrDown.svg", alt="arrow-down").top-select__arrow 
+              .bot-select(data-bot-select="hidden")
+                .option(data-active-option="active-option" data-disabled="disabled") Старт
+                .option(data-disabled="disabled") Стандарт
+                .option Малый бизнес
+                .option Бизнес
+                .option Энтерпрайз
+            .compare-main-match-select.compare-main-match-select_second
+              .top-select(data-top-select="visible" data-top-active="deactive")
+                p.top-select__p 
+                img(src="assets/images/arrDown.svg", alt="arrow-down").top-select__arrow 
+              .bot-select(data-bot-select="hidden")
+                .option(data-disabled="disabled") Старт 
+                .option(data-active-option="active-option" data-disabled="disabled") Стандарт
+                .option Малый бизнес
+                .option Бизнес
+                .option Энтерпрайз
+            .compare-main-match-select.compare-main-match-select_third
+              .top-select(data-top-select="hidden" data-top-active="deactive")
+                p.top-select__p 
+                img(src="assets/images/arrDown.svg", alt="arrow-down").top-select__arrow 
+              .bot-select(data-bot-select="hidden")
+                .option(data-disabled="disabled") Старт
+                .option(data-disabled="disabled") Стандарт
+                .option Малый бизнес
+                .option Бизнес
+                .option Энтерпрайз
           .compare-main-wrap
             .compare-main-wrap-top
               .compare-main-wrap-top__title CMS

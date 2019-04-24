@@ -44,6 +44,9 @@
     }
   }
   &-main{
+    &-match{
+      display: none;
+    }
     &-wrap{
       &-top{
         padding: 46px 60px 40px;
@@ -83,6 +86,100 @@
             width: 25%;
             text-align: left;
           }
+        }
+      }
+    }
+    &[data-compare-main-condition=second]{
+      .compare-main{
+        &-match{
+          display: flex;
+          justify-content: center;
+          position: relative;
+          padding-top: 107px;
+          margin: 0 -10px;
+          &__add{
+            position: absolute;
+            top: 21px;
+            right: -40px;
+            top: calc();
+          }
+          &-select{
+            position: relative;
+            z-index: 10;
+            margin: 0 10px;
+            .top-select{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 276px;
+              height: 69px;
+              box-sizing: border-box;
+              border: 1px solid #626262;
+              border-radius: 10px;
+              background-color: white;
+              &[data-top-select="hidden"]{
+                display: none;
+              }
+              &[data-top-select="visible"]{
+                display: flex;
+              }
+              &[data-top-active="active"]{
+                box-shadow: 0px 0px 4px #E01839;
+              }
+              &[data-top-active="deactive"]{
+                //display: flex;
+              }
+              &:hover{
+                border: 1px solid #000000;
+                cursor: pointer;
+              }
+              
+              &__p{
+                margin-right: 9.5px;
+                font-family: 'Avenir Next Cyr';
+                font-size: 18px;
+                line-height: 33px;
+              }
+            }
+            .bot-select{
+              position: absolute;
+              padding-top: 20px;
+              top: 49px;
+              border: 1px solid #000000;
+              border-radius: 10px;
+              width: 100%;
+              box-sizing: border-box;
+              background-color: white;
+              z-index: -5;
+              &[data-bot-select="hidden"]{
+                display: none;
+              }
+              &[data-bot-select="visible"]{
+                display: block;
+              }
+              .empty-opt{
+                height: 20px;
+              }
+              .option{
+                width: 100%;
+                padding: 8px 0;
+                font-size: 18px;
+                line-height: 24px;
+                font-family: 'Avenir Next Cyr';
+                text-align: center;
+                &[data-disabled="disabled"]{
+                  display: none;
+                }
+                &:hover{
+                  background: rgba(224, 24, 57, 0.1);
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+        &-wrap{
+          display: none;
         }
       }
     }
