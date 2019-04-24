@@ -738,22 +738,20 @@ html(lang="en")
                   +yes
                 .compare-main-wrap-container__td 
                   +yes
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-      //-
         .compare-bot
           h3.compare-bot__title Остались вопросы?
           .compare-bot-container
-            img(src="", alt="")
+            .compare-bot-container-wrap
+              img(src="assets/images/mail-big-img.svg", alt="").compare-bot-container-wrap__img
             form(action="", method="get").compare-bot-container-form
+              h4.compare-bot-container-form__title Пишите, мы ответим
+              .compare-bot-container-form-wrap
+                input#telephone-input(type="tel", name="telephone-in" placeholder="Телефон").input-half
+                input#email-input(type="email", name="email-in" placeholder="E-mail").input-half
+                textarea#textarea-input(name="textarea-in" placeholder="Сообщение").textarea-full
+                .submit
+                  input(type="submit", value="Связаться").submit__btn
+                  p.submit__conf Отправляя личные данные, Вы соглашаетесь с политикой конфиденциальности
 
   
         

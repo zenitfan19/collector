@@ -87,5 +87,87 @@
       }
     }
   }
+  &-bot{
+    padding-bottom: 100px;
+    &__title{
+      text-align: center;
+      font-size: 36px;
+      font-family: 'Avenir Next Cyr';
+      margin-bottom: 80px;
+      font-weight: 500;
+    }
+    &-container{
+      display: flex;
+      align-items: center;
+      &-wrap{
+        width: 50%;
+        &__img{
+          margin: 0 auto;
+          display: block;
+          max-width: 100%;
+        }
+      }
+      &-form{
+        width: 50%;
+        &__title{
+          padding: 0 0 30px;
+          font-family: 'Avenir Next Cyr';
+          font-size: 24px;
+        }
+        &-wrap{
+          max-width: 544px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          .input-half{
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+          }
+          input, textarea{
+            display: block;
+            padding: 15px 20px;
+            font-family: 'Avenir Next Cyr';
+            font-size: 14px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            border-radius: 5px;
+          }
+          .textarea-full{
+            width: 100%;
+            resize: none;
+            height: 110px;
+          }
+          .submit{
+            display: flex;
+            width: 100%;
+            padding-top: 30px;
+            align-items: center;
+            &__btn{
+              font-family: 'Avenir Next Cyr';
+              font-size: 14px;
+              padding: 18px 10px;
+              box-sizing: border-box;
+              width: 154px;
+              margin-right: 20px;
+              background: #E01839;
+              border-radius: 5px;
+              color: white;
+              border: none;
+            }
+            &__conf{
+              display: block;
+              font-family: 'Avenir Next Cyr';
+              font-size: 14px;
+              line-height: normal;
+              color: rgba(0, 0, 0, 0.7);
+            }
+          }
+          
+        }
+      }
+    }
+  }
 }
 
