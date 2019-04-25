@@ -19,42 +19,42 @@
           <div class="compare-top__btn" data-compare-condition="second">Перейти к таблице</div>
         </div>
         <div class="compare-main" data-compare-main-condition="first">
-          <div class="compare-main-match">
-            <div class="compare-main-match__add"><img src="assets/images/add.svg" alt="add"/></div>
-            <div class="compare-main-match-select compare-main-match-select_first">
-              <div class="top-select" data-top-select="visible" data-top-active="deactive">
+          <div class="compare-main-match" data-activeCol="12">
+            <div class="compare-main-match__add" data-count="2"><img src="assets/images/add.svg" alt="add"/></div>
+            <div class="compare-main-match-select compare-main-match-select_first" data-select="visible">
+              <div class="top-select" data-top-active="deactive">
                 <p class="top-select__p"> </p><img class="top-select__arrow" src="assets/images/arrDown.svg" alt="arrow-down"/>
               </div>
               <div class="bot-select" data-bot-select="hidden">
-                <div class="option" data-active-option="active-option" data-disabled="disabled">Старт</div>
-                <div class="option" data-disabled="disabled">Стандарт</div>
-                <div class="option">Малый бизнес</div>
-                <div class="option">Бизнес</div>
-                <div class="option">Энтерпрайз</div>
+                <div class="option" data-index="1" data-active-option="active-option" data-disabled="disabled">Старт</div>
+                <div class="option" data-index="2" data-disabled="disabled">Стандарт</div>
+                <div class="option" data-index="3">Малый бизнес</div>
+                <div class="option" data-index="4">Бизнес</div>
+                <div class="option" data-index="5">Энтерпрайз</div>
               </div>
             </div>
-            <div class="compare-main-match-select compare-main-match-select_second">
-              <div class="top-select" data-top-select="visible" data-top-active="deactive">
+            <div class="compare-main-match-select compare-main-match-select_second" data-select="visible">
+              <div class="top-select" data-top-active="deactive">
                 <p class="top-select__p"> </p><img class="top-select__arrow" src="assets/images/arrDown.svg" alt="arrow-down"/>
               </div>
               <div class="bot-select" data-bot-select="hidden">
-                <div class="option" data-disabled="disabled">Старт </div>
-                <div class="option" data-active-option="active-option" data-disabled="disabled">Стандарт</div>
-                <div class="option">Малый бизнес</div>
-                <div class="option">Бизнес</div>
-                <div class="option">Энтерпрайз</div>
+                <div class="option" data-index="1" data-disabled="disabled">Старт </div>
+                <div class="option" data-index="2" data-active-option="active-option" data-disabled="disabled">Стандарт</div>
+                <div class="option" data-index="3">Малый бизнес</div>
+                <div class="option" data-index="4">Бизнес</div>
+                <div class="option" data-index="5">Энтерпрайз</div>
               </div>
             </div>
-            <div class="compare-main-match-select compare-main-match-select_third">
-              <div class="top-select" data-top-select="hidden" data-top-active="deactive">
+            <div class="compare-main-match-select compare-main-match-select_third" data-select="hidden">
+              <div class="top-select" data-top-active="deactive">
                 <p class="top-select__p"> </p><img class="top-select__arrow" src="assets/images/arrDown.svg" alt="arrow-down"/>
               </div>
               <div class="bot-select" data-bot-select="hidden">
-                <div class="option" data-disabled="disabled">Старт</div>
-                <div class="option" data-disabled="disabled">Стандарт</div>
-                <div class="option">Малый бизнес</div>
-                <div class="option">Бизнес</div>
-                <div class="option">Энтерпрайз</div>
+                <div class="option" data-index="1" data-disabled="disabled">Старт</div>
+                <div class="option" data-index="2" data-disabled="disabled">Стандарт</div>
+                <div class="option" data-index="3">Малый бизнес</div>
+                <div class="option" data-index="4">Бизнес</div>
+                <div class="option" data-index="5">Энтерпрайз</div>
               </div>
             </div>
           </div>
@@ -558,17 +558,17 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Интернет-магазин</div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">Базовая</div>
                 <div class="compare-main-wrap-container__td">Расширенная</div>
                 <div class="compare-main-wrap-container__td">Расширенная</div>
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Торговый каталог</div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> 
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
                       </svg>
@@ -586,10 +586,10 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Интеграция с CRM</div>
-                <div class="compare-main-wrap-container__td"> </div>
                 <div class="compare-main-wrap-container__td"></div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> 
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
                       </svg>
@@ -602,10 +602,10 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Мастер управления магазином</div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> 
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
                       </svg>
@@ -618,17 +618,17 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Складской учет</div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">1 склад</div>
                 <div class="compare-main-wrap-container__td">Неограничено</div>
                 <div class="compare-main-wrap-container__td">Неограничено</div>
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Валюты</div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> 
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
                       </svg>
@@ -702,11 +702,11 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">VIP-поддержка 24/7</div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> 
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
                       </svg>
@@ -714,11 +714,11 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Аудит производительности от 1С-Битрикс</div>
-                <div class="compare-main-wrap-container__td"> </div>
                 <div class="compare-main-wrap-container__td"></div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> 
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
                       </svg>
@@ -726,11 +726,11 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Сопровождение проекта от 1С-Битрикс</div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> </div>
-                <div class="compare-main-wrap-container__td"> 
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
                       </svg>
@@ -838,7 +838,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Веб-формы</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
@@ -862,7 +862,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Опросы</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
@@ -886,7 +886,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Подписка и рассылки</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
@@ -910,7 +910,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">A/B тестирование</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -930,7 +930,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">E-mail маркетинг</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -950,7 +950,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Реклама</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
@@ -966,7 +966,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Веб-аналитика</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
@@ -1098,7 +1098,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Визуальное масштабирование</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
@@ -1122,7 +1122,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Пульс конверсии</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1142,11 +1142,11 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Модуль "Веб-кластер"</div>
-                <div class="compare-main-wrap-container__td"> </div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
-                <div class="compare-main-wrap-container__td"> 
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
                       </svg>
@@ -1154,7 +1154,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Балансировка нагрузки между серверами</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
@@ -1166,7 +1166,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Отказоустойчивость на уровне кластера серверов</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
@@ -1178,7 +1178,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Географически распределенный кластер</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
@@ -1190,11 +1190,11 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Автоматическое масштабирование</div>
-                <div class="compare-main-wrap-container__td"> </div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
-                <div class="compare-main-wrap-container__td"> 
+                <div class="compare-main-wrap-container__td"></div>
+                <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
                       </svg>
@@ -1318,7 +1318,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Проактивная защита</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
@@ -1342,7 +1342,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Мобильная платформа</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 5.28205L6.71795 10L14.7179 2" stroke="#E01839" stroke-width="3" stroke-linecap="round"></path>
@@ -1366,7 +1366,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Мобильное приложение интернет-магазина</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1386,7 +1386,7 @@
               </div>
               <div class="compare-main-wrap-container-tr">
                 <div class="compare-main-wrap-container__td compare-main-wrap-container__td0">Технология Push & Pull</div>
-                <div class="compare-main-wrap-container__td"> </div>
+                <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td"></div>
                 <div class="compare-main-wrap-container__td">
                       <svg width="17" height="13" viewbox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">

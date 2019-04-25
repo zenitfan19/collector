@@ -1,4 +1,19 @@
+$.fn.hasAttr = function(name) {  
+  if (this.attr(name) !== undefined) {
+    return 0;
+  }
+  return 1;
+};
+
+
 $(document).ready(function() { 
+
+  /*resize*/
+  $(window).resize(function() {
+    findLeft();
+  });
+
+
   /*infinity swap*/
 
   $('.compare-main-wrap-container__td:contains("∞")').css('font-size', '40px');
@@ -12,10 +27,14 @@ $(document).ready(function() {
       $('[data-compare-condition="first"]').hide();
       $('[data-compare-condition="second"]').show();
       $('.compare-main').attr('data-compare-main-condition', 'second');
+      outputCol();
+      widthCols();
     } else {
       $('[data-compare-condition="second"]').hide();
       $('[data-compare-condition="first"]').show();
       $('.compare-main').attr('data-compare-main-condition', 'first');
+      delCol();
+      delWidthCols();
     }
   });
 
@@ -29,9 +48,24 @@ $(document).ready(function() {
     $('.compare-main-match-select_third .top-select__p').html($('.compare-main-match-select_third .option[data-active-option="active-option"]').html());
   }
   
-  /*динамика с селекторами*/
+  /*кнопка с добавлением/скрытием 3-го селектора*/
 
-   //Прячем выпадашки
+  function findLeft (){
+    var leftPX;
+    if ($('.compare-main-match-select[data-select="visible"]').length == 2){
+      leftPX = 326 + 30;
+    } else {
+      leftPX = 326 + 40 + 138;
+    }
+    var left = $('.compare-main').width() / 2 + leftPX;
+    $('.compare-main-match__add').css('top', '128px');
+    $('.compare-main-match__add').css('left', left + 'px');
+  }
+  findLeft();
+
+
+
+  /*динамика с селекторами*/
   $('.top-select').click(function(){
     if ($(this).attr('data-top-active') == 'deactive'){
       $(this).attr('data-top-active', 'active');
@@ -43,5 +77,181 @@ $(document).ready(function() {
   });
 
 
+  /*выбор активного пакета и смена disabled */
+  $('.option').click(function(){
+    
+    $('.bot-select').attr('data-bot-select', 'hidden');
+    $('.top-select').attr('data-top-active', 'deactive');
 
+    var dataIndex = $(this).attr('data-index');
+    var oldIndex = $(this).parent().find('[data-active-option="active-option"]').attr('data-index');
+    
+    $('[data-index="' + oldIndex + '"').removeAttr('data-disabled');
+    $('[data-index="' + oldIndex + '"').removeAttr('data-active-option');
+
+    $(this).attr('data-active-option', 'active-option')
+    $('[data-index="' + dataIndex + '"').attr('data-disabled', 'disabled');
+
+    swapValue();
+    outputCol();
+  });
+
+
+  /*Добавление/скрытие 3 колонки*/
+  $('.compare-main-match__add').click(function(){  
+    if ($(this).attr('data-count') == 2){ /*добавляем 3 столбец*/
+      var i = 1;
+      while (($('.compare-main-match-select_third .bot-select .option[data-index="' + i + '"]').hasAttr('data-disabled')) !== 1) {
+        i++;
+      }
+      $('[data-index="' + i + '"]').attr('data-disabled', 'disabled');
+      $('.compare-main-match-select_third [data-index="' + i + '"]').attr('data-active-option', 'active-option');
+
+
+      $('.compare-main-match-select_third').attr('data-select', 'visible');
+      $(this).attr('data-count', '3');
+      swapValue();
+      findLeft();
+      $('.compare-main-match__add').css('transform', 'rotate(45deg)')
+      outputCol();
+      widthCols();
+    } else { /*убираем 3 столбец*/
+      $('.compare-main-match-select_third').attr('data-select', 'hidden');
+      $(this).attr('data-count', '2');
+
+      var indClose = $('.compare-main-match-select_third .option[data-active-option="active-option"]').attr('data-index');
+      $('[data-index="' + indClose + '"]').removeAttr('data-disabled');
+      $('[data-index="' + indClose + '"]').removeAttr('data-active-option');
+      swapValue();
+      findLeft();
+      $('.compare-main-match__add').css('transform', 'rotate(0deg)')
+      outputCol();
+      widthCols();
+    }
+    
+  });
+  
+  
+
+  
+  /*по умолчанию столбцы*/
+  function delCol () {
+    $('.compare-main-wrap-container__td').show();
+    $('.compare-main-wrap-container__td').css('order', '0');
+    backUp();
+  }
+
+
+  /*Воостановление удаленных строк*/
+  function backUp() {
+    $('.compare-main-wrap').show();
+    $('.compare-main-wrap-container-tr').show();
+  }
+
+  /* обрезка лишних строк  и разделов*/
+  function cutRow () {
+    backUp();
+    /*для 2 столбцовой*/
+    if ($('.compare-main-match__add').attr('data-count') == 2) {
+      $('.compare-main-wrap').each(function(tab){
+        $('.compare-main-wrap-container-tr').each(function(){
+          var ct = 0;
+          $(this).find('.compare-main-wrap-container__td').each(function(){
+            if(($(this).html() == '') && ($(this).css('display') == 'block')) {
+              ct++;
+            } 
+          })
+          if (ct == 2){
+            $(this).hide();
+          } 
+        });
+        if ($(this).find('.compare-main-wrap-container').height() == 0){
+          $(this).hide();
+        }
+      })
+    }
+
+    /*для 3 столбцовой*/
+    if ($('.compare-main-match__add').attr('data-count') == 3) {
+      $('.compare-main-wrap').each(function(tab){
+        $('.compare-main-wrap-container-tr').each(function(){
+          var ct = 0;
+          $(this).find('.compare-main-wrap-container__td').each(function(){
+            if(($(this).html() == '') && ($(this).css('display') == 'block')) {
+              ct++;
+            } 
+          })
+          if (ct == 3){
+            $(this).hide();
+          } 
+        });
+        if ($(this).find('.compare-main-wrap-container').height() == 0){
+          $(this).hide();
+        }
+      })
+    }
+  };
+  
+  /*вывод столбцов в зависимости от заголовков*/
+  function outputCol (){
+    delCol(); //Сначала все чистим
+    $('.compare-main-wrap-container__td').hide();
+    /*для первого столбца*/
+    var indexCol = +$('.compare-main-match-select_first .option[data-active-option="active-option"]').attr('data-index') + 1;
+    $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol + ')').show();
+    $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol + ')').css('order', '1');
+
+    /*для второго столбца*/
+    var indexCol1 = +$('.compare-main-match-select_second .option[data-active-option="active-option"]').attr('data-index') + 1;
+    $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol1 + ')').show();
+    $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol1 + ')').css('order', '2');
+    
+    /*для третьего столбца*/
+    if ($('.compare-main-match-select_third').attr('data-select') == 'visible'){
+      var indexCol2 = +$('.compare-main-match-select_third .option[data-active-option="active-option"]').attr('data-index') + 1;
+      $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol2 + ')').show();
+      $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol2 + ')').css('order', '3');
+    }
+    /*форматирование таблицы*/
+
+        /*пустоту на "-"*/
+        
+  function defis(){
+    antiDefis();
+    $('.compare-main-wrap-container__td').each(function(){
+      if(($(this).is(':empty')) && ($(this).css('display') == 'block')){
+        $(this).html('-');
+      }
+    });
+  }
+  function antiDefis(){
+    $('.compare-main-wrap-container__td').each(function(){
+      if($(this).html() == '-'){
+        $(this).empty()
+      }
+    });
+  }
+    cutRow();
+    defis();
+  }
+
+  
+
+  /*функция для выставления ширины*/
+  function widthCols(){
+    var genWidth;
+    if ($('.compare-main-match-select[data-select="visible"]').length == 2){
+      genWidth = 592;
+    } else {
+      genWidth = 592 + 316;
+    }
+    $('.compare-main-wrap').css('max-width', genWidth);
+    $('.compare-main-wrap').css('margin', '0 auto');
+    $('.compare-main-wrap-container__td').css('width', (genWidth / 2));
+  };
+  function delWidthCols(){
+    $('.compare-main-wrap').css('max-width', '100%');
+    $('.compare-main-wrap-container__td').css('width', '15%');
+    $('.compare-main-wrap-container__td0').css('width', '25%');
+  }
 });
