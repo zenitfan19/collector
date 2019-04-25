@@ -100,7 +100,7 @@
             box-sizing: border-box;
           }
           &-container{
-            padding: 0;
+            padding: 0 0 80px;
             &-th{
               display: none;
             }
@@ -110,6 +110,11 @@
             &__td{
               text-align: left;
               margin: 0 20px;
+              padding-right: 20px;
+              box-sizing: border-box;
+              span{
+                font-size: 18px;
+              }
             }
           }
         }

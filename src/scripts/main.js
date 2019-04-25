@@ -14,13 +14,10 @@ $(document).ready(function() {
   });
 
 
-  /*infinity swap*/
-
-  $('.compare-main-wrap-container__td:contains("∞")').css('font-size', '40px');
   
   
   /*swap screen*/
-
+  
   $('[data-compare-condition="second"]').hide();
   $('.compare-top__btn').click(function(){
     if($(this).attr('data-compare-condition') == 'first'){
@@ -33,10 +30,14 @@ $(document).ready(function() {
       $('[data-compare-condition="second"]').hide();
       $('[data-compare-condition="first"]').show();
       $('.compare-main').attr('data-compare-main-condition', 'first');
+      $('.compare-main-wrap-container__td span').remove();
       delCol();
       delWidthCols();
     }
   });
+
+    
+  
 
   
   /*функция меняющая содержимое видимого блока*/
@@ -187,6 +188,11 @@ $(document).ready(function() {
             } 
           })
           if (ct == 3){
+            $(this).find('.compare-main-wrap-container__td').each(function(){
+              if(($(this).html() == '') && ($(this).css('display') == 'block')) {
+                $(this).hide();
+              } 
+            })
             $(this).hide();
           } 
         });
@@ -200,11 +206,13 @@ $(document).ready(function() {
   /*вывод столбцов в зависимости от заголовков*/
   function outputCol (){
     delCol(); //Сначала все чистим
+    $('.compare-main-wrap-container__td span').remove();
     $('.compare-main-wrap-container__td').hide();
     /*для первого столбца*/
     var indexCol = +$('.compare-main-match-select_first .option[data-active-option="active-option"]').attr('data-index') + 1;
     $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol + ')').show();
     $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol + ')').css('order', '1');
+    
 
     /*для второго столбца*/
     var indexCol1 = +$('.compare-main-match-select_second .option[data-active-option="active-option"]').attr('data-index') + 1;
@@ -217,7 +225,63 @@ $(document).ready(function() {
       $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol2 + ')').show();
       $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol2 + ')').css('order', '3');
     }
-    cutRow();
+    cutRow();  /*форматируем таблицу*/
+
+    /*первый столбец*/
+
+    $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol + ')').each(function(i){
+      var titleTr = $(this).parent().find('.compare-main-wrap-container__td0').html();
+      if($(this).parent().css('display') == 'flex'){
+        if($(this).html() == ''){
+          $(this).prepend('<span>-</span>');
+        } else {
+          if ($(this).children().is('svg')){
+            $(this).find('svg').hide();
+            $(this).prepend('<span>' + titleTr + '</span>')
+          } else {
+            $(this).prepend('<span>' + titleTr + ': ' + '</span>')
+          }
+        }
+      }
+    });
+
+    /*второй столбец*/
+
+    $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol1 + ')').each(function(i){
+      var titleTr = $(this).parent().find('.compare-main-wrap-container__td0').html();
+      if($(this).parent().css('display') == 'flex'){
+        if($(this).html() == ''){
+          $(this).prepend('<span>-</span>');
+        } else {
+          if ($(this).children().is('svg')){
+            $(this).find('svg').hide();
+            $(this).prepend('<span>' + titleTr + '</span>')
+          } else {
+            $(this).prepend('<span>' + titleTr + ': ' + '</span>')
+          }
+        }
+      }
+    })
+
+    /*третий столбец*/
+    if ($('.compare-main-match-select_third').attr('data-select') == 'visible'){
+      $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol2 + ')').each(function(i){
+        var titleTr = $(this).parent().find('.compare-main-wrap-container__td0').html();
+        if($(this).parent().css('display') == 'flex'){
+          if($(this).html() == ''){
+            $(this).prepend('<span>-</span>');
+          } else {
+            if ($(this).children().is('svg')){
+              $(this).find('svg').hide();
+              $(this).prepend('<span>' + titleTr + '</span>')
+            } else {
+              $(this).prepend('<span>' + titleTr + ': ' + '</span>')
+            }
+          }
+        }
+      })
+    }
+
   }
   
   
