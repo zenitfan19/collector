@@ -162,6 +162,11 @@ $(document).ready(function() {
             } 
           })
           if (ct == 2){
+            $(this).find('.compare-main-wrap-container__td').each(function(){
+              if(($(this).html() == '') && ($(this).css('display') == 'block')) {
+                $(this).hide();
+              } 
+            })
             $(this).hide();
           } 
         });
@@ -212,29 +217,9 @@ $(document).ready(function() {
       $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol2 + ')').show();
       $('.compare-main-wrap-container-tr .compare-main-wrap-container__td:nth-child(' + indexCol2 + ')').css('order', '3');
     }
-    /*форматирование таблицы*/
-
-        /*пустоту на "-"*/
-        
-  function defis(){
-    antiDefis();
-    $('.compare-main-wrap-container__td').each(function(){
-      if(($(this).is(':empty')) && ($(this).css('display') == 'block')){
-        $(this).html('-');
-      }
-    });
-  }
-  function antiDefis(){
-    $('.compare-main-wrap-container__td').each(function(){
-      if($(this).html() == '-'){
-        $(this).empty()
-      }
-    });
-  }
     cutRow();
-    defis();
   }
-
+  
   
 
   /*функция для выставления ширины*/
