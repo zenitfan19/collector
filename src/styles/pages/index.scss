@@ -251,6 +251,9 @@
             border: 1px solid rgba(0, 0, 0, 0.2);
             box-sizing: border-box;
             border-radius: 5px;
+            &:hover{
+              box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
+            }
           }
           .textarea-full{
             width: 100%;
