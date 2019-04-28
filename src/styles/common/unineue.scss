@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Uni Neue';
+    src: local('Uni Neue Light'), local('UniNeueLight'), url('../fonts/Unineuelight.woff2') format('woff2'), url('../fonts/Unineuelight.woff') format('woff'), url('../fonts/Unineuelight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Uni Neue';
+    src: local('Uni Neue Heavy Italic'), local('UniNeueHeavy-Italic'), url('../fonts/Unineueheavyitalic.woff2') format('woff2'), url('../fonts/Unineueheavyitalic.woff') format('woff'), url('../fonts/Unineueheavyitalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}

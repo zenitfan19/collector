@@ -1,294 +1,483 @@
-.compare{
-  padding: 70px 20px 0;
-  box-sizing: border-box;
-  max-width: 1440px;
+body {
+  background: linear-gradient(to right, #191223 0%, #1d1337 100%);
+  color: white;
+}
+.first-section{
+  max-width: 1700px;
+  padding: 0 30px;
   margin: 0 auto;
-  font-family: 'Avenir Next Cyr';
-  &-top{
+  &__title{
+    font-size: 90px;
+    font-family: 'Uni Neue';
+    padding: 60px 0 40px;
+    text-align: center;
+    background: linear-gradient(15deg, #ff9c00 0%, #fff844 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 300;
+    font-style: normal;
+  }
+  &__subtitle{
+    padding-bottom: 80px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1360px;
+    font-size: 30px;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    line-height: 42px;
+  }
+  .direction-wrap{
     display: flex;
-    width: 100%;  
-    box-sizing: border-box;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 60px 14px;
-    &__title{
-      font-size: 36px;
-      line-height: 66px;
-      font-weight: normal;
-      &_red{
-        color: #E01839;
+    align-items: flex-end;
+    padding-bottom: 70px;
+    .direction-block{
+      text-align: center;
+      width: 33%;
+      &__p{
+        padding-top: 30px;
+        font-size: 18px;
+        font-family: 'Ubuntu';
       }
-      &_bold{
+    }
+  }
+  .cta-block{
+    padding: 70px 0;
+    border-radius: 10px;
+    background-color: #322a43;
+    box-sizing: border-box;
+    border: 3px solid #2f2640;
+    &-wrap{
+      max-width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    &-text{
+      &__top{
+        font-size: 32px;
+        padding-bottom: 20px;
+        font-weight: 700;
+        font-family: 'Ubuntu';
+      }
+      &__bot{
+        font-size: 24px;
+        color: #bfbdc2;
         font-weight: 500;
+        font-family: 'Ubuntu';
       }
     }
     &__btn{
-      border: 2px solid #E01839;
-      box-sizing: border-box;
-      border-radius: 10px;
-      padding: 21px 0 20px;
+      display: block;
+      max-width: 384px;
+      padding: 30px;
       text-align: center;
-      max-width: 276px;
-      width: 100%;
-      color: #E01839;
-      font-size: 18px;
-      line-height: 24px;
-      user-select: none;
+      border-radius: 10px;
+      background-color: #da345e;
+      font-size: 24px;
+      flex-grow: 1;
+      font-weight: 700;
+      font-family: 'Ubuntu';
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
       &:hover{
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         cursor: pointer;
       }
-      &:active{
-        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-      }
     }
   }
-  &-main{
-    &-match{
-      display: none;
-    }
-    &-wrap{
-      &-top{
-        padding: 46px 60px 40px;
-        border-bottom: 0.5px solid #878787;
-        &__title{
-          margin-bottom: 27px;
-          font-size: 24px;
-          font-weight: 500;
-        }
-        &__subtitle{
-          font-size: 18px;
-        }
-      }
-      &-container{
-        padding: 0 60px 82px;
-        &-th{
-          display: flex;
-          align-items: center;
-          margin-bottom: 69px;
-          padding-top: 34px;
-          .compare-main-wrap-container__td{
-            font-size: 24px;
-          }
-        }
-        &-tr{
-          display: flex;
-          align-items: center;
-          padding: 21px 0;
-          .compare-main-wrap-container__td{
-            font-size: 18px;
-          }
-        }
-        &__td{
-          text-align: center;
-          width: 15%;
-          display: block;
-          &0{
-            width: 25%;
-            text-align: left;
-          }
-        }
-      }
-    }
-    &[data-compare-main-condition=second]{
-      .compare-main{
-        &-wrap{
-          &-top{
-            margin: 0 auto;
-            padding: 40px 0px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-          }
-          &-container{
-            padding: 0 0 80px;
-            &-th{
-              display: none;
-            }
-            &-tr{
-              margin: 0 -20px;
-            }
-            &__td{
-              text-align: left;
-              margin: 0 20px;
-              padding-right: 20px;
-              box-sizing: border-box;
-              span{
-                font-size: 18px;
-              }
-            }
-          }
-        }
-        &-match{
-          display: flex;
-          justify-content: center;
-          position: relative;
-          padding-top: 107px;
-          margin: 0 -20px;
-          &__add{
-            position: absolute;
-            &:hover{
-              cursor: pointer;
-            }
-          }
-          &-select{
-            position: relative;
-            z-index: 10;
-            margin: 0 20px;
-            &[data-select="hidden"]{
-              display: none;
-            }
-            &[data-select="visible"]{
-              display: block;
-            }
-            .top-select{
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 276px;
-              height: 69px;
-              box-sizing: border-box;
-              border: 1px solid #626262;
-              border-radius: 10px;
-              background-color: white;
-              &[data-top-active="active"]{
-                box-shadow: 0px 0px 4px #E01839;
-              }
-              &:hover{
-                border: 1px solid #000000;
-                cursor: pointer;
-              }
-              
-              &__p{
-                margin-right: 9.5px;
-                font-family: 'Avenir Next Cyr';
-                font-size: 18px;
-                line-height: 33px;
-              }
-            }
-            .bot-select{
-              position: absolute;
-              padding-top: 20px;
-              top: 49px;
-              border: 1px solid #000000;
-              border-radius: 10px;
-              width: 100%;
-              box-sizing: border-box;
-              background-color: white;
-              z-index: -5;
-              &[data-bot-select="hidden"]{
-                display: none;
-              }
-              &[data-bot-select="visible"]{
-                display: block;
-              }
-              .empty-opt{
-                height: 20px;
-              }
-              .option{
-                width: 100%;
-                padding: 8px 0;
-                font-size: 18px;
-                line-height: 24px;
-                font-family: 'Avenir Next Cyr';
-                text-align: center;
-                &[data-disabled="disabled"]{
-                  display: none;
-                }
-                &:hover{
-                  background: rgba(224, 24, 57, 0.1);
-                  cursor: pointer;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+}
+.second-section{
+  padding: 140px 30px 0;
+  &__title{
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    text-align: center;
+    padding-bottom: 50px;
   }
-  &-bot{
-    padding-bottom: 100px;
-    &__title{
-      text-align: center;
-      font-size: 36px;
-      font-family: 'Avenir Next Cyr';
-      margin-bottom: 80px;
-      font-weight: 500;
-    }
-    &-container{
-      display: flex;
-      align-items: center;
-      &-wrap{
-        width: 50%;
-        &__img{
-          margin: 0 auto;
-          display: block;
-          max-width: 100%;
+  .list-wrap{
+    max-width: 1360px;
+    margin: 0 auto 60px;
+    .list-ul{
+      li{
+        font-weight: 500;
+        font-family: 'Ubuntu';
+        font-size: 24px;
+        line-height: 34px;
+        list-style-type: none;
+        &:not(:last-child){
+          margin-bottom: 20px;
         }
-      }
-      &-form{
-        width: 50%;
-        &__title{
-          padding: 0 0 30px;
-          font-family: 'Avenir Next Cyr';
-          font-size: 24px;
-        }
-        &-wrap{
-          max-width: 544px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-wrap: wrap;
-          .input-half{
-            width: calc(50% - 10px);
-            margin-bottom: 20px;
-          }
-          input, textarea{
-            display: block;
-            padding: 15px 20px;
-            font-family: 'Avenir Next Cyr';
-            font-size: 14px;
-            background: #FFFFFF;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            box-sizing: border-box;
-            border-radius: 5px;
-            &:hover{
-              box-shadow: 0px 0px 5px rgba(110, 24, 102, 0.25);
-            }
-          }
-          .textarea-full{
-            width: 100%;
-            resize: none;
-            height: 110px;
-          }
-          .submit{
-            display: flex;
-            width: 100%;
-            padding-top: 30px;
-            align-items: center;
-            &__btn{
-              font-family: 'Avenir Next Cyr';
-              font-size: 14px;
-              padding: 18px 10px;
-              box-sizing: border-box;
-              width: 154px;
-              margin-right: 20px;
-              background: #E01839;
-              border-radius: 5px;
-              color: white;
-              border: none;
-            }
-            &__conf{
-              display: block;
-              font-family: 'Avenir Next Cyr';
-              font-size: 14px;
-              line-height: normal;
-              color: rgba(0, 0, 0, 0.7);
-            }
-          }
-          
+        &:before{
+          content: "•";
+          padding-right: 10px;
+          color: #d9345d;
         }
       }
     }
   }
 }
-
+.third-section{
+  padding: 0 30px;
+  &__title{
+    font-size: 60px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    padding-bottom: 65px;
+    text-align: center;
+  }
+  .cards-wrap{
+    max-width: 1640px;
+    margin: 0 auto 110px;
+    display: flex;
+    justify-content: space-between;
+    &__card{
+      width: calc(33% - 20px);
+      box-sizing: border-box;
+      border-radius: 10px;
+      background-color: #322a43;
+      box-sizing: border-box;
+      border: 3px solid #2f2640;
+      padding: 32px 10px 25px;
+      .card-img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #020415;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .card__p{
+        padding-top: 35px;
+        font-weight: 500;
+        font-family: 'Ubuntu';
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+      }
+    }
+  }
+}
+.diagram{
+  padding: 0 30px 120px;
+  &-wrap{
+    max-width: 1640px;
+    margin: 0 auto 110px;
+    position: relative;
+    &__axis{
+      width: 100%;
+      position: relative;
+      z-index: 10;
+    }
+    &__value{
+      position: absolute;
+      width: 97.7%;
+      left: 1.8%;
+      top: -6px;
+      z-index: 5;
+    }
+  }
+}
+.advantage{
+  padding: 0 30px 120px;
+  &__title{
+    font-size: 60px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    padding-bottom: 65px;
+    text-align: center;
+  }
+  &-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 70px;
+    .advantage-block{
+      text-align: center;
+      width: 33%;
+      &__p{
+        padding-top: 30px;
+        font-size: 18px;
+        font-family: 'Ubuntu';
+      }
+    }
+  }
+}
+.clients{
+  padding: 0 30px;
+  &__title{
+    font-size: 60px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    padding-bottom: 65px;
+    text-align: center;
+  }
+  &-wrap{
+    max-width: 1640px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+.about{
+  padding: 0 30px;
+  &__title{
+    font-size: 60px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+    padding-bottom: 65px;
+    text-align: center;
+  }
+  &-text{
+    max-width: 1425px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 30px 60px 30px;
+    font-weight: 300;
+    font-family: 'Ubuntu';
+    &__top{
+      font-size: 36px;
+      line-height: 48px;
+      padding-bottom: 35px;
+      span{
+        color: #e58c06;
+      }
+    }
+    &__bot{
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+  &-advantage{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1425px;
+    margin: 0 auto 85px;
+    .advantage-block{
+      text-align: center;
+      max-width: 180px;
+      .advantage-counter{
+        font-size: 60px;
+        font-weight: 300;
+        font-family: 'Ubuntu';
+        color: #ffad00;
+        margin: 0 auto 20px;
+      }
+      .advantage-increment{
+        
+        display: inline;
+      }
+      &__p{
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        font-family: 'Ubuntu';
+      }
+    }
+  }
+  &-contacts{
+    max-width: 1425px;
+    margin: 0 auto;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    padding: 0 20px 80px;
+    &__title{
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 40px;
+      color: #ffad00;
+      margin-bottom: 20px;
+    }
+    &__p{
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &__link{
+      font-size: 24px;
+      color: white;
+      display: block;
+      text-decoration: none;
+      &:not(:last-child){
+        margin-bottom: -5px;
+      }
+      img{
+        margin-right: 25px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.popup-trainee {
+  position: relative;
+  background: #f1f0f6;
+  max-width: 1500px;
+  padding: 0 30px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  .mfp-close{
+    font-size: 30px;
+    color: #d9345d;
+    width: 30px;
+    height: 30px;
+    top: 30px;
+    right: 30px;
+  }
+  form{
+    color: black;
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: left;
+    .label-wrap{
+      padding-bottom: 30px;
+      position: relative;
+      .in-block{
+        position: relative;
+        &_tel{
+          width: 242px;
+          input{
+            width: 100%;
+          }
+        }
+        &_age{
+          width: 130px;
+          input{
+            width: 100%;
+          }
+        }
+        &_ball{
+          width: 90px;
+          input{
+            width: 100%;
+          }
+        }
+      }
+      .required-dot{
+        width: 6px;
+        height: 6px;
+        background-color: #d9345d;
+        border-radius: 50%;
+        position: absolute;
+        top: calc(50% - 3px);
+        right: -12px;
+      }
+      label{
+        display: block;
+        max-width: 494px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        flex-grow: 1;
+        font-family: 'Ubuntu';
+        font-weight: 300;
+        font-size: 24px;
+      }
+      input, select, textarea{
+        display: block;
+        height: 60px;
+        box-sizing: border-box;
+        border: 3px solid #e7e4f7;
+        font-family: 'Ubuntu';
+        font-weight: 300;
+        font-size: 24px;
+        width: auto;
+        border-radius: 30px;
+        padding: 0 25px;
+        outline: none;
+      }
+      select{
+        padding: 0 41px 0 25px;
+        appearance: none !important;
+        background: url('../images/arrDown.png') no-repeat no-repeat #fff;
+        background-position: right 16px center;
+        width: 386px;
+      }
+      .input_full{
+        flex-grow: 1;
+        input{
+          width: 100%;
+        }
+      }
+      textarea{
+        width: 100%;
+        resize: none;
+        padding: 20px 25px; 
+        box-sizing: border-box;
+        height: 180px;
+      }
+      &_full{
+        flex-direction: column;
+        align-items: flex-start;
+        label{
+          max-width: 100%;
+          margin-bottom: 30px;
+        }
+        .in-block{
+          width: 100%;
+        }
+        input{
+          width: 100%;
+        }
+      }
+      display: flex;
+      align-items: center;
+    }
+    .submit-block{
+      display: flex;
+      align-items: center;
+      padding: 50px 0 120px;
+      input{
+        background: linear-gradient(top, #d9345d, #dc355f);
+        box-shadow: 7px 7px 15px 0 #661428;
+        display: block;
+        max-width: 385px;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        font-family: 'Ubuntu';
+        width: 100%;
+        border: none;
+        border-radius: 7px;
+        font-weight: 700;
+        height: 80px;
+        margin-right: 32px;
+      }
+      &__p{
+        font-family: 'Ubuntu';
+        font-size: 18px;
+        line-height: 26px;
+        display: block;
+        a{
+          text-decoration: underline;
+          color: black;
+        }
+      }
+    }
+    .form__title{
+      font-size: 60px;
+      font-family: 'Uni Neue';
+      text-align: left;
+      padding: 110px 0 40px;
+    }
+    .form__p{
+      text-align: left;
+      font-size: 24px;
+      line-height: 40px;
+      font-family: 'Ubuntu';
+      font-weight: 300;
+      padding-bottom: 20px;
+    }
+  }
+  
+}

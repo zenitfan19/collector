@@ -5,789 +5,226 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="assets/styles/app.min.css")
-    script(src="assets/scripts/jquery.min.js")
-    script(src="assets/scripts/main.js")
-    title Сравнение лицензий
+    title Document
   body
-    mixin yes()
-      svg(width='17', height='13', viewbox='0 0 17 13', fill='none', xmlns='http://www.w3.org/2000/svg')
-        path(d='M2 5.28205L6.71795 10L14.7179 2', stroke='#E01839', stroke-width='3', stroke-linecap='round')
-    section.main
-      section.compare
-        .compare-top
-          h1(data-compare-condition="first").compare-top__title Лицензии <span class="compare-top__title_bold"><span class="compare-top__title_red">1С</span>-Битрикс</span>
-          div(data-compare-condition="first").compare-top__btn Сравнить лицензии
-          h1(data-compare-condition="second").compare-top__title Сравнение лицензий
-          div(data-compare-condition="second").compare-top__btn Перейти к таблице
-        .compare-main(data-compare-main-condition="first")
-          .compare-main-match(data-activeCol="12")
-            .compare-main-match__add(data-count="2")
-              img(src="assets/images/add.svg", alt="add")
-            .compare-main-match-select(data-select="visible").compare-main-match-select_first
-              .top-select(data-top-active="deactive")
-                p.top-select__p 
-                img(src="assets/images/arrDown.svg", alt="arrow-down").top-select__arrow 
-              .bot-select(data-bot-select="hidden")
-                .option(data-index="1" data-active-option="active-option" data-disabled="disabled") Старт
-                .option(data-index="2" data-disabled="disabled") Стандарт
-                .option(data-index="3") Малый бизнес
-                .option(data-index="4") Бизнес
-                .option(data-index="5") Энтерпрайз
-            .compare-main-match-select(data-select="visible").compare-main-match-select_second
-              .top-select(data-top-active="deactive")
-                p.top-select__p 
-                img(src="assets/images/arrDown.svg", alt="arrow-down").top-select__arrow 
-              .bot-select(data-bot-select="hidden")
-                .option(data-index="1" data-disabled="disabled") Старт 
-                .option(data-index="2" data-active-option="active-option" data-disabled="disabled") Стандарт
-                .option(data-index="3") Малый бизнес
-                .option(data-index="4") Бизнес
-                .option(data-index="5") Энтерпрайз
-            .compare-main-match-select(data-select="hidden").compare-main-match-select_third
-              .top-select(data-top-active="deactive")
-                p.top-select__p 
-                img(src="assets/images/arrDown.svg", alt="arrow-down").top-select__arrow 
-              .bot-select(data-bot-select="hidden")
-                .option(data-index="1" data-disabled="disabled") Старт
-                .option(data-index="2" data-disabled="disabled") Стандарт
-                .option(data-index="3") Малый бизнес
-                .option(data-index="4") Бизнес
-                .option(data-index="5") Энтерпрайз
-          .compare-main-wrap
-            .compare-main-wrap-top
-              .compare-main-wrap-top__title CMS
-              .compare-main-wrap-top__subtitle Здесь представлен список модулей, которые входят в данную лицензию и сравниваются с другими
-            .compare-main-wrap-container
-              .compare-main-wrap-container-th
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0
-                .compare-main-wrap-container__td Старт
-                .compare-main-wrap-container__td Стандарт
-                .compare-main-wrap-container__td Малый бизнес
-                .compare-main-wrap-container__td Бизнес
-                .compare-main-wrap-container__td Энтерпрайз
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Цена
-                .compare-main-wrap-container__td 5400 руб.
-                .compare-main-wrap-container__td 15900 руб.
-                .compare-main-wrap-container__td 35900 руб.
-                .compare-main-wrap-container__td 72900 руб.
-                .compare-main-wrap-container__td Индивидуально
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 CMS
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Главный модуль
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Сайты24
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Число сайтов
-                .compare-main-wrap-container__td 2
-                .compare-main-wrap-container__td ∞
-                .compare-main-wrap-container__td ∞
-                .compare-main-wrap-container__td ∞
-                .compare-main-wrap-container__td ∞
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Число страниц
-                .compare-main-wrap-container__td ∞
-                .compare-main-wrap-container__td ∞
-                .compare-main-wrap-container__td ∞
-                .compare-main-wrap-container__td ∞
-                .compare-main-wrap-container__td ∞
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Управление структурой
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Информационные блоки
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Highload-блоки
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Поиск
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Перевод
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Форумы
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Блоги
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Социальная сеть
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Обучение, тестирование
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Веб-мессенджер
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Бизнес-процессы
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Почта
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Техподдержка
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Календари
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Документооборот
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 AD/LDAP интеграция
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Универсальные списки
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Контролллер сайтов
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-          .compare-main-wrap
-            .compare-main-wrap-top
-              .compare-main-wrap-top__title Интернет-магазин
-              .compare-main-wrap-top__subtitle Здесь представлен список модулей, которые входят в данную лицензию и сравниваются с другими
-            .compare-main-wrap-container
-              .compare-main-wrap-container-th
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0
-                .compare-main-wrap-container__td Старт
-                .compare-main-wrap-container__td Стандарт
-                .compare-main-wrap-container__td Малый бизнес
-                .compare-main-wrap-container__td Бизнес
-                .compare-main-wrap-container__td Энтерпрайз
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Интернет-магазин
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td Базовая
-                .compare-main-wrap-container__td Расширенная
-                .compare-main-wrap-container__td Расширенная
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Торговый каталог
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Интеграция с CRM
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Мастер управления магазином
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Складской учет
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td 1 склад
-                .compare-main-wrap-container__td Неограничено
-                .compare-main-wrap-container__td Неограничено
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Валюты
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Конструктор отчетов
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Разделение заказов между филиалами компании
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes 
-          .compare-main-wrap
-            .compare-main-wrap-top
-              .compare-main-wrap-top__title Поддержка и консалтинг 1С-Битрикс
-              .compare-main-wrap-top__subtitle Здесь представлен список модулей, которые входят в данную лицензию и сравниваются с другими
-            .compare-main-wrap-container
-              .compare-main-wrap-container-th
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0
-                .compare-main-wrap-container__td Старт
-                .compare-main-wrap-container__td Стандарт
-                .compare-main-wrap-container__td Малый бизнес
-                .compare-main-wrap-container__td Бизнес
-                .compare-main-wrap-container__td Энтерпрайз
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Время реакции в техподдержке
-                .compare-main-wrap-container__td 6 часов
-                .compare-main-wrap-container__td 6 часов
-                .compare-main-wrap-container__td 6 часов
-                .compare-main-wrap-container__td 6 часов
-                .compare-main-wrap-container__td 2 часа
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 VIP-поддержка 24/7
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Аудит производительности от 1С-Битрикс
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Сопровождение проекта от 1С-Битрикс
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-          .compare-main-wrap
-            .compare-main-wrap-top
-              .compare-main-wrap-top__title Маркетинг
-              .compare-main-wrap-top__subtitle Здесь представлен список модулей, которые входят в данную лицензию и сравниваются с другими
-            .compare-main-wrap-container
-              .compare-main-wrap-container-th
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0
-                .compare-main-wrap-container__td Старт
-                .compare-main-wrap-container__td Стандарт
-                .compare-main-wrap-container__td Малый бизнес
-                .compare-main-wrap-container__td Бизнес
-                .compare-main-wrap-container__td Энтерпрайз
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 SEO-модуль
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Социальные сервисы
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Интеграция с Битрикс24
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Веб-формы
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Опросы
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Подписка и рассылки
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 A/B тестирование
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 E-mail маркетинг
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Реклама
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Веб-аналитика
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-          .compare-main-wrap
-            .compare-main-wrap-top
-              .compare-main-wrap-top__title Производительность
-              .compare-main-wrap-top__subtitle Здесь представлен список модулей, которые входят в данную лицензию и сравниваются с другими
-            .compare-main-wrap-container
-              .compare-main-wrap-container-th
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0
-                .compare-main-wrap-container__td Старт
-                .compare-main-wrap-container__td Стандарт
-                .compare-main-wrap-container__td Малый бизнес
-                .compare-main-wrap-container__td Бизнес
-                .compare-main-wrap-container__td Энтерпрайз
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Композитный сайт
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Компрессия
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Ежемесячный трафик CDN
-                .compare-main-wrap-container__td 5 гб
-                .compare-main-wrap-container__td 10 гб
-                .compare-main-wrap-container__td 20 гб
-                .compare-main-wrap-container__td 40 гб
-                .compare-main-wrap-container__td ∞
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Допустимое число серверов
-                .compare-main-wrap-container__td 1
-                .compare-main-wrap-container__td 1
-                .compare-main-wrap-container__td 1
-                .compare-main-wrap-container__td 1
-                .compare-main-wrap-container__td от 4
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Монитор производительности
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Визуальное масштабирование
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Пульс конверсии
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Модуль "Веб-кластер"
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Балансировка нагрузки между серверами
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Отказоустойчивость на уровне кластера серверов
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Географически распределенный кластер
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Автоматическое масштабирование
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-          .compare-main-wrap
-            .compare-main-wrap-top
-              .compare-main-wrap-top__title Безопасность и мобильность
-              .compare-main-wrap-top__subtitle Здесь представлен список модулей, которые входят в данную лицензию и сравниваются с другими
-            .compare-main-wrap-container
-              .compare-main-wrap-container-th
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0
-                .compare-main-wrap-container__td Старт
-                .compare-main-wrap-container__td Стандарт
-                .compare-main-wrap-container__td Малый бизнес
-                .compare-main-wrap-container__td Бизнес
-                .compare-main-wrap-container__td Энтерпрайз
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Облачные хранилища
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Автоматический бекап в облако
-                .compare-main-wrap-container__td 2 гб
-                .compare-main-wrap-container__td 2 гб
-                .compare-main-wrap-container__td 4 гб
-                .compare-main-wrap-container__td 10 гб
-                .compare-main-wrap-container__td ∞
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Маркетплейс
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Защита от DDOS
-                .compare-main-wrap-container__td 
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Базы данных
-                .compare-main-wrap-container__td MySQL
-                .compare-main-wrap-container__td MySQL
-                .compare-main-wrap-container__td MySQL 
-                .compare-main-wrap-container__td MySQL
-                .compare-main-wrap-container__td MySQL
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Проактивная защита
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Мобильная платформа
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Мобильное приложение интернет-магазина
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes
-              .compare-main-wrap-container-tr
-                .compare-main-wrap-container__td.compare-main-wrap-container__td0 Технология Push & Pull
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td
-                  +yes
-                .compare-main-wrap-container__td 
-                  +yes 
-        .compare-bot
-          h3.compare-bot__title Остались вопросы?
-          .compare-bot-container
-            .compare-bot-container-wrap
-              img(src="assets/images/mail-big-img.svg", alt="").compare-bot-container-wrap__img
-            form(action="", method="get").compare-bot-container-form
-              h4.compare-bot-container-form__title Пишите, мы ответим
-              .compare-bot-container-form-wrap
-                input#telephone-input(type="tel", name="telephone-in" placeholder="Телефон").input-half
-                input#email-input(type="email", name="email-in" placeholder="E-mail").input-half
-                textarea#textarea-input(name="textarea-in" placeholder="Сообщение").textarea-full
-                .submit
-                  input(type="submit", value="Связаться").submit__btn
-                  p.submit__conf Отправляя личные данные, Вы соглашаетесь с политикой конфиденциальности
-
-  
+    section.first-section
+      h1(data-wow-delay="2.4s").first-section__title.wow.fadeInUp Стажерская программа
+      h2(data-wow-delay="2.4s").first-section__subtitle.wow.fadeInUp Компания ALP GROUP представляет стажерскую программу профессионального развития в области разработки и тестирования
+      .direction-wrap
+        div(data-wow-delay="2.7s").direction-block.wow.fadeInUp
+          img.direction-block__img(src="assets/images/1c.png", alt="1c")
+          br
+          p.direction-block__p Разработка 1С
+        div(data-wow-delay="2.5s").direction-block.wow.fadeInUp
+          img.direction-block__img(src="assets/images/bi.png", alt="bi")
+          br
+          p.direction-block__p Обработка и анализ данных (BI) 
+        div(data-wow-delay="2.9s").direction-block.wow.fadeInUp
+          img.direction-block__img(src="assets/images/test.png", alt="test")
+          br
+          p.direction-block__p Тестирование
+      .cta-block(data-wow-delay="2.4s").wow.fadeInUp
+        .cta-block-wrap
+          .cta-block-text(data-wow-delay="2.5s").wow.fadeInUp
+            p.cta-block-text__top Открыт набор на курсы для студентов 3 и 4 курса
+            p.cta-block-text__bot Для участия в программе заполни анкету
+          a(href="#trainee-form" data-wow-delay="2.5s").cta-block__btn.wow.fadeInUp Заполнить анкету
+    section.second-section
+      h1.second-section__title.wow.fadeInUp Сделай шаг навстречу успешной карьере<br>вместе с ALP Group
+      .list-wrap
+        ul.list-ul
+          li(data-wow-delay="0.1s").wow.fadeInUp Бесплатное обучение по уникальной Стажерской программе ALP Group
+          li(data-wow-delay="0.2s").wow.fadeInUp Наставничество со стороны признанных IT-экспертов ALP
+          li(data-wow-delay="0.3s").wow.fadeInUp Решение практических и интересных задач в процессе обучения
+          li(data-wow-delay="0.4s").wow.fadeInUp Возможность работать в удобное время (летняя практика и не только)
+          li(data-wow-delay="0.5s").wow.fadeInUp Возможность стажировки и трудоустройства для студентов, успешно завершивших стажерскую программу
+    section.third-section
+      h1.third-section__title.wow.fadeInUp Кого мы ищем?
+      .cards-wrap
+        .cards-wrap__card(data-wow-delay="0.1s").wow.fadeInUp
+          .card-img
+            img(src="assets/images/ready.png", alt="CheckIt")
+          p.card__p Кандидатов, обладающих<br>базовыми навыками<br>программирования
+        .cards-wrap__card(data-wow-delay="0.3s").wow.fadeInUp
+          .card-img
+            img(src="assets/images/ready.png", alt="CheckIt")
+          p.card__p Кандидатов, обладающих<br>системным мышлением
+        .cards-wrap__card(data-wow-delay="0.5s").wow.fadeInUp
+          .card-img
+            img(src="assets/images/ready.png", alt="CheckIt")
+          p.card__p Кандидатов, имеющих<br>огромное желание учиться<br>и развиваться
+    section.diagram 
+      .diagram-wrap
+        img(src="assets/images/axis.png", alt="axis").diagram-wrap__axis.wow.fadeInUp
+        img(src="assets/images/value.png", alt="value" data-wow-delay="0.3s").diagram-wrap__value.wow.fadeInUp
+          
+    section.advantage
+      h1.advantage__title.wow.fadeInUp Компания ALP GROUP работает<br>на рынке IT услуг более 20 лет
+      .advantage-wrap
+        .advantage-block(data-wow-delay="0.5s").wow.fadeInUp
+          img.advantage-block__img(src="assets/images/fingerUp.png", alt="1c")
+          br
+          p.advantage-block__p Достойная<br>заработаная плата
+        .advantage-block(data-wow-delay="0.3s").wow.fadeInUp
+          img.advantage-block__img(src="assets/images/house.png", alt="bi")
+          br
+          p.advantage-block__p Работа<br>рядом с домом 
+        .advantage-block(data-wow-delay="0.1s").wow.fadeInUp
+          img.advantage-block__img(src="assets/images/stairs.png", alt="test")
+          br
+          p.advantage-block__p Профессиональный<br>и карьерный рост
+    section.clients
+      h1.clients__title.wow.fadeInUp Наши клиенты
+      .clients-wrap.wow(data-wow-delay="0.3s").fadeInUp
+        img(src="assets/images/logos.png", alt="firm1c")
+    section.about
+      h1.about__title.wow.fadeInUp Сделай шаг навстречу успешной карьере<br>вместе с ALP Group
+      .about-text.wow.fadeInUp(data-wow-delay="0.1s")
+        p.about-text__top <span>Миссия компании</span> — разработка и внедрение новейших технологий автоматизации бизнеса, за счет которых наши Заказчики получают преимущества перед конкурентами.
+        p.about-text__top Мы вместе создаем истории успеха.
+        p.about-text__bot.wow.fadeInUp(data-wow-delay="0.3s") Компания ALP GROUP, эксперт в области разработки, внедрения и сопровождения бизнес-систем, работает на рынке  с 1996 года.  За время, прошедшее с момента создания, АЛП сумела занять лидирующие позиции на российском рынке в Enterprise сегменте. На счету ALP GROUP крупнейшие внедрение 1С в России.
+      .about-advantage
+        .advantage-block.wow.fadeInUp(data-wow-delay="0.3s")
+          .advantage-counter
+            .advantage-increment.advantage-increment1 200
+            | +
+          p.advantage-block__p Общее количество<br>заказчиков
+        .advantage-block.wow.fadeInUp(data-wow-delay="0.1s")
+          .advantage-counter
+            .advantage-increment.advantage-increment2 4,8
+            | /5
+          p.advantage-block__p Удовлетворенность<br>заказчиков
+        .advantage-block.wow.fadeInUp(data-wow-delay="0.2s")
+          .advantage-counter
+            .advantage-increment.advantage-increment3 400
+            | +
+          p.advantage-block__p Общее количество<br>сотрудников
+        .advantage-block.wow.fadeInUp(data-wow-delay="0.4s")
+          .advantage-counter
+            .advantage-increment.advantage-increment4 250
+            | +
+          p.advantage-block__p Сертифицированных<br>специалистов
+      .about-contacts.wow.fadeInUp
+        h2.about-contacts__title.wow.fadeInUp(data-wow-delay="0.1s") Лукина Ольга
+        .about-cont-wrap.wow.fadeInUp(data-wow-delay="0.3s")
+          p.about-contacts__p Менеджер по обучению персонала, департамент корпоративных информационных систем
+          a.about-contacts__link(href="mailto:olga.lukina@alp.ru") <br>
+            img(src="assets/images/mail.png", alt="mail")
+            | olga.lukina@alp.ru
+          a.about-contacts__link(href="tel:88005555151") <br>
+            img(src="assets/images/num.png", alt="num")
+            | 8 (800) 555-51-51
+          a.about-contacts__link(href="tel:+74957855151") <br>
+            img(src="assets/images/tel.png", alt="tel")
+            | +7 (495) 785-51-51 доб. (5665)
+    .popup-trainee.white-popup.mfp-hide#trainee-form
+      form(action="#", method="get")
+        h1.form__title Анкета для записи на собеседование
+        p.form__p Уважаемые студенты, для рассмотрения вашей кандидатуры на запись в программу профессионального развития в области разработки и тестирования «Стажерская программа», просим заполнить короткую анкету с вашими контактными данными.
+        p.form__p Пожалуйста, заполните в свободной форме все поля анкеты и нажмите кнопку «Готово». Мы свяжемся с вами по указанным в анкете контактам.
+        .label-wrap
+          label(for="fio") Фамилия, имя и отчество полностью:
+          .in-block.input_full
+            input(type="text", name="fio" pattern="[А-Яа-яЁё]{10, }" required placeholder="Константин Константинович Константинопольский")
+        .label-wrap
+          label(for="age") Возраст:
+          .in-block.in-block_age
+            input(type="text", name="age" required placeholder="20 лет")
+        .label-wrap
+          label(for="tel") Телефон:
+          .in-block.in-block_tel
+            input(type="tel", name="tel" required placeholder="+7 800 700-06-11")
+        .label-wrap
+          label(for="mail") Адрес электронной почты:
+          .in-block.input_full
+            input(type="email", name="mail" required placeholder="info@mail.ru")
+        .label-wrap
+          label(for="uni") Название университета:
+          .in-block.input_full
+            input(type="text", name="uni" required)
+        .label-wrap
+          label(for="uni") Специальность, курс:
+          .in-block.input_full
+            input(type="text", name="uni" required)
+        .label-wrap
+          label(for="form-study") Форма обучения:
+          .in-block
+            select(name="form-study" required)
+              option(value="Дистанционная" selected) Дистанционная
+              option(value="Очная") Очная
+              option(value="Заочная") Заочная
+              option(value="Вечерняя" ) Вечерняя
+        .label-wrap
+          label(for="ball") Средний балл зачетной книжки
+          .in-block.in-block_ball
+            input(type="text", name="ball" required placeholder="12")
+        .label-wrap
+          label(for="lvlComp") Уровень владения компьютером:
+          .in-block
+            select(name="lvlComp" required) 
+              option(value="Системный администратор" selected) Системный администратор
+              option(value="Не системный администратор") Не системный администратор
+        .label-wrap
+          label(for="lblEnglish") Уровень владения английским языком:
+          .in-block
+            select(name="lblEnglish" required)
+              option(value="Pre-Intermediate" selected) Pre-Intermediate
+              option(value="Intermediate") Intermediate
+              option(value="Upper-Intermediate") Upper-Intermediate
+        .label-wrap
+          label(for="lvlComp") Отношение к воинской службе:
+          .in-block
+            select(name="lvlComp" required)
+              option(value="Не подлежу призыву" selected) Не подлежу призыву
+              option(value="Годен") Годен
+        .label-wrap.label-wrap_full
+          label(for="int-les") Укажите 3 наиболее интересных предмета для вас в ВУЗе:
+          .in-block
+            input(type="text", name="int-les" required)        
+        .label-wrap.label-wrap_full
+          label(for="notInt-les") Укажите 3 наименее интересных предмета для вас в ВУЗе:
+          .in-block
+            input(type="text", name="notInt-les" required) 
+        .label-wrap.label-wrap_full
+          label(for="dopCourse") Дополнительное образование, курсы:
+          .in-block
+            textarea(name="dopCourse")
+        .label-wrap.label-wrap_full
+          label(for="olimpiada") Достижения (участие в Олимпиадах, конкурсах, получение наград, грантов и т.д.):
+          .in-block
+            textarea(name="olimpiada")
+        .label-wrap.label-wrap_full
+          label(for="hobby") Ваши увлечения, хобби:
+          .in-block
+            textarea(name="hobby" required)
+        .label-wrap.label-wrap_full
+          label(for="about1c") Что вы знаете про 1С?
+          .in-block
+            textarea(name="about1c" required)
+        .label-wrap.label-wrap_full
+          label(for="aboutALP") Что вы ожидаете от прохождения стажировки в ALP Group?
+          .in-block
+            textarea(name="aboutALP" required)
+        .label-wrap.label-wrap_full
+          label(for="aboutTraine") На что, по вашему мнению, стоит обратить внимание при рассмотрении вашей кандидатуры?
+          .in-block
+            textarea(name="aboutTraine" required)
+        .label-wrap.label-wrap_full
+          label(for="whenReady") С какого времени готовы приступить к стажировке?
+          .in-block
+            textarea(name="whenReady" required)
+        .submit-block
+          input(type="submit", value="Отправить анкету")
+          p.submit-block__p Нажимая на кнопку «Отправить», вы соглашаетесь<br>с 
+            a(href="#") политикой конфиденциальности
+          
+        
         
 
+    script(src="assets/scripts/jquery.min.js")
+    script(src="assets/scripts/spincrement.min.js")
+    script(src="assets/scripts/wow.min.js")
+    script(src="assets/scripts/magnific.min.js")
+    script(src="assets/scripts/inputmask.min.js")
+    script(src="assets/scripts/main.js")
+      
