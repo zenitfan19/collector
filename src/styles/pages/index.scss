@@ -6,6 +6,9 @@ body {
   max-width: 1700px;
   padding: 0 30px;
   margin: 0 auto;
+  @include w480{
+    padding: 0 20px;
+  }
   &__title{
     font-size: 90px;
     font-family: 'Uni Neue';
@@ -16,9 +19,26 @@ body {
     -webkit-text-fill-color: transparent;
     font-weight: 300;
     font-style: normal;
+    @include w1440{
+      font-size: 70px;
+      padding: 30px 10px 20px;
+    }
+    @include w1024{
+      font-size: 60px;
+    }
+    @include w768{
+      font-size: 54px;
+    }
+    @include w480{
+      font-size: 32px;
+      padding: 20px 0 10px;
+    }
+    @include w320{
+      font-size: 26px;
+    }
   }
   &__subtitle{
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -27,19 +47,62 @@ body {
     font-family: 'Ubuntu';
     font-weight: 300;
     line-height: 42px;
+    @include w1440{
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+    @include w768{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    @include w480{
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include w320{
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
   .direction-wrap{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 70px;
+    @include w768{
+      padding-bottom: 40px;
+    }
+    @include w480{
+      padding-bottom: 20px;
+    }
     .direction-block{
       text-align: center;
       width: 33%;
+      @include w480{
+        img{
+          width: 80%;
+        }   
+      }
+      @include w320{
+        img{
+          width: 70%;
+        }
+      }
       &__p{
         padding-top: 30px;
         font-size: 18px;
         font-family: 'Ubuntu';
+        @include w768{
+          font-size: 14px;
+          padding-top: 20px;
+        }
+        @include w480{
+          font-size: 12px;
+          padding-top: 15px;
+        }
+        @include w320{
+          font-size: 10px;
+        }
       }
     }
   }
@@ -49,6 +112,15 @@ body {
     background-color: #322a43;
     box-sizing: border-box;
     border: 3px solid #2f2640;
+    @include w1440{
+      padding: 30px 0;
+    }
+    @include w768{
+      padding: 20px 0;
+    }
+    @include w480{
+      padding: 10px 10px;
+    }
     &-wrap{
       max-width: 1360px;
       margin: 0 auto;
@@ -56,6 +128,14 @@ body {
       justify-content: space-between;
       align-items: center;
       padding: 0 20px;
+      @include w768{
+        padding: 0 15px;
+      }
+      @include w480{
+        padding: 0;   
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     &-text{
       &__top{
@@ -63,12 +143,35 @@ body {
         padding-bottom: 20px;
         font-weight: 700;
         font-family: 'Ubuntu';
+        @include w1440{
+          font-size: 24px;
+          padding-bottom: 15px;
+        }
+        @include w768{
+          font-size: 18px;
+          padding-bottom: 10px;
+        }
+        @include w480{
+          font-size: 14px;
+          padding-bottom: 5px;
+          font-weight: 500;
+        }
       }
       &__bot{
         font-size: 24px;
         color: #bfbdc2;
         font-weight: 500;
         font-family: 'Ubuntu';
+        @include w1440{
+          font-size: 18px;
+        }
+        @include w768{
+          font-size: 16px;
+        }
+        @include w480{
+          font-size: 12px;
+          padding-bottom: 20px;
+        }
       }
     }
     &__btn{
@@ -88,11 +191,38 @@ body {
       &:hover{
         cursor: pointer;
       }
+      @include w1440{
+        max-width: 260px;
+        padding: 15px 20px;
+      }
+      @include w768{
+        padding: 10px 15px;
+        width: auto;
+        flex-grow: 0;
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+      @include w480{
+        margin-left: 0;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px 20px;
+      }
     }
   }
 }
 .second-section{
   padding: 140px 30px 0;
+  @include w1440{
+    padding: 80px 30px 0;
+  }
+  @include w768{
+    padding: 50px 30px 0;
+  }
+  @include w480{
+    padding: 30px 20px 0;       
+  }
   &__title{
     font-size: 60px;
     line-height: 68px;
@@ -100,10 +230,34 @@ body {
     font-family: 'Ubuntu';
     text-align: center;
     padding-bottom: 50px;
+    @include w1440{
+      font-size: 48px;
+      line-height: 54px;
+      padding-bottom: 30px;
+    }
+    @include w1024{
+      font-size: 42px;
+      line-height: 48px;
+    }
+    @include w768{
+      font-size: 32px;
+      line-height: 36px;
+    }
+    @include w480{
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 20px;
+    }
   }
   .list-wrap{
     max-width: 1360px;
     margin: 0 auto 60px;
+    @include w1440{
+      margin-bottom: 40px;
+    }
+    @include w480{
+      margin-bottom: 30px;
+    }
     .list-ul{
       li{
         font-weight: 500;
@@ -111,8 +265,29 @@ body {
         font-size: 24px;
         line-height: 34px;
         list-style-type: none;
+        @include w1440{
+          font-size: 20px;
+          line-height: 28px;
+        }
+        @include w768{
+          font-size: 16px;
+          line-height: 20px;
+        }
+        @include w480{
+          font-size: 12px;
+          line-height: 16px;
+        }
         &:not(:last-child){
           margin-bottom: 20px;
+          @include w1440{
+            margin-bottom: 15px;
+          }
+          @include w768{
+            margin-bottom: 10px;
+          }
+          @include w480{
+            margin-bottom: 6px;
+          }
         }
         &:before{
           content: "•";
@@ -125,18 +300,44 @@ body {
 }
 .third-section{
   padding: 0 30px;
+  @include w480{
+    padding: 0 20px;
+  }
   &__title{
     font-size: 60px;
     font-weight: 500;
     font-family: 'Ubuntu';
     padding-bottom: 65px;
     text-align: center;
+    @include w1440{
+      font-size: 48px;
+      padding-bottom: 40px;
+    }
+    @include w1024{
+      font-size: 42px;
+      line-height: 48px;
+    }
+    @include w768{
+      font-size: 32px;
+      line-height: 36px;
+    }
+    @include w480{
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 20px;
+    }
   }
   .cards-wrap{
     max-width: 1640px;
     margin: 0 auto 110px;
     display: flex;
     justify-content: space-between;
+    @include w1440{
+      margin-bottom: 60px;
+    }
+    @include w480{
+      flex-direction: column;
+    }
     &__card{
       width: calc(33% - 20px);
       box-sizing: border-box;
@@ -145,6 +346,15 @@ body {
       box-sizing: border-box;
       border: 3px solid #2f2640;
       padding: 32px 10px 25px;
+      @include w480{
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        &:not(:last-child){
+          margin-bottom: 20px;
+        }
+      }
       .card-img{
         width: 80px;
         height: 80px;
@@ -154,6 +364,22 @@ body {
         justify-content: space-around;
         align-items: center;
         margin: 0 auto;
+        @include w768{
+          width: 60px;
+          height: 60px;
+          img{
+            width: 50%;
+          }
+        }
+        @include w480{
+          margin: 0;
+          margin-right: 10px;
+          width: 45px;
+          height: 45px;
+          img{
+            
+          }
+        }
       }
       .card__p{
         padding-top: 35px;
@@ -162,16 +388,59 @@ body {
         font-size: 24px;
         line-height: 35px;
         text-align: center;
+        @include w1440{
+          padding-top: 25px;
+          font-size: 20px;
+          line-height: 24px;
+        }
+        @include w768{
+          font-size: 16px;
+          line-height: 20px;
+          padding-top: 18px;
+        }
+        @include w480{
+          padding-top: 0;
+          text-align: left;
+          font-size: 14px;
+          line-height: 16px;
+          font-weight: 300;
+        }
       }
     }
   }
 }
 .diagram{
-  padding: 0 30px 120px;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1640px;
+  margin: 0 auto 120px;
+  position: relative;
+  overflow-y: hidden;
+  svg{
+    display: none;
+    @include w768{
+      position: absolute;
+      top: 20px;
+      left: 70px;
+      display: block;
+      width: 30px;
+      height: 30px;
+      stroke: white;
+      fill: white;
+    }
+  }
+  @include w1440{
+    margin-bottom: 40px;
+  }
   &-wrap{
-    max-width: 1640px;
-    margin: 0 auto 110px;
+    padding-top: 3px;
+    box-sizing: border-box;
+    margin: 0 auto;
     position: relative;
+    padding: 0 30px;
+    min-width: 1024px;
+    overflow-x: auto;
+    overflow-y: hidden;
     &__axis{
       width: 100%;
       position: relative;
@@ -179,34 +448,78 @@ body {
     }
     &__value{
       position: absolute;
-      width: 97.7%;
-      left: 1.8%;
-      top: -6px;
+      width: calc(97.7% - 60px);
+      left: calc(1.8% + 30px);
+      top: -3px;
       z-index: 5;
     }
   }
 }
 .advantage{
   padding: 0 30px 120px;
+  @include w1440{
+    padding: 0 30px 0px;
+  }
+  @include w480{
+    padding: 0 20px;
+  }
   &__title{
     font-size: 60px;
     font-weight: 500;
     font-family: 'Ubuntu';
     padding-bottom: 65px;
     text-align: center;
+    @include w1440{
+      font-size: 48px; 
+    }
+    @include w1024{
+      font-size: 42px;
+      line-height: 48px;
+    }
+    @include w768{
+      font-size: 32px;
+      line-height: 36px;
+      padding-bottom: 30px;
+    }
+    @include w480{
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 20px;
+    }
   }
   &-wrap{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 70px;
+    margin: 0 auto;
+    max-width: 1640px;
+    @include w768{
+      padding-bottom: 40px;
+    }
     .advantage-block{
       text-align: center;
       width: 33%;
+      @include w480{
+        img{
+          width: 65%;
+        }
+      }
       &__p{
         padding-top: 30px;
         font-size: 18px;
         font-family: 'Ubuntu';
+        @include w768{
+          padding-top: 20px;
+          font-size: 14px;
+        }
+        @include w480{
+          font-size: 12px;
+          padding-top: 14px;
+        }
+        @include w320{
+          font-size: 10px;
+        }
       }
     }
   }
@@ -219,25 +532,115 @@ body {
     font-family: 'Ubuntu';
     padding-bottom: 65px;
     text-align: center;
+    @include w1440{
+      font-size: 48px;
+    }
+    @include w1024{
+      font-size: 42px;
+      line-height: 48px;
+    }
+    @include w768{
+      font-size: 32px;
+      line-height: 36px;
+      padding-bottom: 30px;
+    }
+    @include w480{
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 20px;
+    }
   }
   &-wrap{
     max-width: 1640px;
     margin: 0 auto;
     padding-bottom: 120px;
-    img{
-      width: 100%;
-      height: auto;
+    display: flex;
+    justify-content: space-between;
+    @include w1440{
+      padding-bottom: 70px;
+      flex-wrap: wrap;
     }
+    @include w768{
+      padding-bottom: 40px;
+    }
+    @include w480{
+      justify-content: center;
+    }
+    &-img{
+      
+      img{
+        display: block;
+        margin: 0 auto;
+      }
+      &:nth-child(n + 7){
+        @include w1440{
+          margin-top: 20px;
+        }
+      }
+      &:nth-child(n + 5){
+        @include w768{
+          margin-top: 20px;
+        }
+      }
+      &:nth-child(n + 4){
+        @include w480{
+          margin-top: 15px;
+        }
+      }
+      &:nth-child(n + 3){
+        @include w320{
+          margin-top: 10px;
+        }
+      }
+      @include w1440{
+        min-width: 16%;
+        max-width: 20%;
+      }
+      @include w768{
+        min-width: 25%;
+        max-width: 33%;
+      }
+      @include w480{
+        flex-grow: 1;
+        min-width: 33%;
+        max-width: 49.8%;
+      }
+      @include w320{
+        min-width: 50%;
+        max-width: 100%;
+      }
+    }
+
   }
 }
 .about{
   padding: 0 30px;
+  @include w480{
+    padding: 0 20px;
+  }
   &__title{
     font-size: 60px;
     font-weight: 500;
     font-family: 'Ubuntu';
     padding-bottom: 65px;
     text-align: center;
+    @include w1440{
+      font-size: 48px;
+    }
+    @include w1024{
+      font-size: 42px;
+      line-height: 48px;
+    }
+    @include w768{
+      font-size: 32px;
+      line-height: 36px;
+      padding-bottom: 30px;
+    }
+    @include w480{
+      font-size: 20px;
+      line-height: 24px;
+      padding-bottom: 20px;
+    }
   }
   &-text{
     max-width: 1425px;
@@ -246,10 +649,32 @@ body {
     padding: 0 30px 60px 30px;
     font-weight: 300;
     font-family: 'Ubuntu';
+    @include w1440{
+      padding: 0 20px 50px;
+    }
+    @include w768{
+      padding: 0 20px 40px;
+    }
+    @include w480{
+      padding: 0 0 40px;
+    }
     &__top{
       font-size: 36px;
       line-height: 48px;
       padding-bottom: 35px;
+      @include w1440{
+        font-size: 28px;
+        line-height: 32px;
+      }
+      @include w768{
+        font-size: 18px;
+        line-height: 22px;
+        padding-bottom: 20px;
+      }
+      @include w480{
+        font-size: 14px;
+        line-height: 18px;
+      }
       span{
         color: #e58c06;
       }
@@ -257,6 +682,18 @@ body {
     &__bot{
       font-size: 24px;
       line-height: 34px;
+      @include w1440{
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @include w768{
+        font-size: 14px;
+        line-height: 18px;
+      }
+      @include w480{
+        font-size: 12px;
+        line-height: 15px;
+      }
     }
   }
   &-advantage{
@@ -264,6 +701,12 @@ body {
     justify-content: space-between;
     max-width: 1425px;
     margin: 0 auto 85px;
+    @include w1440{
+      margin-bottom: 65px;
+    }
+    @include w768{
+      margin-bottom: 40px;
+    }
     .advantage-block{
       text-align: center;
       max-width: 180px;
@@ -273,9 +716,15 @@ body {
         font-family: 'Ubuntu';
         color: #ffad00;
         margin: 0 auto 20px;
+        @include w768{
+          font-size: 40px;
+          margin: 0 auto 10px;
+        }
+        @include w480{
+          font-size: 20px;
+        }
       }
       .advantage-increment{
-        
         display: inline;
       }
       &__p{
@@ -283,6 +732,18 @@ body {
         line-height: 24px;
         font-weight: 300;
         font-family: 'Ubuntu';
+        @include w768{
+          font-size: 14px;
+          line-height: 18px;
+        }
+        @include w480{
+          font-size: 10px;
+          line-height: 14px;
+        }
+        @include w320{
+          font-size: 8px;
+          line-height: 12px;
+        }
       }
     }
   }
@@ -292,30 +753,73 @@ body {
     font-family: 'Ubuntu';
     font-weight: 300;
     padding: 0 20px 80px;
+    @include w480{
+      padding: 0 0 40px;
+    }
     &__title{
       font-weight: 300;
       font-size: 36px;
       line-height: 40px;
       color: #ffad00;
       margin-bottom: 20px;
+      @include w768{
+        font-size: 24px;
+        line-height: 28px;
+      }
+      @include w480{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
     }
     &__p{
       font-size: 18px;
       line-height: 24px;
+      padding-bottom: 20px;
+      @include w768{
+        font-size: 14px;
+        line-height: 18px;
+      }
+      @include w480{
+        font-size: 14px;
+        padding-bottom: 10px;
+      }
     }
     &__link{
       font-size: 24px;
       color: white;
-      display: block;
+      display: flex;
+      align-items: center;
       text-decoration: none;
+      height: 26px;
+      @include w768{
+        font-size: 18px;
+      }
+      @include w480{
+        font-size: 14px;
+      }
       &:not(:last-child){
-        margin-bottom: -5px;
+        margin-bottom: 18px;
+        @include w768{
+          margin-bottom: 10px;
+        }
+        @include w480{
+          margin-bottom: 6px;
+        }
       }
       img{
         margin-right: 25px;
         vertical-align: middle;
+        @include w768{
+          margin-right: 15px;
+          transform: scale(0.8);
+        }
       }
     }
+  }
+}
+.mfp-content{
+  @include w1024{
+    padding: 10px !important;
   }
 }
 .popup-trainee {
@@ -327,13 +831,26 @@ body {
   border-radius: 10px;
   margin: 20px auto;
   box-sizing: border-box;
+  @include w1024{
+    margin: 0 auto;
+  }
+  @include w480{
+    padding: 0 20px;
+  }
   .mfp-close{
     font-size: 30px;
-    color: #d9345d;
+    background: url('../images/closeBtn.png');
     width: 30px;
     height: 30px;
     top: 30px;
     right: 30px;
+    @include w480{
+      width: 20px;
+      height: 20px;
+      background-size: 100% 100%;
+      top: 20px;
+      right: 20px;
+    }
   }
   form{
     color: black;
@@ -343,6 +860,15 @@ body {
     .label-wrap{
       padding-bottom: 30px;
       position: relative;
+      display: flex;
+      align-items: center;
+      @include w1024{
+        padding-bottom: 15px;
+      }
+      @include w480{
+        flex-direction: column;
+        align-items: flex-start;
+      }
       .in-block{
         position: relative;
         &_tel{
@@ -350,15 +876,24 @@ body {
           input{
             width: 100%;
           }
+          @include w1024{
+            width: 198px;
+          }
         }
         &_age{
           width: 130px;
           input{
             width: 100%;
           }
+          @include w1024{
+            width: 115px;
+          }
         }
         &_ball{
           width: 90px;
+          @include w1024{
+            width: 75px;
+          }
           input{
             width: 100%;
           }
@@ -382,6 +917,19 @@ body {
         font-family: 'Ubuntu';
         font-weight: 300;
         font-size: 24px;
+        @include w1024{
+          font-size: 18px;
+          max-width: 40%;
+        }
+        @include w768{
+          font-size: 16px;
+          max-width: 35%;
+          padding-right: 10px;
+        }
+        @include w480{
+          max-width: 100%;
+          margin-bottom: 15px;
+        }
       }
       input, select, textarea{
         display: block;
@@ -395,6 +943,12 @@ body {
         border-radius: 30px;
         padding: 0 25px;
         outline: none;
+        @include w1024{
+          font-size: 18px;
+        }
+        @include w768{
+          font-size: 16px;
+        }
       }
       select{
         padding: 0 41px 0 25px;
@@ -402,10 +956,16 @@ body {
         background: url('../images/arrDown.png') no-repeat no-repeat #fff;
         background-position: right 16px center;
         width: 386px;
+        @include w480{
+          width: 100%;
+        }
       }
       .input_full{
         flex-grow: 1;
         input{
+          width: 100%;
+        }
+        @include w480{
           width: 100%;
         }
       }
@@ -422,6 +982,9 @@ body {
         label{
           max-width: 100%;
           margin-bottom: 30px;
+          @include w768{
+            margin-bottom: 15px;
+          }
         }
         .in-block{
           width: 100%;
@@ -430,13 +993,19 @@ body {
           width: 100%;
         }
       }
-      display: flex;
-      align-items: center;
     }
     .submit-block{
       display: flex;
       align-items: center;
       padding: 50px 0 120px;
+      @include w768{
+        padding: 40px 0 50px;
+      }
+      @include w480{
+        padding: 30px 0 30px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
       input{
         background: linear-gradient(top, #d9345d, #dc355f);
         box-shadow: 7px 7px 15px 0 #661428;
@@ -452,12 +1021,23 @@ body {
         font-weight: 700;
         height: 80px;
         margin-right: 32px;
+        @include w768{
+          font-size: 18px;
+          max-width: 240px;
+          height: 60px;
+        }
+        @include w480{
+          margin-bottom: 20px;
+        }
       }
       &__p{
         font-family: 'Ubuntu';
         font-size: 18px;
         line-height: 26px;
         display: block;
+        @include w768{
+          font-size: 14px;
+        }
         a{
           text-decoration: underline;
           color: black;
@@ -469,6 +1049,18 @@ body {
       font-family: 'Uni Neue';
       text-align: left;
       padding: 110px 0 40px;
+      @include w1024{
+        font-size: 40px;
+        padding: 40px 0 40px;
+        font-weight: 700;
+      }
+      @include w768{
+        font-size: 32px;
+      }
+      @include w480{
+        font-size: 26px;
+        padding: 30px 0;
+      }
     }
     .form__p{
       text-align: left;
@@ -477,7 +1069,17 @@ body {
       font-family: 'Ubuntu';
       font-weight: 300;
       padding-bottom: 20px;
+      @include w1024{
+        font-size: 18px;
+        line-height: 22px;
+      }
+      @include w768{
+        font-size: 16px;
+      }
+      @include w480{
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
-  }
-  
+  } 
 }
