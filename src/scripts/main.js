@@ -44,5 +44,17 @@ $(document).ready(function(){
 		alias: "email",
 		showMaskOnHover: false,
 		showMaskOnFocus: true
-	});
+  });
+
+
+  /*ticker*/ 
+  $('.ticker').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 15000,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    arrows: false 
+  });
 });
