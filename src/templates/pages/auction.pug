@@ -1,0 +1,143 @@
+extends ../common/main.pug
+block title
+  title Главная 
+block content
+  .wrapper
+    .head
+      .breadcrumb
+        a(href="#").breadcrumb__link Главная
+        a(href="#").breadcrumb__link Аукцион
+      h1.gen-title Аукцион
+      .sort-select
+        .sort-select-display 
+          span
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L13 1" stroke="black" stroke-opacity="0.2"/>
+          </svg>
+        .sort-select-options
+          .sort-opt(data-selected="selected") По дате аукциона
+          .sort-opt По стоимости
+          .sort-opt По рейтингу
+          .sort-opt По по
+    .head-line
+  .search-block.search-block_auction
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1464 15.8536C15.3417 16.0488 15.6583 16.0488 15.8536 15.8536C16.0488 15.6583 16.0488 15.3417 15.8536 15.1464L15.1464 15.8536ZM15.8536 15.1464L12.3536 11.6464L11.6464 12.3536L15.1464 15.8536L15.8536 15.1464Z" fill="black" fill-opacity="0.5"/>
+          <path d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7Z" stroke="black" stroke-opacity="0.5"/>
+        </svg>
+        form(action="", method="get")
+          input#seacrh-field(type="text", name="", placeholder="Найдите лот")
+          button Поиск
+  .lots
+    .lots-wrap
+      .lots-item(data-lider="0" data-favourites="0")
+        .lots-item__img
+        .lots-item-desc
+          h3.lots-item__title Gordian I Africanus. Sestertius
+          p.lots-item__num Лот №
+            span 1
+          .lots-item-prew
+            .lots-item-prew-half.lots-item-prew-half1
+              p.lots-item-prew__assessment.lots-item-prew__p Оценка:
+                span 75000 руб
+              p.lots-item-prew__current-rate.lots-item-prew__p Текущая ставка:
+                span 55000 руб
+              p.lots-item-prew__rate.lots-item-prew__p Ставок:
+                span 5
+            .lots-item-prew-half.lots-item-prew-half2
+              p.lots-item-prew__finish До завершения
+              .lots-item-prew__finish-time
+                p 11
+                  span дней
+                p 10
+                  span часов
+                p 12
+                  span минут
+              a(href="#").lots-item-prew__btn Сделать ставку
+        .lots-item__favourites
+          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 1.26414L12.2446 6.47629L12.362 6.74897L12.6576 6.77639L18.3083 7.30047L14.0449 11.0458L13.8218 11.2418L13.8871 11.5314L15.1348 17.0675L10.2553 14.1701L10 14.0185L9.74472 14.1701L4.86519 17.0675L6.11291 11.5314L6.17818 11.2418L5.95513 11.0458L1.6917 7.30047L7.34236 6.77639L7.63799 6.74897L7.75541 6.47629L10 1.26414Z" stroke="#C69A60"/>
+          </svg>
+        img(src="assets/images/lider.png", alt="lider").lots-item__lider
+      .lots-item(data-lider="0" data-favourites="1")
+        .lots-item__img
+        .lots-item-desc
+          h3.lots-item__title Gordian I Africanus. Sestertius
+          p.lots-item__num Лот №
+            span 1
+          .lots-item-prew
+            .lots-item-prew-half.lots-item-prew-half1
+              p.lots-item-prew__assessment.lots-item-prew__p Оценка:
+                span 75000 руб
+              p.lots-item-prew__current-rate.lots-item-prew__p Текущая ставка:
+                span 55000 руб
+              p.lots-item-prew__rate.lots-item-prew__p Ставок:
+                span 5
+            .lots-item-prew-half.lots-item-prew-half2
+              p.lots-item-prew__finish До завершения
+              .lots-item-prew__finish-time
+                p 11
+                  span дней
+                p 10
+                  span часов
+                p 12
+                  span минут
+              a(href="#").lots-item-prew__btn Сделать ставку
+        .lots-item__favourites
+          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 1.26414L12.2446 6.47629L12.362 6.74897L12.6576 6.77639L18.3083 7.30047L14.0449 11.0458L13.8218 11.2418L13.8871 11.5314L15.1348 17.0675L10.2553 14.1701L10 14.0185L9.74472 14.1701L4.86519 17.0675L6.11291 11.5314L6.17818 11.2418L5.95513 11.0458L1.6917 7.30047L7.34236 6.77639L7.63799 6.74897L7.75541 6.47629L10 1.26414Z" stroke="#C69A60"/>
+          </svg>
+        img(src="assets/images/lider.png", alt="lider").lots-item__lider
+      .lots-item(data-lider="1" data-favourites="0")
+        .lots-item__img
+        .lots-item-desc
+          h3.lots-item__title Gordian I Africanus. Sestertius
+          p.lots-item__num Лот №
+            span 1
+          .lots-item-prew
+            .lots-item-prew-half.lots-item-prew-half1
+              p.lots-item-prew__assessment.lots-item-prew__p Оценка:
+                span 75000 руб
+              p.lots-item-prew__current-rate.lots-item-prew__p Текущая ставка:
+                span 55000 руб
+              p.lots-item-prew__rate.lots-item-prew__p Ставок:
+                span 5
+            .lots-item-prew-half.lots-item-prew-half2
+              p.lots-item-prew__finish До завершения
+              .lots-item-prew__finish-time
+                p 11
+                  span дней
+                p 10
+                  span часов
+                p 12
+                  span минут
+              a(href="#").lots-item-prew__btn Сделать ставку
+        .lots-item__favourites
+          <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 1.26414L12.2446 6.47629L12.362 6.74897L12.6576 6.77639L18.3083 7.30047L14.0449 11.0458L13.8218 11.2418L13.8871 11.5314L15.1348 17.0675L10.2553 14.1701L10 14.0185L9.74472 14.1701L4.86519 17.0675L6.11291 11.5314L6.17818 11.2418L5.95513 11.0458L1.6917 7.30047L7.34236 6.77639L7.63799 6.74897L7.75541 6.47629L10 1.26414Z" stroke="#C69A60"/>
+          </svg>
+        img(src="assets/images/lider.png", alt="lider").lots-item__lider
+    .pagination
+      p.sum-show Показать по: 
+        a(href="#").sum-show__link.sum-show__link_active 12
+        a(href="#").sum-show__link 18
+        a(href="#").sum-show__link 24
+      .page-show
+        a(href="#").page-show__link
+          <svg width="10" height="28" viewBox="0 0 10 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 1L1 14L9 27" stroke="black" stroke-linecap="round"/>
+          </svg>
+        p.page-show-num
+          span.page-show-num_1 1
+          |/ 
+          span.page-show-num_2 2
+        a(href="#").page-show__link
+          <svg width="10" height="28" viewBox="0 0 10 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L9 14L1 27" stroke="black" stroke-linecap="round"/>
+          </svg>
+
+
+
+
+
+

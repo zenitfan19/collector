@@ -1,0 +1,215 @@
+a, p, h1, h2, h3, h4, h5, h6, *{
+  font-family: 'Open Sans', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .footer{
+    margin-top: auto;
+  }
+}
+.main-header{
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
+  &_white{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    max-width: 100%;
+    width: 100%;
+    svg *{
+      stroke: white;
+    }
+    .main-header-right__profile :nth-child(2){
+      fill: white;
+      stroke: none;
+    }
+    a{
+      color: white;
+    }
+    .main-header__logo{
+      display: none;
+    }
+  }
+  &__logo{
+    display: block;
+  }
+  &-nav{
+    &__link{
+      font-size: 14px;
+      line-height: 19px;
+      text-transform: uppercase;
+      color: #171717;
+    }
+    &__link:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+  &-right{
+    display: flex;
+    align-items: center;
+    &__phone{
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: #171717;
+    }
+    &__link:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+}
+.head{
+  &_solo{
+    justify-content: flex-start;
+  }
+  display: flex;
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  height: 92px;
+  position: relative;
+  .breadcrumb{
+    display: flex;
+    &__link{
+      display: block;
+      color: rgba(0, 0, 0, 0.5);
+      &:not(:first-child){
+        &::before{
+          content: " > ";
+          margin: 0 9px;
+        }
+      }
+      &:last-child{
+        color: rgba(0, 0, 0, 0.75);
+      }
+      &:hover{
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+  }
+  .gen-title{
+    display: block;
+    position: absolute;
+    padding: 0 !important;
+    top: 20px;
+  }
+  .sort-select{
+    height: 100%;
+    .open{
+      display: block;
+    }
+    &-display{
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 217px;
+      height: 100%;
+      position: relative;
+      z-index: 10;
+      background-color: white;
+      span{
+        font-size: 14px;
+        line-height: 19px;
+        color: rgba(0, 0, 0, 0.8);
+      }
+      &:hover{
+        border: 1px solid rgba(0, 0, 0, 1);
+        cursor: pointer;
+        svg path{
+          stroke-opacity: 1;
+        }
+        span{
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+    &-options{
+      display: none;
+      background-color: white;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding-top: 30px;
+      position: relative;
+      z-index: 5;
+      top: -20px;
+      border-radius: 5px;
+      .sort-opt{
+        padding: 10px 20px;
+        color: rgba(0, 0, 0, 0.8);
+        &:not(:first-child){
+          border-top: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        &:hover{
+          cursor: pointer;
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+  }
+}
+.head-line{
+  width: 100%;
+  height: 2px;
+  background-color: #C69A60;
+}
+.search-block{
+  &_auction{
+    max-width: 612px;
+    margin: 30px auto 30px;
+  }
+  display: flex;
+  max-width: 525px;
+  width: 100%;
+  margin: 0 auto 97px;
+  background-color: white;
+  border: 1px solid #C69A60;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 50px;
+  align-items: center;
+  overflow: hidden;
+  svg{
+    padding: 0 10px 0 10px;
+  }
+  form{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    input{
+      width: 100%;
+      border: none;
+      font-size: 14px;
+      line-height: 19px;
+    }
+    button{
+      width: 116px;
+      border: none;
+      border-left: 1px solid #C69A60;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      background-color: white;  
+      &:hover{
+        cursor: pointer;
+      }       
+    }
+  }
+}

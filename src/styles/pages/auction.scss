@@ -1,0 +1,169 @@
+.lots{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+  &-wrap{
+    margin: -10px -10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 20px);
+  }
+  &-item{
+    margin: 10px;
+    width: calc(100% / 3 - 20px);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    &:hover{
+      box-shadow: 0px 0px 10px rgba(198, 154, 96, 0.25);
+      border: 1px solid #C69A60;
+    }
+    box-sizing: border-box;
+    border-radius: 5px;
+    &__img{
+      width: 100%;
+      background-image: url('../images/moneta-a.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &__title{
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      padding-bottom: 15px;
+    }
+    &__num{
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &-desc{
+      padding: 24px 20px 20px;
+    }
+    &__favourites{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      &:hover path{
+        fill: rgba(198,154,96, 0.5);
+        cursor: pointer;
+      }
+    }
+    &__lider{
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      display: none;
+    }
+    &-prew{
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      &-half{
+        width: calc(50% - 10px);
+        a{
+          display: block;
+        }
+      }
+      &__p{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        span{
+          font-weight: normal;
+          margin-left: 10px;
+        }
+      }
+      &__current-rate, &__rate{
+        margin-top: 15px;
+      }
+      &__finish{
+        font-size: 10px;
+        line-height: 14px;
+        margin-top: 5px;
+      }
+      &__finish-time{
+        margin-top: 15px;
+        display: flex;
+        p{
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 19px;    
+          display: flex;
+          align-items: flex-end;
+          span {
+            font-weight: normal;
+            display: block;
+            font-size: 10px;
+            line-height: 14px;
+            margin-left: 4px;
+          } 
+          &:not(:last-child){
+            margin-right: 8px;
+          }
+        }   
+      }
+      &__btn{
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        box-sizing: border-box;
+        border: 1px solid #C69A60;
+        border-radius: 5px;
+        color: #C69A60;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+  .pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .sum-show{
+      display: flex;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 19px;
+      &__link{
+        display: block;
+        margin-left: 17px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        color: black;
+        &_active{
+          font-weight: normal;
+        }
+        &:hover{
+          font-weight: normal;
+        }
+      }
+    }
+    .page-show{
+      display: flex;
+      align-items: center;
+      &__link{
+        display: block;
+        height: 28px;
+      }
+      &-num{
+        display: flex;
+        margin: 0 28px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        &_1{margin-right: 8px;}
+        &_2{margin-left: 8px;}
+        &__link{
+          display: block;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}
