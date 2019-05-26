@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;amp;subset=cyrillic" rel="stylesheet"/>
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/main.js"></script>
-    <title>Аукцион</title>
+    <title>Каталог</title>
   </head>
   <body> 
     <header class="main-header"><a class="main-header__logo" href="index.html"><img src="assets/images/logo.png" alt="Logo"/></a>
@@ -33,113 +33,46 @@
     </header>
     <div class="wrapper">
       <div class="head">
-        <div class="breadcrumb"><a class="breadcrumb__link" href="#">Главная</a><a class="breadcrumb__link" href="#">Аукцион</a></div>
-        <h1 class="gen-title">Аукцион</h1>
+        <div class="breadcrumb"><a class="breadcrumb__link" href="#">Главная</a><a class="breadcrumb__link" href="#">Каталог</a></div>
+        <h1 class="gen-title">Каталог</h1>
         <div class="sort-select">
           <div class="sort-select-display"> <span></span><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 1L7 7L13 1" stroke="black" stroke-opacity="0.2"/>
 </svg>
           </div>
           <div class="sort-select-options">
-            <div class="sort-opt" data-selected="selected">По дате аукциона</div>
-            <div class="sort-opt">По стоимости</div>
-            <div class="sort-opt">По рейтингу</div>
-            <div class="sort-opt">По по</div>
+            <div class="sort-opt" data-selected="selected">Золото</div>
+            <div class="sort-opt">Серебро</div>
+            <div class="sort-opt">Медь</div>
+            <div class="sort-opt">Бронза</div>
           </div>
         </div>
       </div>
       <div class="head-line"></div>
-    </div>
-    <div class="search-block search-block_auction"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.1464 15.8536C15.3417 16.0488 15.6583 16.0488 15.8536 15.8536C16.0488 15.6583 16.0488 15.3417 15.8536 15.1464L15.1464 15.8536ZM15.8536 15.1464L12.3536 11.6464L11.6464 12.3536L15.1464 15.8536L15.8536 15.1464Z" fill="black" fill-opacity="0.5"/>
-<path d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7Z" stroke="black" stroke-opacity="0.5"/>
-</svg>
-      <form action="" method="get">
-        <input id="seacrh-field" type="text" name="" placeholder="Найдите лот"/>
-        <button>Поиск</button>
-      </form>
-    </div>
-    <div class="lots">
-      <div class="lots-wrap">
-        <div class="lots-item" data-lider="0" data-favourites="0">
-          <div class="lots-item__img"></div>
-          <div class="lots-item-desc">
-            <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
-            <p class="lots-item__num">Лот №<span>1</span></p>
-            <div class="lots-item-prew">
-              <div class="lots-item-prew-half lots-item-prew-half1">
-                <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
-                <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
-                <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
-              </div>
-              <div class="lots-item-prew-half lots-item-prew-half2">
-                <p class="lots-item-prew__finish">До завершения</p>
-                <div class="lots-item-prew__finish-time">
-                  <p>11<span>дней</span></p>
-                  <p>10<span>часов</span></p>
-                  <p>12<span>минут</span></p>
-                </div><a class="lots-item-prew__btn" href="#">Сделать ставку</a>
-              </div>
-            </div>
+      <div class="catalog catalog_general">
+        <div class="catalog-wrap">
+          <div class="catalog-item">
+            <div class="catalog-item__title">Античная Греция</div><a class="catalog-item__category" href="#">Категория</a>
+            <div class="catalog-item__hr"></div><a class="catalog-item__to-section" href="#">Перейти к разделу</a>
           </div>
-          <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
-        </div>
-        <div class="lots-item" data-lider="0" data-favourites="1">
-          <div class="lots-item__img"></div>
-          <div class="lots-item-desc">
-            <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
-            <p class="lots-item__num">Лот №<span>1</span></p>
-            <div class="lots-item-prew">
-              <div class="lots-item-prew-half lots-item-prew-half1">
-                <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
-                <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
-                <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
-              </div>
-              <div class="lots-item-prew-half lots-item-prew-half2">
-                <p class="lots-item-prew__finish">До завершения</p>
-                <div class="lots-item-prew__finish-time">
-                  <p>11<span>дней</span></p>
-                  <p>10<span>часов</span></p>
-                  <p>12<span>минут</span></p>
-                </div><a class="lots-item-prew__btn" href="#">Сделать ставку</a>
-              </div>
-            </div>
+          <div class="catalog-item">
+            <div class="catalog-item__title">Древний Рим</div><a class="catalog-item__category" href="#">Категория</a>
+            <div class="catalog-item__hr"></div><a class="catalog-item__to-section" href="#">Перейти к разделу</a>
           </div>
-          <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
-        </div>
-        <div class="lots-item" data-lider="1" data-favourites="0">
-          <div class="lots-item__img"></div>
-          <div class="lots-item-desc">
-            <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
-            <p class="lots-item__num">Лот №<span>1</span></p>
-            <div class="lots-item-prew">
-              <div class="lots-item-prew-half lots-item-prew-half1">
-                <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
-                <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
-                <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
-              </div>
-              <div class="lots-item-prew-half lots-item-prew-half2">
-                <p class="lots-item-prew__finish">До завершения</p>
-                <div class="lots-item-prew__finish-time">
-                  <p>11<span>дней</span></p>
-                  <p>10<span>часов</span></p>
-                  <p>12<span>минут</span></p>
-                </div><a class="lots-item-prew__btn" href="#">Сделать ставку</a>
-              </div>
-            </div>
+          <div class="catalog-item">
+            <div class="catalog-item__title">Византия</div><a class="catalog-item__category" href="#">Категория</a>
+            <div class="catalog-item__hr"></div><a class="catalog-item__to-section" href="#">Перейти к разделу</a>
           </div>
-          <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
+          <div class="catalog-item">
+            <div class="catalog-item__title">Антика</div><a class="catalog-item__category" href="#">Категория</a>
+            <div class="catalog-item__hr"></div><a class="catalog-item__to-section" href="#">Перейти к разделу</a>
+          </div>
         </div>
       </div>
-      <div class="pagination">
-        <p class="sum-show">Показать по: <a class="sum-show__link sum-show__link_active" href="#">12</a><a class="sum-show__link" href="#">18</a><a class="sum-show__link" href="#">24</a></p>
-        <div class="page-show"><a class="page-show__link" href="#"><svg width="10" height="28" viewBox="0 0 10 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 1L1 14L9 27" stroke="black" stroke-linecap="round"/>
-</svg></a>
-          <p class="page-show-num"><span class="page-show-num_1">1</span>/ <span class="page-show-num_2">2</span></p><a class="page-show__link" href="#"><svg width="10" height="28" viewBox="0 0 10 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L9 14L1 27" stroke="black" stroke-linecap="round"/>
-</svg></a>
-        </div>
+      <div class="head-line"></div>
+      <div class="pre-foot">
+        <div class="pre-foot__title">Наша коллекция</div>
+        <div class="pre-foot__p">Наш клуб так же предоставляет большой ассортимент монет из драгоценных металлов, аксессуаров, наборов монет, книг по нумизматике. На нашем портале вы можете общаться на форумах с коллегами нумизматами, обсуждать разные интересные темы и обмениваться монетами с участниками клуба. Просматривая актуальные статьи, публикации и новости вы всегда будете в курсе событий такой обширной сферы как "Нумизматика".</div>
       </div>
     </div>
     <footer class="footer">

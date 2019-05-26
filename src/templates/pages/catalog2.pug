@@ -1,0 +1,108 @@
+extends ../common/main.pug
+block title
+  title Монеты
+block content
+  .wrapper
+    .head
+      .breadcrumb
+        a(href="#").breadcrumb__link Главная
+        a(href="#").breadcrumb__link Каталог
+        a(href="#").breadcrumb__link Античная Греция
+        a(href="#").breadcrumb__link Италия и Сицилия
+      h1.gen-title Монеты
+      .sort-select
+        .sort-select-display 
+          span
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L13 1" stroke="black" stroke-opacity="0.2"/>
+          </svg>
+        .sort-select-options
+          .sort-opt(data-selected="selected") Золото
+          .sort-opt Серебро
+          .sort-opt Медь
+          .sort-opt Бронза
+    .head-line
+    .catalog-main
+      .catalog-main-wrap
+        .catalog-main-item(data-favourites="0" data-new="1" data-ex="0")
+          .catalog-main-item__img
+          .catalog-main-item__title Gordian I Africanus. Sestertius
+          .catalog-main-item__price 
+            span 125 500 
+            | руб.
+          a(href="#").catalog-main-item__more Узнать подробнее
+          .fav-star
+          img(src="assets/images/new-item.png", alt="").catalog-main-item__new.marker
+          img(src="assets/images/ex-item.png", alt="").catalog-main-item__ex.marker
+        .catalog-main-item(data-favourites="1" data-new="0" data-ex="0")
+          .catalog-main-item__img
+          .catalog-main-item__title Gordian I Africanus. Sestertius
+          .catalog-main-item__price 
+            span 125 500 
+            | руб.
+          a(href="#").catalog-main-item__more Узнать подробнее
+          .fav-star
+          img(src="assets/images/new-item.png", alt="").catalog-main-item__new.marker
+          img(src="assets/images/ex-item.png", alt="").catalog-main-item__ex.marker
+        .catalog-main-item(data-favourites="0" data-new="0" data-ex="1")
+          .catalog-main-item__img
+          .catalog-main-item__title Gordian I Africanus. Sestertius
+          .catalog-main-item__price 
+            span 125 500 
+            | руб.
+          a(href="#").catalog-main-item__more Узнать подробнее
+          .fav-star
+          img(src="assets/images/new-item.png", alt="").catalog-main-item__new.marker
+          img(src="assets/images/ex-item.png", alt="").catalog-main-item__ex.marker
+        .catalog-main-item(data-favourites="0" data-new="1" data-ex="0")
+          .catalog-main-item__img
+          .catalog-main-item__title Gordian I Africanus. Sestertius
+          .catalog-main-item__price 
+            span 125 500 
+            | руб.
+          a(href="#").catalog-main-item__more Узнать подробнее
+          .fav-star
+          img(src="assets/images/new-item.png", alt="").catalog-main-item__new.marker
+          img(src="assets/images/ex-item.png", alt="").catalog-main-item__ex.marker
+        .catalog-main-item(data-favourites="1" data-new="0" data-ex="0")
+          .catalog-main-item__img
+          .catalog-main-item__title Gordian I Africanus. Sestertius
+          .catalog-main-item__price 
+            span 125 500 
+            | руб.
+          a(href="#").catalog-main-item__more Узнать подробнее
+          .fav-star
+          img(src="assets/images/new-item.png", alt="").catalog-main-item__new.marker
+          img(src="assets/images/ex-item.png", alt="").catalog-main-item__ex.marker
+        .catalog-main-item(data-favourites="0" data-new="0" data-ex="1")
+          .catalog-main-item__img
+          .catalog-main-item__title Gordian I Africanus. Sestertius
+          .catalog-main-item__price 
+            span 125 500 
+            | руб.
+          a(href="#").catalog-main-item__more Узнать подробнее
+          .fav-star
+          img(src="assets/images/new-item.png", alt="").catalog-main-item__new.marker
+          img(src="assets/images/ex-item.png", alt="").catalog-main-item__ex.marker
+      .pagination
+        p.sum-show Показать по: 
+          a(href="#").sum-show__link.sum-show__link_active 12
+          a(href="#").sum-show__link 18
+          a(href="#").sum-show__link 24
+        .page-show
+          a(href="#").page-show__link
+            <svg width="10" height="28" viewBox="0 0 10 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 1L1 14L9 27" stroke="black" stroke-linecap="round"/>
+            </svg>
+          p.page-show-num
+            span.page-show-num_1 1
+            |/ 
+            span.page-show-num_2 2
+          a(href="#").page-show__link
+            <svg width="10" height="28" viewBox="0 0 10 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L9 14L1 27" stroke="black" stroke-linecap="round"/>
+            </svg>
+    .head-line
+    .pre-foot
+      .pre-foot__title Наша коллекция
+      .pre-foot__p Наш клуб так же предоставляет большой ассортимент монет из драгоценных металлов, аксессуаров, наборов монет, книг по нумизматике. На нашем портале вы можете общаться на форумах с коллегами нумизматами, обсуждать разные интересные темы и обмениваться монетами с участниками клуба. Просматривая актуальные статьи, публикации и новости вы всегда будете в курсе событий такой обширной сферы как "Нумизматика".
