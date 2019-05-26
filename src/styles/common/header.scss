@@ -69,6 +69,9 @@ body{
       line-height: 19px;
       text-transform: uppercase;
       color: #171717;
+      &:hover{
+        text-decoration: underline;
+      }
     }
     &__link:not(:last-child){
       margin-right: 30px;
