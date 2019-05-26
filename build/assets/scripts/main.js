@@ -21,6 +21,16 @@ $(document).ready(function(){
   $('.articles-item-img').height($('.articles-item-img').width() / koef3);
   $('.head .gen-title').css('left', ($('.head').width() / 2) - ($('.head .gen-title').width() / 2) + 20);
   
+  /*ширина трэка для избранного*/
+  var widthTrackFavourites =  0;
+  $('.goods-item').each(function(i,elem){
+    widthTrackFavourites += ($(elem).width() + 20);
+  });
+  widthTrackFavourites -= 20;
+  $('.goods-track').css('width', widthTrackFavourites);
+  $('.goods-track').css('display', 'flex');
+
+  
   
   /* для определения аукционных item*/
   $('.lots-item').each(function(i, el){
@@ -54,6 +64,10 @@ $(document).ready(function(){
     var srcVideo = $('.article__video iframe').attr('src');
     $('.article__video iframe').attr('src', srcVideo + '&autoplay=1');
   });
+  
+  /*404*/
+  $('.notFound').parent().parent().find('.footer').css('margin-top', '0');
+  $('.notFound').parent().parent().css('justify-content', 'space-between');
 
   /*resize*/
   $(window).resize(function(){

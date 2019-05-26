@@ -17,6 +17,7 @@
     flex-direction: column;
     max-width: 264px;
     padding: 0 20px;
+    width: 100%;
     input, button{
       display: block;
       margin: 0 auto;
@@ -33,6 +34,9 @@
       font-size: 12px;
       line-height: 16px;
       color: black;
+      &:hover{
+        text-decoration: underline;
+      }
     }
     &__link:not(:last-child){
       margin-bottom: 20px;
@@ -45,6 +49,9 @@
         background-color: transparent;
         outline: none;
         width: 100%;
+        &:focus{
+          border-bottom: 1px solid #000000;
+        }
       }
       #footer-form__mail{
         margin-bottom: 30px;
