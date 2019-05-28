@@ -106,4 +106,32 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1   
   });
+
+  
+  /*переключение в ЛК*/
+
+  function swapWindow() {
+    $('[data-active="1"]').attr('data-active', '0');
+    $('.lk-profile').hide();
+    $('.lk-lots').hide();
+
+    if($('.lk-aside').attr('data-window') == '0'){
+      $('.lk-aside').attr('data-window', '1');
+      $('.lk-aside :nth-child(1)').attr('data-active', '1');
+      $('.lk-profile').show();
+      $('.lk-aside').attr('data-window', '1');
+    } else {
+      $('.lk-aside').attr('data-window', '1');
+      $('.lk-aside :nth-child(2)').attr('data-active', '1');
+      $('.lk-lots').show();
+      $('.lk-aside').attr('data-window', '0');
+    }
+  }
+  swapWindow();
+  $('.lk-aside__link').click(function(){
+    if($(this).attr('data-active') == '0'){
+      swapWindow();
+    }
+  });
+
 });

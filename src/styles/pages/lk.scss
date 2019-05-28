@@ -7,5 +7,58 @@
   &-main{
     max-width: 1114px;
     margin: 0 auto;
+    display: flex;
+  }
+  &-aside{
+    max-width: 118px;
+    width: 100%;
+    &__link, &__exit{
+      color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      line-height: 25px;
+      svg{
+        margin-right: 10px;
+      }
+      &:hover{
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.8);
+        svg{
+          path, rect, line{
+            stroke-opacity: 0.8;
+            fill-opacity: 0.8;
+          }
+        }
+      }
+      &[data-active="1"]{
+        color: rgba(0, 0, 0, 1);
+        svg{
+          path, rect, line{
+            stroke-opacity: 1;
+            fill-opacity: 1;
+          }
+        }
+      }
+    }
+    &__profile{
+      margin-bottom: 40px;
+    }
+    &__hr{
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin: 30px 0;
+    }
+  }
+  &-profile{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+  }
+  &-lots{
+    width: 10px;
+    height: 10px;
+    background-color: blue;
   }
 }
