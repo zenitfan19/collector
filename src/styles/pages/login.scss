@@ -1,0 +1,137 @@
+.login{
+  input, button{
+    outline: none !important;
+  }
+  .head{
+    height: auto;
+    padding-top: 35px;
+    padding-bottom: 20px;
+  }
+  .gen-title{
+    padding: 0;
+    line-height: normal;
+    margin-bottom: 70px;
+  }
+  &__subtitle{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #282828;
+    font-size: 20px;
+    line-height: 27px;
+    svg{
+      margin-right: 15px;
+    }
+  }
+  .auth{
+    max-width: 378px;
+    margin: 0 auto;
+    input:not([type="checkbox"]){
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 20px;
+      border: 1px solid #CECECE;
+      border-radius: 5px;
+      font-size: 12px;
+      margin-bottom: 20px;
+      &:focus{
+        border: 1px solid #272727;
+      }
+    }
+    button{
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      height: 46px;
+      background: #C69A60;
+      border-radius: 5px;
+      color: #FFFFFF;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      border: none;
+      margin-bottom: 25px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    &-flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .forgetPass{
+        font-size: 12px;
+        line-height: 28px;
+        color: #D25B5B;
+      }
+      label{
+        vertical-align: middle;
+        margin-right: 28px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 12px;
+        line-height: 28px;
+        &:hover{
+          cursor: pointer;
+        }
+        input{
+          display: none;
+          @keyframes animation-checkbox {
+            0% {
+              transform: scale(0.8);
+            }
+            70% {
+              transform: scale(1.2);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+          &:checked + .thumb-check{
+            background-image: url('../images/check.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            animation: animation-checkbox 0.4s ease-in-out;
+          }
+        }
+        .thumb-check{
+          margin-right: 9px;
+          width: 16px;
+          height: 16px;
+          background: #FFFFFF;
+          border: 1px solid #979797;
+          box-sizing: border-box;
+          position: relative;
+          svg{
+            position: absolute;
+            top: 2.6px;
+            left: 1.8px;
+          }
+        }
+      }
+    }
+    
+  }
+  .makeAccount{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #969696;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 40px;
+    &:hover{
+      color: #000000;
+      svg path{
+        stroke: #000000;
+      }
+    }
+    svg{
+      margin-right: 15px;
+    }
+    margin-bottom: 120px;
+  }
+}

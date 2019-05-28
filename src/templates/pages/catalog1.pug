@@ -1,0 +1,48 @@
+extends ../common/main.pug
+block title
+  title Каталог
+block content
+  .wrapper
+    .head
+      .breadcrumb
+        a(href="#").breadcrumb__link Главная
+        a(href="#").breadcrumb__link Каталог
+      h1.gen-title Каталог
+      .sort-select
+        .sort-select-display 
+          span
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L13 1" stroke="black" stroke-opacity="0.2"/>
+          </svg>
+        .sort-select-options
+          .sort-opt(data-selected="selected") Золото
+          .sort-opt Серебро
+          .sort-opt Медь
+          .sort-opt Бронза
+    .head-line
+    .catalog.catalog_general
+      .catalog-wrap
+        .catalog-item
+          .catalog-item__title Античная Греция
+          a(href="#").catalog-item__category Категория
+          .catalog-item__hr
+          a(href="#").catalog-item__to-section Перейти к разделу
+        .catalog-item
+          .catalog-item__title Древний Рим
+          a(href="#").catalog-item__category Категория
+          .catalog-item__hr
+          a(href="#").catalog-item__to-section Перейти к разделу
+        .catalog-item
+          .catalog-item__title Византия
+          a(href="#").catalog-item__category Категория
+          .catalog-item__hr
+          a(href="#").catalog-item__to-section Перейти к разделу
+        .catalog-item
+          .catalog-item__title Антика
+          a(href="#").catalog-item__category Категория
+          .catalog-item__hr
+          a(href="#").catalog-item__to-section Перейти к разделу
+    .head-line
+    .pre-foot
+      .pre-foot__title Наша коллекция
+      .pre-foot__p Наш клуб так же предоставляет большой ассортимент монет из драгоценных металлов, аксессуаров, наборов монет, книг по нумизматике. На нашем портале вы можете общаться на форумах с коллегами нумизматами, обсуждать разные интересные темы и обмениваться монетами с участниками клуба. Просматривая актуальные статьи, публикации и новости вы всегда будете в курсе событий такой обширной сферы как "Нумизматика".

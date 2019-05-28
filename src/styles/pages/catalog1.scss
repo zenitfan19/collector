@@ -1,0 +1,21 @@
+.catalog_general{
+  background-color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+  .catalog-wrap{
+    flex-wrap: wrap;
+    margin: 0 -20px;
+    width: calc(100% + 60px);
+    padding: 20px;
+    box-sizing: content-box;
+
+  }
+  .catalog-item{
+    border: 1px solid rgba(198, 154, 96, 0.2);
+    margin: 20px 20px;
+    box-sizing: border-box;
+    width: calc(50% - 40px);
+    background-position: center center;
+    background-image: url('../images/moncat1.png');
+  }
+}

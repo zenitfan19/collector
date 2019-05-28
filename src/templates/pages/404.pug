@@ -1,0 +1,13 @@
+extends ../common/main.pug
+block title
+  title Этой страницы не существует | 404 Not Found
+block content
+  .wrapper
+    .notFound
+      img(src="assets/images/404.png", alt="404").notFound__img
+      h3.ooops Упс... Такой страницы не существует.
+      p.ooops_p Проверьте написание адреса — может быть, вы просто ошиблись при наборе. А может быть, этой страницы уже нет.
+      p.ooops_p 
+        a(href="index.html").ooops_a Вернуться на главную 
+        | или воспользоваться 
+        a(href="catalog1.html").ooops_a каталогом товаров

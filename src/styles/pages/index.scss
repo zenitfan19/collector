@@ -86,7 +86,6 @@
         }
       }
       &_s{
-        height: calc(50% - 20px);
         &1{
           .main-news-item-img{
             background-image: url('../images/moneta2.png');
@@ -108,7 +107,7 @@
           &__title{
             font-weight: 600;
             font-size: 18px;
-            line-height: 25px;
+            line-height: 18px;
             margin-bottom: 13px;
           }
           &__date{
@@ -218,7 +217,7 @@
         display: block;
         position: absolute;
         bottom: 20px;
-        left: 16px;
+        left: 20px;
         width: 196px;
         padding: 15px 0 14px;
         text-align: center;

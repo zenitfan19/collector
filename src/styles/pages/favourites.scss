@@ -1,0 +1,47 @@
+.track-visible{
+  max-width: 1400px;
+  box-sizing: border-box;
+  margin: 40px auto 160px;
+  overflow-x: auto;
+  width: calc(100% - 40px);
+}
+.goods-track{
+  height: 410px;
+  max-width: 999999px;
+  padding-bottom: 10px;
+  .goods-item{
+    height: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 200;
+    &:not(:last-child){
+      margin-right: 20px;
+    }
+  }
+  .lots-item{
+    width: 453px;
+    &-desc{
+      padding: 0 20px;
+    }
+    &__img{
+      height: 200px !important;
+      background-size: contain;
+      margin-bottom: 0;
+    }
+  }
+  .catalog-main-item{
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__img{
+      height: 200px !important;
+      background-size: contain;
+      margin-bottom: 0;
+      width: 100%;
+    }
+    &__more{
+      margin-top: auto;
+    }
+  }
+}

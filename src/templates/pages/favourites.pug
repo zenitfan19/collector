@@ -1,0 +1,21 @@
+extends ../common/main.pug
+block title
+  title Избранное
+block content
+  .wrapper
+    .head.head_flex-start
+      .breadcrumb
+        a(href="#").breadcrumb__link Главная
+        a(href="#").breadcrumb__link Избранное
+      h1.gen-title Избранное
+    .head-line
+    .track-visible
+      .goods-track
+        include ../common/lotsitem.pug
+        include ../common/productitem.pug
+        include ../common/lotsitem.pug
+        include ../common/lotsitem.pug
+        include ../common/productitem.pug
+        include ../common/lotsitem.pug
+        include ../common/productitem.pug
+        include ../common/lotsitem.pug

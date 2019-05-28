@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;amp;subset=cyrillic" rel="stylesheet"/>
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/main.js"></script>
-    <title>Аукцион</title>
+    <title>Блог</title>
   </head>
   <body> 
     <header class="main-header"><a class="main-header__logo" href="index.html"><img src="assets/images/logo.png" alt="Logo"/></a>
@@ -32,115 +32,70 @@
 </svg></a></div>
     </header>
     <div class="wrapper">
-      <div class="head">
-        <div class="breadcrumb"><a class="breadcrumb__link" href="#">Главная</a><a class="breadcrumb__link" href="#">Аукцион</a></div>
-        <h1 class="gen-title">Аукцион</h1>
-        <div class="sort-select">
-          <div class="sort-select-display"> <span></span><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L7 7L13 1" stroke="black" stroke-opacity="0.2"/>
-</svg>
-          </div>
-          <div class="sort-select-options">
-            <div class="sort-opt" data-selected="selected">По дате аукциона</div>
-            <div class="sort-opt">По стоимости</div>
-            <div class="sort-opt">По рейтингу</div>
-            <div class="sort-opt">По по</div>
-          </div>
-        </div>
+      <div class="head head_flex-start">
+        <div class="breadcrumb"><a class="breadcrumb__link" href="#">Главная</a><a class="breadcrumb__link" href="#">Блог</a></div>
+        <h1 class="gen-title">Блог</h1>
       </div>
       <div class="head-line"></div>
-    </div>
-    <div class="search-block search-block_auction"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.1464 15.8536C15.3417 16.0488 15.6583 16.0488 15.8536 15.8536C16.0488 15.6583 16.0488 15.3417 15.8536 15.1464L15.1464 15.8536ZM15.8536 15.1464L12.3536 11.6464L11.6464 12.3536L15.1464 15.8536L15.8536 15.1464Z" fill="black" fill-opacity="0.5"/>
-<path d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7Z" stroke="black" stroke-opacity="0.5"/>
-</svg>
-      <form action="" method="get">
-        <input id="seacrh-field" type="text" name="" placeholder="Найдите лот"/>
-        <button>Поиск</button>
-      </form>
-    </div>
-    <div class="lots">
-      <div class="lots-wrap">
-        <div class="lots-item" data-lider="0" data-favourites="0">
-          <div class="lots-item__img"></div>
-          <div class="lots-item-desc">
-            <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
-            <p class="lots-item__num">Лот №<span>1</span></p>
-            <div class="lots-item-prew">
-              <div class="lots-item-prew-half lots-item-prew-half1">
-                <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
-                <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
-                <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
-              </div>
-              <div class="lots-item-prew-half lots-item-prew-half2">
-                <p class="lots-item-prew__finish">До завершения</p>
-                <div class="lots-item-prew__finish-time">
-                  <p>11<span>дней</span></p>
-                  <p>10<span>часов</span></p>
-                  <p>12<span>минут</span></p>
-                </div><a class="lots-item-prew__btn" href="#">Сделать ставку</a>
-              </div>
-            </div>
+      <div class="articles-wrap articles-main">
+        <div class="articles-wrap-wr">
+          <div class="articles-item">
+            <div class="articles-item-img"></div>
+            <div class="articles-item__date">Опубликовано: <span>21.01.2019</span></div>
+            <h3 class="articles-item__title">Банк России посвятила монеты усадьбе-музею «Архангельское» в Москве</h3><a class="articles-item__more" href="#">
+              Читать далее<br><svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black" fill-opacity="0.7"/>
+</svg></a>
           </div>
-          <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
-        </div>
-        <div class="lots-item" data-lider="0" data-favourites="1">
-          <div class="lots-item__img"></div>
-          <div class="lots-item-desc">
-            <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
-            <p class="lots-item__num">Лот №<span>1</span></p>
-            <div class="lots-item-prew">
-              <div class="lots-item-prew-half lots-item-prew-half1">
-                <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
-                <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
-                <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
-              </div>
-              <div class="lots-item-prew-half lots-item-prew-half2">
-                <p class="lots-item-prew__finish">До завершения</p>
-                <div class="lots-item-prew__finish-time">
-                  <p>11<span>дней</span></p>
-                  <p>10<span>часов</span></p>
-                  <p>12<span>минут</span></p>
-                </div><a class="lots-item-prew__btn" href="#">Сделать ставку</a>
-              </div>
-            </div>
+          <div class="articles-item">
+            <div class="articles-item-img"></div>
+            <div class="articles-item__date">Опубликовано: <span>21.01.2019</span></div>
+            <h3 class="articles-item__title">Монета Британских территорий в Индийском океане «Воительница и дракон»</h3><a class="articles-item__more" href="#">
+              Читать далее<br><svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black" fill-opacity="0.7"/>
+</svg></a>
           </div>
-          <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
-        </div>
-        <div class="lots-item" data-lider="1" data-favourites="0">
-          <div class="lots-item__img"></div>
-          <div class="lots-item-desc">
-            <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
-            <p class="lots-item__num">Лот №<span>1</span></p>
-            <div class="lots-item-prew">
-              <div class="lots-item-prew-half lots-item-prew-half1">
-                <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
-                <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
-                <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
-              </div>
-              <div class="lots-item-prew-half lots-item-prew-half2">
-                <p class="lots-item-prew__finish">До завершения</p>
-                <div class="lots-item-prew__finish-time">
-                  <p>11<span>дней</span></p>
-                  <p>10<span>часов</span></p>
-                  <p>12<span>минут</span></p>
-                </div><a class="lots-item-prew__btn" href="#">Сделать ставку</a>
-              </div>
-            </div>
+          <div class="articles-item">
+            <div class="articles-item-img"></div>
+            <div class="articles-item__date">Опубликовано: <span>21.01.2019</span></div>
+            <h3 class="articles-item__title">Сан-Марино выпустили монету в честь мобильной связи 5G</h3>
+            <div class="articles-item__desc">Темы памятных монетах отличаются невероятным разнообразием...</div><a class="articles-item__more" href="#">
+              Читать далее<br><svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black" fill-opacity="0.7"/>
+</svg></a>
           </div>
-          <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
+          <div class="articles-item">
+            <div class="articles-item-img"></div>
+            <div class="articles-item__date">Опубликовано: <span>21.01.2019</span></div>
+            <h3 class="articles-item__title">Банк России посвятила монеты усадьбе-музею «Архангельское» в Москве</h3><a class="articles-item__more" href="#">
+              Читать далее<br><svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black" fill-opacity="0.7"/>
+</svg></a>
+          </div>
+          <div class="articles-item">
+            <div class="articles-item-img"></div>
+            <div class="articles-item__date">Опубликовано: <span>21.01.2019</span></div>
+            <h3 class="articles-item__title">Монета Британских территорий в Индийском океане «Воительница и дракон»</h3><a class="articles-item__more" href="#">
+              Читать далее<br><svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black" fill-opacity="0.7"/>
+</svg></a>
+          </div>
+          <div class="articles-item">
+            <div class="articles-item-img"></div>
+            <div class="articles-item__date">Опубликовано: <span>21.01.2019</span></div>
+            <h3 class="articles-item__title">Сан-Марино выпустили монету в честь мобильной связи 5G</h3>
+            <div class="articles-item__desc">Темы памятных монетах отличаются невероятным разнообразием...</div><a class="articles-item__more" href="#">
+              Читать далее<br><svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black" fill-opacity="0.7"/>
+</svg></a>
+          </div>
         </div>
       </div>
-      <div class="pagination">
-        <p class="sum-show">Показать по: <a class="sum-show__link sum-show__link_active" href="#">12</a><a class="sum-show__link" href="#">18</a><a class="sum-show__link" href="#">24</a></p>
-        <div class="page-show"><a class="page-show__link" href="#"><svg width="10" height="28" viewBox="0 0 10 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 1L1 14L9 27" stroke="black" stroke-linecap="round"/>
-</svg></a>
-          <p class="page-show-num"><span class="page-show-num_1">1</span>/ <span class="page-show-num_2">2</span></p><a class="page-show__link" href="#"><svg width="10" height="28" viewBox="0 0 10 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 1L9 14L1 27" stroke="black" stroke-linecap="round"/>
-</svg></a>
-        </div>
-      </div>
+      <div class="pag-blog"><a class="pag-blog__link pag-blog__link_a" href="#">01</a><a class="pag-blog__link" href="#">02</a><a class="pag-blog__link" href="#">03</a><a class="pag-blog__link" href="#">04</a><a class="pag-blog__next" href="#">
+           <svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 5.5H15.5" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.5 0.5L15.5 5.5L10.5 10.5" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></div>
     </div>
     <footer class="footer">
       <div class="footer-wrap">
