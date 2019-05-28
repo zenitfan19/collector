@@ -98,4 +98,12 @@ $(document).ready(function(){
     $('.sort-select-options').toggleClass('open');
     $('.sort-select-display span').html($('.sort-select-options .sort-opt[data-selected="selected"]').html());
   });
+  $('.item-card-main-block-slider').slick({            
+    infinite: true,
+    dots: true,
+    arrows: false,    
+    speed: 500,    
+    slidesToShow: 1,
+    slidesToScroll: 1   
+  });
 });

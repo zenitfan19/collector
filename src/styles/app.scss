@@ -1,12 +1,12 @@
 @import "common/reset.scss";
 @import "common/header.scss";
 @import "common/footer.scss";
+@import "common/adaptive.scss";
+@import "common/slick.scss";
 @import "pages/index.scss";
 @import "pages/auction.scss";
-
-@import "common/adaptive.scss";
 @import "pages/item-card.scss";
-
+@import "pages/auction-item.scss";
 @import "pages/catalog1.scss";
 @import "pages/catalog2.scss";
 @import "pages/blog.scss";
@@ -14,5 +14,4 @@
 @import "pages/login.scss";
 @import "pages/favourites.scss";
 @import "pages/lk.scss";
-@import "common/adaptive.scss";
 
