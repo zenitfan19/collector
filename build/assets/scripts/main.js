@@ -106,4 +106,64 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1   
   });
+
+  /*переключение в логине*/ 
+  function swapLogin(){
+    $('.log_in').hide();
+    $('.registration').hide();
+    if($('.login').attr('data-login') == '0'){
+      $('.log_in').show();
+    } else {
+      $('.registration').show();
+    }
+  }
+  swapLogin();
+  $('.makeAccount').click(function(){
+    if($('.login').attr('data-login') == '0'){
+      $('.login').attr('data-login', '1');
+      swapLogin();
+    } else {
+      $('.login').attr('data-login', '0');
+      swapLogin();
+    }
+  });
+
+  /*переключение в ЛК*/
+
+  function swapWindow() {
+    $('[data-active="1"]').attr('data-active', '0');
+    $('.lk-profile').hide();
+    $('.lk-lots').hide();
+    if($('.lk-aside').attr('data-window') == '0'){
+      $('.lk-aside').attr('data-window', '1');
+      $('.lk-aside :nth-child(1)').attr('data-active', '1');
+      $('.lk-profile').show();
+      $('.lk-aside').attr('data-window', '1');
+    } else {
+      $('.lk-aside').attr('data-window', '1');
+      $('.lk-aside :nth-child(2)').attr('data-active', '1');
+      $('.lk-lots').show();
+      $('.lots-item__img').height($('.lots-item__img').width() / koef4);
+      $('.lk-aside').attr('data-window', '0');
+    }
+  }
+  swapWindow();
+  $('.lk-aside__link').click(function(){
+    if($(this).attr('data-active') == '0'){
+      swapWindow();
+    }
+  });
+
+  /*меню адаптив*/
+  $('.humburger').click(function(){
+    $('.main-header').toggleClass('main-header_down');
+    if($('.main-header').hasClass('main-header_down') == true){
+      $('body').css('height', $('.main-header').height());
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('height', 'auto');
+      $('body').css('overflow', 'visible');
+    }
+  })
+
 });

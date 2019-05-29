@@ -48,6 +48,11 @@
       font-weight: 600;
       font-size: 14px;
       line-height: 19px;
+      &:hover{
+        cursor: pointer;
+        animation: lightBTN 0.2s linear;
+        background-color: $lightBG;
+      }
     }
   }
 }

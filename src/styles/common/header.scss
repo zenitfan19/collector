@@ -1,8 +1,82 @@
 a, p, h1, h2, h3, h4, h5, h6, *{
   font-family: 'Open Sans', sans-serif;
 }
+
 a{
   text-decoration: none;
+}
+input:required {
+  box-shadow:none;
+}
+
+$size:        30px;
+$line-height: 2px;
+$color:       #000;
+.humburger{
+  @include w1024{
+    display: inline-block;
+  }
+  display:  none;
+  width:    22.5px;
+  height:   15px;
+  margin:   auto 0.1rem;
+  cursor:   pointer;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  span {
+    display:       block;
+    position:      absolute;
+    height:        $line-height;
+    width:         100%;
+    background:    $color;
+    border-radius: 1px;
+    opacity:       1;
+    left:          0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    &:nth-child(1){
+      top:     0;
+      transform-origin: left center;
+    }
+    &:nth-child(2){
+      top:     calc(50% - 1px);
+      transform-origin: left center;
+    }
+    &:nth-child(3){
+      top:     calc(100% - 1px);
+      transform-origin: left center;
+    }
+  }
+}
+.humburger_o {
+  span:nth-child(1) {
+    transform: rotate(45deg);
+    top: -0.6px;
+  }
+
+  span:nth-child(2) {
+    left:    -100%;
+    opacity: 0;
+  }
+
+  span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: calc(100% + 0.6px);
+  }
+}
+
+
+
+
+$darkBG: darken(#C69A60, 20%);
+$lightBG: rgba(164, 125, 75, 0.2);
+@keyframes lightBTN{
+  from {background-color: white;}
+  to {background-color: $lightBG;}
+}
+@keyframes darkBTN{
+  from {background-color: #C69A60;}
+  to {background-color: $darkBG}
 }
 input{
   outline: none !important;
@@ -39,13 +113,78 @@ body{
   margin: 0 auto;
   box-sizing: border-box;
   width: 100%;
+  @include w1024{
+    padding: 10px 20px;
+  }
+  &_down{
+    position: absolute;
+    z-index: 200;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: block;
+    padding-top: 40px;
+    .humburger {
+      span{
+        background-color: #000;
+      } 
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+    &.main-header_white{
+      .main-header-nav__link{
+        color: #000;
+      }
+      svg * {
+        stroke: #000 !important;
+      }
+      .main-header-right__link{
+        color: #000;
+      }
+    }
+    .main-header{
+      &-right{
+        justify-content: center;
+        padding-top: 30px;
+        &__link{
+          display: block;
+        }
+      }
+      &-nav{
+        display: block;
+        flex-direction: column;
+        &__link{
+          display: block;
+          margin: 0 !important;
+          padding: 20px;
+          text-align: center;
+        }
+      }
+    }
+      
+  }
   &_white{
     position: absolute;
     top: 0;
     left: 0;
-    
     max-width: 100%;
     width: 100%;
+    span{
+      background-color: white;
+    }
+    .main-header-nav{
+      &__link{
+        color: white;
+        &:after{
+          background-color: white;
+        }
+        &:hover:after,
+        &:focus:after{
+          width: 100%;
+        }
+      }
+    }
     svg *{
       stroke: white;
     }
@@ -62,15 +201,37 @@ body{
   }
   &__logo{
     display: block;
+    @include w1024{
+      display: none;
+    }
   }
   &-nav{
+    @include w1024{
+      display: none;
+    }
     &__link{
       font-size: 14px;
       line-height: 19px;
       text-transform: uppercase;
       color: #171717;
-      &:hover{
-        text-decoration: underline;
+      cursor: pointer;
+      position:relative;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      &:after{
+        background-color: #171717;
+        display: block;
+        content: "";
+        height: 1px;
+        width: 0%;
+        left:50%;
+        position:absolute;
+        transition: width .3s ease-in-out;
+        transform:translateX(-50%);
+      }
+      &:hover:after,
+      &:focus:after{
+        width: 100%;
       }
     }
     &__link:not(:last-child){
@@ -80,14 +241,29 @@ body{
   &-right{
     display: flex;
     align-items: center;
+    
     &__phone{
       font-weight: bold;
       font-size: 16px;
       line-height: 22px;
       color: #171717;
+      @include w1024{
+        display: block !important;
+        margin-right: 0 !important;
+        font-size: 14px;
+        line-height: 19px;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
     }
     &__link:not(:last-child){
       margin-right: 30px;
+    }
+    &__link{
+      @include w1024{
+        display: none;
+      }
     }
   }
 }
@@ -150,10 +326,10 @@ body{
       span{
         font-size: 14px;
         line-height: 19px;
-        color: rgba(0, 0, 0, 0.8);
+        color: rgba(0, 0, 0, 1);
       }
       &:hover{
-        border: 1px solid rgba(0, 0, 0, 1);
+        border: 1px solid rgba(0, 0, 0, 0.4);
         cursor: pointer;
         svg path{
           stroke-opacity: 1;
@@ -207,8 +383,16 @@ body{
   height: 50px;
   align-items: center;
   overflow: hidden;
+  @include w768{
+    margin: 0 auto 40px;
+    height: 40px;
+    max-width: 390px;
+  }
   svg{
     padding: 0 10px 0 10px;
+    @include w768{
+      padding: 0 15px 0 10px;
+    }
   }
   form{
     display: flex;
@@ -219,6 +403,10 @@ body{
       border: none;
       font-size: 14px;
       line-height: 19px;
+      @include w768{
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
     button{
       width: 116px;
@@ -230,7 +418,11 @@ body{
       background-color: white;  
       &:hover{
         cursor: pointer;
-      }       
+      }     
+      @include w768{
+        font-size: 12px;
+        line-height: 16px;
+      }  
     }
   }
 }
@@ -304,4 +496,7 @@ body{
   max-width: 580px;
   text-align: center;
   padding: 20px;
+  .ooops_a{
+    color: #C69A60;
+  }
 }

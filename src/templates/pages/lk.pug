@@ -7,4 +7,56 @@ block content
       .breadcrumb
         a(href="#").breadcrumb__link Главная
         a(href="#").breadcrumb__link Личный кабинет
-    .lk-main вфыв
+    .lk-main 
+      aside.lk-aside(data-window='0')
+        a.lk-aside__profile.lk-aside__link(data-active="1")
+          <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 13C7.176 13 4.671 13.638 3.025 14.193C1.81 14.604 1 15.749 1 17.032V21C1 21 10.958 21 11 21" stroke="black" stroke-opacity="0.4" stroke-width="2"/>
+            <path d="M10 13C12.824 13 15.329 13.638 16.975 14.193C18.19 14.604 19 15.749 19 17.032V21C19 21 9.042 21 9 21" stroke="black" stroke-opacity="0.4" stroke-width="2"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 13V13C7.239 13 5 9.761 5 7V6C5 3.239 7.239 1 10 1V1C12.761 1 15 3.239 15 6V7C15 9.761 12.761 13 10 13Z" stroke="black" stroke-opacity="0.4" stroke-width="2" stroke-linecap="square"/>
+          </svg>
+          | Профиль
+        a.lk-aside__lots.lk-aside__link(data-active="0")
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="path-1-inside-1" fill="white">
+            <rect width="20" height="20.7692" rx="1"/>
+            </mask>
+            <rect width="20" height="20.7692" rx="1" stroke="black" stroke-opacity="0.4" stroke-width="3" mask="url(#path-1-inside-1)"/>
+            <line x1="6.9043" y1="4.63461" x2="16.1735" y2="4.63461" stroke="black" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6.9043" y1="10.0192" x2="16.1735" y2="10.0192" stroke="black" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6.9043" y1="15.4038" x2="16.1735" y2="15.4038" stroke="black" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="3.82617" y1="4.63461" x2="3.86463" y2="4.63461" stroke="black" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="3.82617" y1="10.0192" x2="3.86463" y2="10.0192" stroke="black" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="3.82617" y1="15.4038" x2="3.86463" y2="15.4038" stroke="black" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          | Лоты
+        .lk-aside__hr
+        a.lk-aside__exit
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 3V2.25C4.58579 2.25 4.25 2.58579 4.25 3H5ZM19 3H19.75C19.75 2.58579 19.4142 2.25 19 2.25V3ZM19 21V21.75C19.4142 21.75 19.75 21.4142 19.75 21H19ZM5 21H4.25C4.25 21.4142 4.58579 21.75 5 21.75V21ZM1 12L8.5 16.3301V7.66987L1 12ZM5.75 5.5V3H4.25V5.5H5.75ZM5 3.75H19V2.25H5V3.75ZM18.25 3V21H19.75V3H18.25ZM19 20.25H5V21.75H19V20.25ZM5.75 21V18.5H4.25V21H5.75ZM12.5 11.25H7.75V12.75H12.5V11.25Z" fill="black" fill-opacity="0.4"/>
+          </svg>
+          | Выход
+      .lk-window
+        .lk-profile
+          h2.lk__title Ваши данные
+          form(action="", method="get").data-user
+            .data-user-input
+              input#username(type="text", name="user-name" value="Арт I")
+              input#useremail(type="email", name="user-email" value="abc@def.com")
+              input#userphone(type="tel", name="user-phone" placeholder="Телефон")
+            button(type="submit") Сохранить
+          h2.lk__title Сменить пароль
+          form(action="", method="get").data-user-pass
+            input#oldpass(type="password", name="old-pass" placeholder="Старый пароль" required)
+            input#newpass(type="password", name="new-pass" placeholder="Новый пароль" required)
+            input#repeatpass(type="password", name="repeat-pass" placeholder="Повторите пароль" required)
+            button(type="submit") Сменить пароль
+        .lk-lots
+          h2.lk__title Ваши лоты
+          .lk-lots-wrap
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug

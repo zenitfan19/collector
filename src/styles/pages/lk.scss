@@ -1,11 +1,137 @@
 .lk{
   .head{
-    max-width: 1114px;
+    max-width: 1162px;
     padding: 0 20px;
     box-sizing: content-box;
   }
   &-main{
-    max-width: 1114px;
+    max-width: 1162px;
     margin: 0 auto;
+    display: flex;
+    padding: 0 20px;
+  }
+  &-aside{
+    max-width: 118px;
+    width: 100%;
+    margin-right: 20px;
+    padding-top: 5px;
+    &__link, &__exit{
+      color: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      line-height: 25px;
+      svg{
+        margin-right: 10px;
+      }
+      &:hover{
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.8);
+        svg{
+          path, rect, line{
+            stroke-opacity: 0.8;
+            fill-opacity: 0.8;
+          }
+        }
+      }
+      &[data-active="1"]{
+        color: rgba(0, 0, 0, 1);
+        svg{
+          path, rect, line{
+            stroke-opacity: 1;
+            fill-opacity: 1;
+          }
+        }
+      }
+    }
+    &__profile{
+      margin-bottom: 40px;
+    }
+    &__hr{
+      width: 100%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.4);
+      margin: 30px 0;
+    }
+  }
+  &-profile{
+    width: 100%;
+    margin-left: auto;
+    padding-bottom: 80px;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .data-user{
+      padding-bottom: 10px;
+      display: flex;
+      flex-grow: 1;
+      &-input{
+        flex-grow: 1;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &-window{
+    width: 100%;
+    display: flex;
+  }
+  &-lots{
+    width: 100%;
+    margin-left: auto;
+    max-width: 926px;
+    padding-bottom: 50px;
+    &-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px;
+      .lots-item{
+        width: calc(50% - 20px);
+      }
+    }
+  }
+  &__title{
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.72px;
+    color: #181818;
+    margin-bottom: 30px;
+  }
+  input{
+    background: #FFFFFF;
+    border: 1px solid #CECECE;
+    box-sizing: border-box;
+    border-radius: 5px;
+    max-width: 452px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    height: 46px;
+    font-size: 12px;
+    line-height: 28px;
+    display: block;
+    margin-bottom: 20px;
+    &:focus{
+      border: 1px solid #000000;
+    }
+  }
+  button{
+    background-color: #FFFFFF;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #C69A60;
+    border: 1px solid #C69A60;
+    border-radius: 5px;
+    height: 46px;
+    width: 166px;
+    &:hover{
+      cursor: pointer;
+      animation: lightBTN 0.2s linear;
+      background-color: $lightBG;
+    }
   }
 }

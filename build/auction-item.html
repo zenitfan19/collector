@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="assets/styles/app.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;amp;subset=cyrillic" rel="stylesheet"/>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon"/>
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/slick.js"></script>
     <script src="assets/scripts/main.js"></script>
     <title>Карточка товара </title>
   </head>
   <body> 
-    <header class="main-header"><a class="main-header__logo" href="index.html"><img src="assets/images/logo.png" alt="Logo"/></a>
-      <nav class="main-header-nav"><a class="main-header-nav__link" href="index.html">Главная</a><a class="main-header-nav__link" href="catalog1.html">Каталог</a><a class="main-header-nav__link" href="#">Сертификаты</a><a class="main-header-nav__link" href="#">Экспертиза</a><a class="main-header-nav__link" href="#">Комиссия</a><a class="main-header-nav__link" href="auction.html">Аукцион</a><a class="main-header-nav__link" href="#">Статьи</a><a class="main-header-nav__link" href="#">Обратная связь</a></nav>
+    <header class="main-header"><a class="humburger" onclick="this.classList.toggle('humburger_o')"><span></span><span></span><span></span></a><a class="main-header__logo" href="index.html"><img src="assets/images/logo.png" alt="Logo"/></a>
+      <nav class="main-header-nav"><a class="main-header-nav__link" href="index.html">Главная</a><a class="main-header-nav__link" href="catalog1.html">Каталог</a><a class="main-header-nav__link" href="#">Сертификаты</a><a class="main-header-nav__link" href="#">Экспертиза</a><a class="main-header-nav__link" href="#">Комиссия</a><a class="main-header-nav__link" href="auction.html">Аукцион</a><a class="main-header-nav__link" href="blog.html">Статьи</a><a class="main-header-nav__link" href="#">Обратная связь</a></nav>
       <div class="main-header-right"><a class="main-header-right__link main-header-right__phone" href="tel: +7 (911) 926-51-19">+7 (911) 926-51-19</a><a class="main-header-right__link main-header-right__lots" href="#"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="path-1-inside-1" fill="white">
 <rect width="26" height="27" rx="1"/>
@@ -151,18 +152,18 @@
     </div>
     <footer class="footer">
       <div class="footer-wrap">
-        <div class="footer-col">
+        <div class="footer-col footer-col_2">
           <h3 class="footer-col__title">Связаться с нами</h3><a class="footer-col__link" href="tel: +7 (921) 343-16-76">+7 921 343 16 76</a><a class="footer-col__link" href="tel: +7 (911) 926-51-19">+7 911 926 51 19</a><a class="footer-col__link" href="mailto: ghobbyru@gmail.com">ghobbyru@gmail.com</a>
         </div>
-        <div class="footer-col">
+        <div class="footer-col footer-col_1">
           <h3 class="footer-col__title">Будьте в курсе новых поступлений</h3>
           <form class="footer-col-form" action="" method="get">
-            <input class="footer-col-form__input" id="footer-form__name" type="text" name="footer-name" placeholder="Имя"/>
-            <input class="footer-col-form__input" id="footer-form__mail" type="email" name="footer-mail" placeholder="E-mail"/>
+            <input class="footer-col-form__input" id="footer-form__name" type="text" name="footer-name" placeholder="Имя" required="required"/>
+            <input class="footer-col-form__input" id="footer-form__mail" type="email" name="footer-mail" placeholder="E-mail" required="required"/>
             <button type="submit">Отправить</button>
           </form>
         </div>
-        <div class="footer-col">
+        <div class="footer-col footer-col_3">
           <h3 class="footer-col__title">Для клиента</h3><a class="footer-col__link" href="#">Новинки</a><a class="footer-col__link" href="#">Доставка и оплата</a><a class="footer-col__link" href="#">Отзывы</a><a class="footer-col__link" href="#">Гарантии</a>
         </div>
       </div>
