@@ -2,13 +2,15 @@
   background-color: #fff;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
   .catalog-wrap{
     flex-wrap: wrap;
     margin: 0 -20px;
-    width: calc(100% + 60px);
-    padding: 20px;
-    box-sizing: content-box;
-
+    width: calc(100% + 40px);
+    box-sizing: border-box;
+    padding: 0 !important;
   }
   .catalog-item{
     border: 1px solid rgba(198, 154, 96, 0.2);

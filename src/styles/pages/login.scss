@@ -55,6 +55,8 @@
       margin-bottom: 25px;
       &:hover{
         cursor: pointer;
+        animation: darkBTN 0.2s linear;
+        background-color: $darkBG;
       }
     }
     &-flex{
@@ -124,6 +126,7 @@
     line-height: 27px;
     margin-top: 40px;
     &:hover{
+      cursor: pointer;
       color: #000000;
       svg path{
         stroke: #000000;

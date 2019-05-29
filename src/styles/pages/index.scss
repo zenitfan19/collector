@@ -15,12 +15,21 @@
       justify-content: space-between;
       box-sizing: border-box;
       padding: 40px 20px;
+      @include w768{
+        padding: 30px 20px;
+      }
       .half{
         width: calc(50% - 20px);
+        @include w768{
+          width: calc(50% - 10px);
+        }
         &:nth-child(2){
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          @include w768{
+            justify-content: flex-start;
+          }
           &> :nth-child(1){
             margin-bottom: 20px;
           }
@@ -42,6 +51,19 @@
         line-height: 19px;
         text-align: center;
         color: #FFFFFF;
+        @include w768{
+          font-size: 12px;
+          line-height: 16px;
+          height: 36px;
+          padding: 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+        &:hover{
+          animation: darkBTN 0.2s linear;
+          background-color: $darkBG;
+        }
       }
       &-img{
         border: 1px solid #C69A60;
@@ -69,20 +91,34 @@
           flex-direction: row;
           align-items: flex-end;
           width: 100%;
+          @include w768{
+            padding-top: 10px;
+          }
           &__title{
             font-weight: 600;
             font-size: 24px;
             display: block;
             line-height: 33px;
+            @include w768{
+              font-size: 18px;
+              line-height: 25px;
+            }
           }
           &__date{
             display: block;
             font-size: 14px;
             line-height: 19px;
+            @include w768{
+              font-size: 12px;
+              line-height: 16px;
+            }
           }
         }
         .main-news-item__more{
           margin-top: 30px;
+          @include w768{
+            margin-top: 14px;
+          }
         }
       }
       &_s{
@@ -102,6 +138,10 @@
           width: 100%;
           background-repeat: no-repeat;
           background-position: center center;
+          @include w768{
+            max-width: 167px;
+            background-size: contain;
+          }
         }
         .main-news-item-desc{
           &__title{
@@ -109,6 +149,10 @@
             font-size: 18px;
             line-height: 18px;
             margin-bottom: 13px;
+            @include w768{
+              font-size: 14px;
+              line-height: 19px;
+            }
           }
           &__date{
             font-size: 12px;
@@ -118,11 +162,17 @@
           &__about{
             font-size: 12px;
             line-height: 16px;
+            @include w768{
+              display: none;
+            }
           }
         }
         .main-news-item-desc{
           .main-news-item__more{
             margin-top: auto;
+            @include w768{
+              width: 100%;
+            }
           }
         }
       }
@@ -139,6 +189,11 @@
     line-height: 49px;
     padding: 30px 0 40px;
     font-weight: normal;
+    @include w768{
+      font-size: 24px;
+      line-height: 33px;
+      padding: 20px 0 30px;
+    }
   }
   .catalog{
     background-color: rgba(198, 154, 96, 0.1);
@@ -149,18 +204,33 @@
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+      @include w768{
+        padding: 0 20px 30px;
+      }
     }
     .catalog-item{
       width: calc(50% - 20px);
+      @include w768{
+        width: calc(50% - 10px);
+        height: 294px;
+        padding: 15px 10px 20px 20px;
+        background: #fff no-repeat right 10px bottom 20px;
+        background-size: 60%;
+      }
       box-sizing: border-box;
       padding: 20px;
       height: 430px;
       border-radius: 5px;
       position: relative;
       background: #fff no-repeat right 82px bottom 45px;
+
       &_sm{
         height: 282px;
         background: #fff no-repeat right 50px bottom 60px;
+        @include w768{
+          background-position: center center;
+          background-size: 70%;
+        }
         .catalog-item{
           &__title{
             font-size: 18px;
@@ -175,6 +245,11 @@
           }
           &__to-section{
             width: 179px;
+            &:hover{
+              cursor: pointer;
+              animation: lightBTN 0.2s linear;
+              background-color: $lightBG;
+            }
           }
         }
       }
@@ -183,8 +258,20 @@
         font-size: 24px;
         line-height: 33px;
         margin-bottom: 15px;
+        @include w768{
+          font-size: 18px;
+          line-height: 25px;
+          margin-bottom: 10px;
+        }
       }
       &__category{
+        @include w768{
+          top: 20px;
+          right: 10px;
+          font-size: 12px;
+          line-height: 16px;
+          padding-bottom: 8px;
+        }
         display: block;
         padding-bottom: 11px;
         font-weight: 300;
@@ -212,6 +299,10 @@
         display: block;
         max-width: 322px;
         margin-top: 15px;
+        @include w768{
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
       &__to-section{
         display: block;
@@ -224,6 +315,17 @@
         color: #A47D4B;
         border-radius: 5px;
         border: 1px solid #A47D4B;
+        background-color: white;
+        &:hover{
+          cursor: pointer;
+          animation: lightBTN 0.2s linear;
+          background-color: $lightBG;
+        }
+        @include w768{
+          font-size: 12px;
+          line-height: 16px;
+          background-size: contain;
+        }
       }
       &1{
         background-image: url('../images/monets.png');
@@ -269,6 +371,10 @@
         padding-right: 20px;
         box-sizing: border-box;
         padding-bottom: 40px;
+        @include w768{
+          padding-right: 10px;
+          padding-bottom: 30px;
+        }
         &-wrap{
           display: flex;
           flex-wrap: wrap;
@@ -285,6 +391,10 @@
         background-color: #eee1cf;
         padding-left: 20px;
         padding-bottom: 40px;
+        @include w768{
+          padding-left: 10px;
+          padding-bottom: 30px;
+        }
         &-wrap{
           display: flex;
           flex-wrap: wrap;
@@ -300,6 +410,9 @@
   }
   .articles{
     padding-bottom: 81px;
+    @include w768{
+      padding-bottom: 35px;
+    }
     &-wrap{
       max-width: 1440px;
       box-sizing: border-box;
@@ -310,13 +423,21 @@
         justify-content: space-between;
         margin: 0 -20px;
         width: calc(100% + 40px);
+        @include w768{
+          margin: 0 -10px;
+          width: calc(100% + 20px);
+        }
       }
     }
     &-item{
       margin: 0 20px;
       display: flex;
       flex-direction: column;
-      width: calc(33.3333% - 20px);
+      width: calc(100% / 3 - 20px);
+      @include w768{
+        width: calc(100% / 3 - 10px);
+        margin: 0 10px;
+      }
       &-img{
         margin-bottom: 15px;
         background-repeat: no-repeat;
@@ -327,12 +448,20 @@
         line-height: 19px;
         color: #4D4D4D;
         margin-bottom: 5px;
+        @include w768{
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
       &__title{
         font-weight: 600;
         font-size: 24px;
         line-height: 33px;
         margin-bottom: 20px;
+        @include w768{
+          font-size: 18px;
+          line-height: 25px;
+        }
       }
       &__desc{
         margin-bottom: 25px;

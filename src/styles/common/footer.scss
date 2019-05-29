@@ -10,6 +10,12 @@
     box-sizing: border-box;
     padding: 34px 20px 33px;
     height: 272px;
+    @include w480{
+      flex-direction: column;
+      height: auto;
+      padding: 25px 20px 30px;
+      align-items: center;
+    }
   }
   &-col{
     text-align: center;
@@ -18,6 +24,24 @@
     max-width: 264px;
     padding: 0 20px;
     width: 100%;
+    align-items: center;
+    &_1{
+      @include w480{
+        order: 1;
+        margin-bottom: 30px;
+      }
+    }
+    &_2{
+      @include w480{
+        order: 2;
+        margin-bottom: 30px;
+      }
+    }
+    &_3{
+      @include w480{
+        order: 3;
+      }
+    }
     input, button{
       display: block;
       margin: 0 auto;
@@ -27,21 +51,43 @@
       font-size: 18px;
       line-height: 25px;
       margin-bottom: 30px;
+      @include w480{
+        margin-bottom: 5px;
+      }
     }
     &__link{
+      display: block;
       font-style: normal;
       font-weight: normal;
       font-size: 12px;
       line-height: 16px;
       color: black;
-      &:hover{
-        text-decoration: underline;
+      cursor: pointer;
+      position:relative;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      &:after{
+        background-color: black;
+        display: block;
+        content: "";
+        height: 1px;
+        width: 0%;
+        left:50%;
+        position:absolute;
+        transition: width .3s ease-in-out;
+        transform:translateX(-50%);
+      }
+      &:hover:after,
+      &:focus:after{
+        width: 100%;
       }
     }
     &__link:not(:last-child){
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     &-form{
+      flex-grow: 1;
+      width: 100%;
       input{
         padding: 9px 0;
         border: none;
@@ -52,9 +98,15 @@
         &:focus{
           border-bottom: 1px solid #000000;
         }
+        &:required {
+          box-shadow:none;
+        }
       }
       #footer-form__mail{
         margin-bottom: 30px;
+        @include w480{
+          margin-bottom: 20px;
+        }
       }
       button{
         width: 145px;
@@ -65,6 +117,11 @@
         line-height: 16px;
         color: #FFFFFF;
         border: none;
+        &:hover{
+          cursor: pointer;
+          animation: darkBTN 0.2s linear;
+          background-color: $darkBG;
+        }
       }
     }
   }

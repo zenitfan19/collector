@@ -25,7 +25,10 @@
     line-height: 16px;
     color: #737373;
     opacity: 0.7;
-    &:hover{
+    &:hover:not(.pag-blog__link_a){
+      cursor: pointer;
+      animation: lightBTN 0.2s linear;
+      background-color: $lightBG;
       opacity: 1;
     }
     &_a{

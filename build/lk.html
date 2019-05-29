@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="assets/styles/app.min.css"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;amp;subset=cyrillic" rel="stylesheet"/>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon"/>
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/slick.js"></script>
     <script src="assets/scripts/main.js"></script>
     <title>Личный кабинет</title>
   </head>
   <body> 
-    <header class="main-header"><a class="main-header__logo" href="index.html"><img src="assets/images/logo.png" alt="Logo"/></a>
-      <nav class="main-header-nav"><a class="main-header-nav__link" href="index.html">Главная</a><a class="main-header-nav__link" href="catalog1.html">Каталог</a><a class="main-header-nav__link" href="#">Сертификаты</a><a class="main-header-nav__link" href="#">Экспертиза</a><a class="main-header-nav__link" href="#">Комиссия</a><a class="main-header-nav__link" href="auction.html">Аукцион</a><a class="main-header-nav__link" href="#">Статьи</a><a class="main-header-nav__link" href="#">Обратная связь</a></nav>
+    <header class="main-header"><a class="humburger" onclick="this.classList.toggle('humburger_o')"><span></span><span></span><span></span></a><a class="main-header__logo" href="index.html"><img src="assets/images/logo.png" alt="Logo"/></a>
+      <nav class="main-header-nav"><a class="main-header-nav__link" href="index.html">Главная</a><a class="main-header-nav__link" href="catalog1.html">Каталог</a><a class="main-header-nav__link" href="#">Сертификаты</a><a class="main-header-nav__link" href="#">Экспертиза</a><a class="main-header-nav__link" href="#">Комиссия</a><a class="main-header-nav__link" href="auction.html">Аукцион</a><a class="main-header-nav__link" href="blog.html">Статьи</a><a class="main-header-nav__link" href="#">Обратная связь</a></nav>
       <div class="main-header-right"><a class="main-header-right__link main-header-right__phone" href="tel: +7 (911) 926-51-19">+7 (911) 926-51-19</a><a class="main-header-right__link main-header-right__lots" href="#"><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="path-1-inside-1" fill="white">
 <rect width="26" height="27" rx="1"/>
@@ -61,25 +62,184 @@
 </svg>Выход</a>
         </aside>
         <div class="lk-window">
-          <div class="lk-profile"></div>
-          <div class="lk-lots"></div>
+          <div class="lk-profile">
+            <h2 class="lk__title">Ваши данные</h2>
+            <form class="data-user" action="" method="get">
+              <div class="data-user-input">
+                <input id="username" type="text" name="user-name" value="Арт I"/>
+                <input id="useremail" type="email" name="user-email" value="abc@def.com"/>
+                <input id="userphone" type="tel" name="user-phone" placeholder="Телефон"/>
+              </div>
+              <button type="submit">Сохранить</button>
+            </form>
+            <h2 class="lk__title">Сменить пароль</h2>
+            <form class="data-user-pass" action="" method="get">
+              <input id="oldpass" type="password" name="old-pass" placeholder="Старый пароль" required="required"/>
+              <input id="newpass" type="password" name="new-pass" placeholder="Новый пароль" required="required"/>
+              <input id="repeatpass" type="password" name="repeat-pass" placeholder="Повторите пароль" required="required"/>
+              <button type="submit">Сменить пароль</button>
+            </form>
+          </div>
+          <div class="lk-lots">
+            <h2 class="lk__title">Ваши лоты</h2>
+            <div class="lk-lots-wrap">
+              <div class="lots-item goods-item" data-lider="0" data-favourites="0">
+                <div class="lots-item__img"></div>
+                <div class="lots-item-desc">
+                  <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
+                  <p class="lots-item__num">Лот №<span>1</span></p>
+                  <div class="lots-item-prew">
+                    <div class="lots-item-prew-half lots-item-prew-half1">
+                      <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
+                      <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
+                      <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
+                    </div>
+                    <div class="lots-item-prew-half lots-item-prew-half2">
+                      <p class="lots-item-prew__finish">До завершения</p>
+                      <div class="lots-item-prew__finish-time">
+                        <p>11<span>дней</span></p>
+                        <p>10<span>часов</span></p>
+                        <p>12<span>минут</span></p>
+                      </div><a class="lots-item-prew__btn" href="auction-item.html">Сделать ставку</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
+              </div>
+              <div class="lots-item goods-item" data-lider="0" data-favourites="0">
+                <div class="lots-item__img"></div>
+                <div class="lots-item-desc">
+                  <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
+                  <p class="lots-item__num">Лот №<span>1</span></p>
+                  <div class="lots-item-prew">
+                    <div class="lots-item-prew-half lots-item-prew-half1">
+                      <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
+                      <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
+                      <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
+                    </div>
+                    <div class="lots-item-prew-half lots-item-prew-half2">
+                      <p class="lots-item-prew__finish">До завершения</p>
+                      <div class="lots-item-prew__finish-time">
+                        <p>11<span>дней</span></p>
+                        <p>10<span>часов</span></p>
+                        <p>12<span>минут</span></p>
+                      </div><a class="lots-item-prew__btn" href="auction-item.html">Сделать ставку</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
+              </div>
+              <div class="lots-item goods-item" data-lider="0" data-favourites="0">
+                <div class="lots-item__img"></div>
+                <div class="lots-item-desc">
+                  <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
+                  <p class="lots-item__num">Лот №<span>1</span></p>
+                  <div class="lots-item-prew">
+                    <div class="lots-item-prew-half lots-item-prew-half1">
+                      <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
+                      <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
+                      <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
+                    </div>
+                    <div class="lots-item-prew-half lots-item-prew-half2">
+                      <p class="lots-item-prew__finish">До завершения</p>
+                      <div class="lots-item-prew__finish-time">
+                        <p>11<span>дней</span></p>
+                        <p>10<span>часов</span></p>
+                        <p>12<span>минут</span></p>
+                      </div><a class="lots-item-prew__btn" href="auction-item.html">Сделать ставку</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
+              </div>
+              <div class="lots-item goods-item" data-lider="0" data-favourites="0">
+                <div class="lots-item__img"></div>
+                <div class="lots-item-desc">
+                  <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
+                  <p class="lots-item__num">Лот №<span>1</span></p>
+                  <div class="lots-item-prew">
+                    <div class="lots-item-prew-half lots-item-prew-half1">
+                      <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
+                      <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
+                      <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
+                    </div>
+                    <div class="lots-item-prew-half lots-item-prew-half2">
+                      <p class="lots-item-prew__finish">До завершения</p>
+                      <div class="lots-item-prew__finish-time">
+                        <p>11<span>дней</span></p>
+                        <p>10<span>часов</span></p>
+                        <p>12<span>минут</span></p>
+                      </div><a class="lots-item-prew__btn" href="auction-item.html">Сделать ставку</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
+              </div>
+              <div class="lots-item goods-item" data-lider="0" data-favourites="0">
+                <div class="lots-item__img"></div>
+                <div class="lots-item-desc">
+                  <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
+                  <p class="lots-item__num">Лот №<span>1</span></p>
+                  <div class="lots-item-prew">
+                    <div class="lots-item-prew-half lots-item-prew-half1">
+                      <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
+                      <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
+                      <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
+                    </div>
+                    <div class="lots-item-prew-half lots-item-prew-half2">
+                      <p class="lots-item-prew__finish">До завершения</p>
+                      <div class="lots-item-prew__finish-time">
+                        <p>11<span>дней</span></p>
+                        <p>10<span>часов</span></p>
+                        <p>12<span>минут</span></p>
+                      </div><a class="lots-item-prew__btn" href="auction-item.html">Сделать ставку</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
+              </div>
+              <div class="lots-item goods-item" data-lider="0" data-favourites="0">
+                <div class="lots-item__img"></div>
+                <div class="lots-item-desc">
+                  <h3 class="lots-item__title">Gordian I Africanus. Sestertius</h3>
+                  <p class="lots-item__num">Лот №<span>1</span></p>
+                  <div class="lots-item-prew">
+                    <div class="lots-item-prew-half lots-item-prew-half1">
+                      <p class="lots-item-prew__assessment lots-item-prew__p">Оценка:<span>75000 руб</span></p>
+                      <p class="lots-item-prew__current-rate lots-item-prew__p">Текущая ставка:<span>55000 руб</span></p>
+                      <p class="lots-item-prew__rate lots-item-prew__p">Ставок:<span>5</span></p>
+                    </div>
+                    <div class="lots-item-prew-half lots-item-prew-half2">
+                      <p class="lots-item-prew__finish">До завершения</p>
+                      <div class="lots-item-prew__finish-time">
+                        <p>11<span>дней</span></p>
+                        <p>10<span>часов</span></p>
+                        <p>12<span>минут</span></p>
+                      </div><a class="lots-item-prew__btn" href="auction-item.html">Сделать ставку</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="fav-star"></div><img class="lots-item__lider marker" src="assets/images/lider.png" alt="lider"/>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <footer class="footer">
       <div class="footer-wrap">
-        <div class="footer-col">
+        <div class="footer-col footer-col_2">
           <h3 class="footer-col__title">Связаться с нами</h3><a class="footer-col__link" href="tel: +7 (921) 343-16-76">+7 921 343 16 76</a><a class="footer-col__link" href="tel: +7 (911) 926-51-19">+7 911 926 51 19</a><a class="footer-col__link" href="mailto: ghobbyru@gmail.com">ghobbyru@gmail.com</a>
         </div>
-        <div class="footer-col">
+        <div class="footer-col footer-col_1">
           <h3 class="footer-col__title">Будьте в курсе новых поступлений</h3>
           <form class="footer-col-form" action="" method="get">
-            <input class="footer-col-form__input" id="footer-form__name" type="text" name="footer-name" placeholder="Имя"/>
-            <input class="footer-col-form__input" id="footer-form__mail" type="email" name="footer-mail" placeholder="E-mail"/>
+            <input class="footer-col-form__input" id="footer-form__name" type="text" name="footer-name" placeholder="Имя" required="required"/>
+            <input class="footer-col-form__input" id="footer-form__mail" type="email" name="footer-mail" placeholder="E-mail" required="required"/>
             <button type="submit">Отправить</button>
           </form>
         </div>
-        <div class="footer-col">
+        <div class="footer-col footer-col_3">
           <h3 class="footer-col__title">Для клиента</h3><a class="footer-col__link" href="#">Новинки</a><a class="footer-col__link" href="#">Доставка и оплата</a><a class="footer-col__link" href="#">Отзывы</a><a class="footer-col__link" href="#">Гарантии</a>
         </div>
       </div>

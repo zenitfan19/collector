@@ -38,5 +38,25 @@ block content
           | Выход
       .lk-window
         .lk-profile
+          h2.lk__title Ваши данные
+          form(action="", method="get").data-user
+            .data-user-input
+              input#username(type="text", name="user-name" value="Арт I")
+              input#useremail(type="email", name="user-email" value="abc@def.com")
+              input#userphone(type="tel", name="user-phone" placeholder="Телефон")
+            button(type="submit") Сохранить
+          h2.lk__title Сменить пароль
+          form(action="", method="get").data-user-pass
+            input#oldpass(type="password", name="old-pass" placeholder="Старый пароль" required)
+            input#newpass(type="password", name="new-pass" placeholder="Новый пароль" required)
+            input#repeatpass(type="password", name="repeat-pass" placeholder="Повторите пароль" required)
+            button(type="submit") Сменить пароль
         .lk-lots
-
+          h2.lk__title Ваши лоты
+          .lk-lots-wrap
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug
+            include ../common/lotsitem.pug
