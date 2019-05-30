@@ -36,38 +36,19 @@
 .item-card-main-block-title-auction-footer {
     width: 50.71%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 40px;
-}
-.item-card-main-block-title-auction-footer-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    &:first-child {
-        font-size: 12px;
-        line-height: 16px;  
-    }
-    &:last-child {
-        margin-bottom: 0;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 33px;
-        .add_info {
-            font-size: 12px;
-            line-height: 16px;
-            margin-left: 3px;
-        }
-    }
+    font-size: 12px;
 }
 .item-card-main-block-title-auction-footer-column {
-    display: flex;
     &:first-child {
         flex: 0 1 140px;
     }
     &:last-child {
-        flex: 0 1 210px
+        flex: 0 1 210px;
     }
 }
+
 .page.auction-item .item-card-main-block-title-header {
     margin-bottom: 45px;    
 }
@@ -119,11 +100,13 @@
 }
 .betting-history .item-card-popular-items-content-row.title {
     color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
 }
 .betting-history .item-card-popular-items-content-row {
     display: flex;
     padding-bottom: 25px;
     padding-top: 15px;
+    font-size: 14px;
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
     &:first-child {
         border: none;
@@ -137,4 +120,271 @@
 }
 .betting-history .item-card-popular-items-content-column .date {
     margin-right: 10px;
+}
+.page.auction-item .item-card-main-block-title-auction-footer-column-row.title-row {
+    margin-bottom: 5px;
+}
+.item-card-main-block-title-auction-footer-column-row .main_info {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin-right: 4px;
+}
+.item-card-main-block-title-auction-footer-column-row-time {
+    display: flex;
+    .item-card-main-block-title-auction-footer-column-row {
+        margin-right: 5px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.page.auction-item .item-card-main-block-title-main-content {
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 1439px) {
+    .page.auction-item .item-card-main-block-title-main-content {
+        flex-wrap: unset;
+        flex: unset;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__properties {
+        flex: unset;
+    }
+    .auction-numbers {
+        justify-content: flex-start;
+        .item-card-main-block-title-footer-row-column:first-child {
+            order: 2;
+        }
+        .item-card-main-block-title-footer-row-column:last-child {
+            order: 1;
+            margin-bottom: 35px;
+        }        
+    }
+    .page.auction-item .item-card-main-block-title-main-content__properties-row-column {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item-card-main-block-title-auction-footer {
+        flex-wrap: wrap;
+    }
+    .item-card-main-block-title-auction-footer-column {
+        margin-bottom: 30px;
+    }
+    .item-card-main-block-title-footer {
+        align-items: flex-start;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__img {
+        flex: 0 1 120px;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__img img {
+        &:first-child {
+            width: 50px;
+            height: 50px;
+        }
+        &:nth-child(2) {
+            height: 50px;
+        }
+    }
+    .page.auction-item .item-card-main-block-title-main-content__img span {
+        font-size: 12px;
+        margin-top: 18px;        
+    }
+    .page.auction-item .item-card-main-block-title-main-content__properties {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .page.auction-item .breadcrumbs {
+        top: 70px;
+    }
+    .page.auction-item .breadcrumbs-item {
+        font-size: 12px;
+    }    
+    .page.auction-item .item-card-main-block-title-auction-footer-column-row.title-row {
+        margin-bottom: 5px;
+    }
+    .page.auction-item .item-card-main-block-description__main-text span {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .page.auction-item .item-card-main-block-description__header span {
+        font-size: 14px;
+    }
+    .page.auction-item .item-card-main-block-description__header {
+        margin-bottom: 15px;
+    }
+    .page.auction-item .item-card-main-block-description__main-text {
+        margin-bottom: 25px;
+    }
+    .page.auction-item .item-card-main-block-description__main-text span {
+        width: 61%;
+    }
+    .page.auction-item .item-card-main-block-title-main-content {
+        width: 61%;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__img span {
+        font-size: 9px;
+        height: 16px;
+    }
+    .item-card-main-block-title-auction-footer-column {
+        margin-bottom: 20px;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__img {
+        flex: 0 1 130px;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__properties {
+        .item-card-main-block-title-main-content__properties-row {
+            margin-bottom: 15px;
+        }
+        .item-card-main-block-title-main-content__properties-row-value {
+            text-align: right;
+        }
+    }
+    .page.auction-item .item-card-main-block-title-header {
+        margin-bottom: 30px;
+    }
+    .page.auction-item .item-card-main-block-title-auction-footer {
+        margin-bottom: 30px;
+        .item-card-main-block-title-auction-footer-column {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .page.auction-item .item-card-main-block-title-auction-footer {
+        font-size: 10px;
+    }
+    .item-card-main-block-title-auction-footer-column-row .main_info {
+        font-size: 18px;
+    }
+    .page.auction-item .item-card-main-block-title-footer-row-column .item-card-main-block-title-main-content__properties .item-card-main-block-title-main-content__properties-row {
+        font-size: 12px;
+    }
+    .page.auction-item .item-card-main-block-title-footer-row-column .item-card-main-block-title-main-content__properties .item-card-main-block-title-main-content__properties-row {
+        margin-bottom: 15px;
+    }
+    .item-card-main-block-title-footer-row-column input, .item-card-main-block-title-footer-row__add-to-card-link {
+        width: 155px;
+        height: 36px;
+        font-size: 12px;
+    }
+    .item-card-main-block-title-footer-row__add-to-card-link--transparent {
+        width: 154px;
+    }
+    .item-card-main-block-title-header svg {
+        top: 0;
+        left: -40px;
+    }
+    .page.auction-item .breadcrumbs {
+        top: 45px;
+    }
+    .page.auction-item .item-card-main-block {
+        margin-bottom: 35px;
+    }
+    .betting-history {
+        width: 540px;
+    }
+    .betting-history .item-card-popular-items-content {
+        margin-bottom: 40px;
+    }
+    .betting-history .item-card-popular-items-content-row.title {        
+        font-size: 14px;
+    }
+    .betting-history .item-card-popular-items-content-row {        
+        font-size: 12px;       
+    }
+}
+@media screen and (max-width: 767px) {
+    .betting-history {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .page.auction-item .breadcrumbs {
+        position: unset;
+        left: unset;
+        top: unset;
+        margin-top: 15px;        
+        padding: 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item-card-main-block-title-auction-footer {
+        width: 100%;
+    }
+    .page.auction-item .breadcrumbs-item {
+        font-size: 12px;
+        white-space: nowrap;
+        margin-bottom: 5px;
+    }
+    .item-card-main-block-title-auction-footer-column:first-child {
+        flex: 0 1 110px;
+    }
+    .item-card-main-block-title-auction-footer-column:last-child {
+        flex: 0 1 180px;
+    }
+    .page.auction-item .item-card-main-block-title-footer-row {        
+        align-items: unset;
+    }
+    .auction-numbers {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .page.auction-item .item-card-main-block-title-footer-row__add-to-card-link {
+        margin-right: 0;
+    }
+    .auction-numbers .item-card-main-block-title-footer-row-column:last-child {
+        margin-bottom: 0;
+    }
+    .page.auction-item .item-card-main-block-title-footer .item-card-main-block-title-footer-row {
+        &:last-child {
+            margin-left: auto;
+        }
+    }
+    .page.auction-item .item-card-main-block-description__main-text span {
+        width: 100%;
+    }
+    .page.auction-item .item-card-main-block-title-main-content {
+        width: 100%;        
+    }
+    .page.auction-item .item-card-main-block-title-main-content__img img:first-child {
+        width: 70px;
+        height: 70px;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__img img:nth-child(2) {
+        height: 70px;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__img span {
+        font-size: 12px;
+        margin-top: 29px;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__img {
+        flex: 0 1 170px;
+    }
+    .page.auction-item .item-card-main-block-title-main-content {
+        padding: unset;
+    }
+    .page.auction-item .item-card-main-block-title-main-content__properties {
+        width: 205px;
+    }
+    .page.auction-item .item-card-main-block {
+        border-bottom: unset;
+        margin-bottom: 0;
+    }
+    .betting-history .item-card-popular-items-content-row.title {
+        font-size: 12px;
+    }
+    .betting-history .item-card-popular-items-content-row {
+        font-size: 10px;
+    }
+    .betting-history .item-card-popular-items-content-column {
+        flex: 0 1 27.5%;
+        &:first-child {
+            flex: 0 1 45%;
+        }
+    }
 }

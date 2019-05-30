@@ -349,6 +349,14 @@
         font-size: 18px;
     }
 }
+@media screen and (max-width: 1200px) {
+    .page.item-card .breadcrumbs {
+        top: 70px;
+    }
+    .page.item-card .breadcrumbs-item {
+        font-size: 12px;
+    }
+}
 @media screen and (max-width: 767px) {
     .item-card-main-block {
         flex-direction: column;
