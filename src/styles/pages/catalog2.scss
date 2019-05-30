@@ -1,11 +1,25 @@
 .catalog-main{
   max-width: 1085px;
   margin: 20px auto;
+  padding: 0 20px;
+  @include w480{
+    padding: 0 10px;
+  }
   &-wrap{
     margin: 0 -20px;
     width: calc(100% + 40px);
     display: flex;
     flex-wrap: wrap;
+    box-sizing: border-box;
+    @include w1024{
+      margin: 0 -10px;
+      width: calc(100% + 20px);
+    }
+    @include w480{
+      margin: 0;
+      width: 100%;
+      flex-direction: column;
+    }
   }
   &-item{
     position: relative;
@@ -14,11 +28,28 @@
     margin: 20px 20px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    @include w1024{
+      margin: 10px;
+      width: calc(100% / 3 - 20px);
+    }
+    @include w480{
+      margin: 0;
+      width: 100%;
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+    }
     &__img{
       background-image: url('../images/moncat.png');
       margin-bottom: 24px;
       background-size: cover;
       background-repeat: no-repeat;
+      @include w1024{
+        margin-bottom: 16px;
+      }
+      @include w480{
+        margin-bottom: 24px;
+      }
     }
     &__title{
       font-weight: bold;
@@ -26,6 +57,16 @@
       line-height: 25px;
       text-align: center;
       margin-bottom: 25px;
+      @include w1024{
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 20px;
+      }
+      @include w480{
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 15px;
+      }
     }
     &__price{
       font-weight: 300;
@@ -33,6 +74,15 @@
       line-height: 19px;
       text-align: center;
       margin-bottom: 32px;
+      @include w1024{
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 20px;
+      }
+      @include w480{
+        font-size: 14px;
+        line-height: 19px;
+      }
     }
     &__more{
       display: block;
@@ -48,6 +98,15 @@
       font-weight: 600;
       font-size: 14px;
       line-height: 19px;
+      @include w1024{
+        width: 163px;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 20px;
+      }
+      @include w480{
+        width: 154.17px;
+      }
       &:hover{
         cursor: pointer;
         animation: lightBTN 0.2s linear;

@@ -11,6 +11,10 @@
     padding: 0;
     line-height: normal;
     margin-bottom: 70px;
+    @include w480{
+      margin-bottom: 36px;
+      padding-top: 10px;
+    }
   }
   &__subtitle{
     display: flex;
@@ -26,6 +30,7 @@
   .auth{
     max-width: 378px;
     margin: 0 auto;
+    padding: 0 10px;
     input:not([type="checkbox"]){
       display: block;
       width: 100%;
@@ -125,6 +130,7 @@
     font-size: 20px;
     line-height: 27px;
     margin-top: 40px;
+    
     &:hover{
       cursor: pointer;
       color: #000000;
@@ -136,5 +142,8 @@
       margin-right: 15px;
     }
     margin-bottom: 120px;
+    @include w480{
+      margin: 40px 0 50px;
+    }
   }
 }
