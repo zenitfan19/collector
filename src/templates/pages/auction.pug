@@ -20,16 +20,16 @@ block content
           .sort-opt По рейтингу          
     .head-line
   .search-block.search-block_auction
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15.1464 15.8536C15.3417 16.0488 15.6583 16.0488 15.8536 15.8536C16.0488 15.6583 16.0488 15.3417 15.8536 15.1464L15.1464 15.8536ZM15.8536 15.1464L12.3536 11.6464L11.6464 12.3536L15.1464 15.8536L15.8536 15.1464Z" fill="black" fill-opacity="0.5"/>
-          <path d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7Z" stroke="black" stroke-opacity="0.5"/>
-        </svg>
-        form(action="", method="get")
-          input#seacrh-field(type="text", name="", placeholder="Найдите лот")
-          button Поиск
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.1464 15.8536C15.3417 16.0488 15.6583 16.0488 15.8536 15.8536C16.0488 15.6583 16.0488 15.3417 15.8536 15.1464L15.1464 15.8536ZM15.8536 15.1464L12.3536 11.6464L11.6464 12.3536L15.1464 15.8536L15.8536 15.1464Z" fill="black" fill-opacity="0.5"/>
+      <path d="M13 7C13 10.3137 10.3137 13 7 13C3.68629 13 1 10.3137 1 7C1 3.68629 3.68629 1 7 1C10.3137 1 13 3.68629 13 7Z" stroke="black" stroke-opacity="0.5"/>
+    </svg>
+    form(action="", method="get")
+      input#seacrh-field(type="text", name="", placeholder="Найдите лот")
+      button Поиск
   .lots
     .lots-wrap
-      .lots-item(data-lider="0" data-favourites="0")
+      .lots-item(data-lider="0" data-favourites="0" data-finish="0")
         .lots-item__img
         .lots-item-desc
           h3.lots-item__title Gordian I Africanus. Sestertius
@@ -44,18 +44,19 @@ block content
               p.lots-item-prew__rate.lots-item-prew__p Ставок:
                 span 5
             .lots-item-prew-half.lots-item-prew-half2
-              p.lots-item-prew__finish До завершения
-              .lots-item-prew__finish-time
-                p 11
-                  span дней
-                p 10
-                  span часов
-                p 12
-                  span минут
+              .prebut
+                p.lots-item-prew__finish До завершения
+                .lots-item-prew__finish-time
+                  p 11
+                    span дней
+                  p 10
+                    span часов
+                  p 12
+                    span минут
               a(href="auction-card.html").lots-item-prew__btn Сделать ставку
         .fav-star
         img(src="assets/images/lider.png", alt="lider").lots-item__lider.marker
-      .lots-item(data-lider="0" data-favourites="1")
+      .lots-item(data-lider="0" data-favourites="1" data-finish="0")
         .lots-item__img
         .lots-item-desc
           h3.lots-item__title Gordian I Africanus. Sestertius
@@ -70,18 +71,19 @@ block content
               p.lots-item-prew__rate.lots-item-prew__p Ставок:
                 span 5
             .lots-item-prew-half.lots-item-prew-half2
-              p.lots-item-prew__finish До завершения
-              .lots-item-prew__finish-time
-                p 11
-                  span дней
-                p 10
-                  span часов
-                p 12
-                  span минут
+              .prebut
+                p.lots-item-prew__finish До завершения
+                .lots-item-prew__finish-time
+                  p 11
+                    span дней
+                  p 10
+                    span часов
+                  p 12
+                    span минут
               a(href="auction-card.html").lots-item-prew__btn Сделать ставку
         .fav-star
         img(src="assets/images/lider.png", alt="lider").lots-item__lider.marker
-      .lots-item(data-lider="1" data-favourites="0")
+      .lots-item(data-lider="1" data-favourites="0" data-finish="1")
         .lots-item__img
         .lots-item-desc
           h3.lots-item__title Gordian I Africanus. Sestertius
@@ -96,14 +98,15 @@ block content
               p.lots-item-prew__rate.lots-item-prew__p Ставок:
                 span 5
             .lots-item-prew-half.lots-item-prew-half2
-              p.lots-item-prew__finish До завершения
-              .lots-item-prew__finish-time
-                p 11
-                  span дней
-                p 10
-                  span часов
-                p 12
-                  span минут
+              .prebut
+                p.lots-item-prew__finish До завершения
+                .lots-item-prew__finish-time
+                  p 11
+                    span дней
+                  p 10
+                    span часов
+                  p 12
+                    span минут
               a(href="auction-card.html").lots-item-prew__btn Сделать ставку
         .fav-star
         img(src="assets/images/lider.png", alt="lider").lots-item__lider.marker

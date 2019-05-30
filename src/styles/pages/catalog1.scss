@@ -11,6 +11,15 @@
     width: calc(100% + 40px);
     box-sizing: border-box;
     padding: 0 !important;
+    @include w1024{
+      width: calc(100% + 20px);
+      margin: 0 -10px;
+    }
+    @include w480{
+      width: 100%;
+      flex-direction: column;
+      margin: 0;
+    }
   }
   .catalog-item{
     border: 1px solid rgba(198, 154, 96, 0.2);
@@ -19,5 +28,18 @@
     width: calc(50% - 40px);
     background-position: center center;
     background-image: url('../images/moncat1.png');
+    @include w1024{
+      width: calc(50% - 20px);
+      margin: 10px;
+    }
+    @include w480{
+      width: 100%;
+      margin: 0;
+      min-height: 300px;
+      height: auto;
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+    }
   }
 }
