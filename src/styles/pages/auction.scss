@@ -41,16 +41,17 @@
     border-radius: 5px;
     @include w1024{
       width: calc(50% - 20px);
-      margin: 0;
-      &:not(:last-child){
-        margin-bottom: 20px;
-      }
+      margin: 10px;
       &:last-child{
         margin-bottom: 4px;
       }
     }
     @include w480{
       width: 100%;
+      margin: 0;
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
     }
     &__img{
       width: 100%;
