@@ -3,11 +3,38 @@
     flex-wrap: wrap;
     padding-top: 20px;
     padding-bottom: 20px;
+    
     .articles-item{
       margin: 20px 20px;
-      width: calc(33.3333% - 40px);
+      width: calc(100% / 3 - 40px);
+      @include w768{
+        width: calc(100% / 3 - 20px);
+        margin: 10px; 
+      }
+      @include w480{
+        width: 100%;
+        margin: 0;
+        &:not(:last-child){
+          margin-bottom: 34px;
+        }
+      }
       &-img{
         background-image: url('../images/fir.png');
+        @include w768{
+          margin-bottom: 16px;
+        }
+      }
+      &__title{
+        margin-bottom: 16px;
+      }
+      &__date{
+        margin-bottom: 16px;
+      }
+      &__desc{
+        display: none;
+      }
+      &__more{
+        margin-top: 0;
       }
     }
   }
@@ -17,6 +44,9 @@
   justify-content: center;
   margin-bottom: 60px;
   align-items: center;
+  @include w480{
+    margin-bottom: 40px;
+  }
   &__link{
     display: block;
     border-radius: 5px;

@@ -2,11 +2,21 @@
   max-width: 1166px;
   margin: 20px auto 60px;
   padding: 0 20px;
+  @include w768{
+    margin: 20px auto 40px;
+  }
+  @include w480{
+    padding: 0 10px;
+  }
   &-date{
     font-size: 14px;
     line-height: 16px;
     color: #969696;
     display: block;
+    @include w768{
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
   &__subtitle{
     font-weight: 600;
@@ -17,11 +27,31 @@
     text-align: center;
     margin: 0 auto;
     padding-bottom: 50px;
+    @include w768{
+      padding-bottom: 30px;
+      font-size: 12px;
+      line-height: 32px;
+    }
+    @include w480{
+      padding: 0 10px 30px;
+      font-size: 10px;
+      line-height: 18px;
+    }
   }
   &__img{
     width: 100%;
     display: block;
     margin-bottom: 45px;
+    @include w768{
+      width: calc(100% + 40px);
+      position: relative;
+      left: -20px;
+      margin-bottom: 25px;
+    }
+    @include w480{
+      width: calc(100% + 20px);
+      left: -10px;
+    }
   }
   &__p{
     max-width: 770px;
@@ -29,6 +59,18 @@
     color: #737373;
     font-size: 14px;
     line-height: 32px;
+    @include w768{
+      margin-bottom: 32px;
+      padding: 0 25px;
+      font-size: 12px;
+      line-height: 32px;
+    }
+    @include w480{
+      margin-bottom: 20px;
+      font-size: 10px;
+      line-height: 20px;
+      padding: 0;
+    }
   }
   &__h3{
     max-width: 770px;
@@ -38,6 +80,16 @@
     line-height: 32px;
     font-style: normal;
     font-weight: normal;
+    @include w768{
+      padding: 0 25px;
+      margin-bottom: 8px;
+    }
+    @include w480{
+      padding: 0;
+      margin-bottom: 17px;
+      font-size: 14px;
+      line-height: 32px;
+    }
   }
   &__video{
     position: relative;
@@ -45,6 +97,11 @@
       position: absolute;
       top: calc(50% - 35px);
       left: calc(50% - 35px);
+    }
+    @include w768{
+      width: calc(100% + 40px);
+      left: -20px;
+      margin-bottom: 25px;
     }
     margin-bottom: 40px;
     div{
@@ -58,16 +115,30 @@
     display: flex;
     margin-top: 40px;
     border-top: 1px solid #D8D8D8;
+    @include w768{
+      margin: 0 14px;
+    }
+    @include w480{
+      margin: 0;
+      justify-content: space-between;
+    }
   }
   &-arrow{
     width: 50%;
+    @include w480{
+      max-width: 100px;
+    }
     &:hover .article-arrow__title{
       text-decoration: underline;
     }
+    
     &.article-next{
       text-align: right;
       .article-flex{
         flex-direction: row-reverse;
+        @include w480{
+          align-items: flex-end;
+        }
       }
     }
     &__title{
@@ -76,26 +147,49 @@
       font-size: 11px;
       line-height: 24px;
       color: #282828;
+      @include w768{
+        padding: 16px 0 20px;
+        font-size: 10px;
+      }
     }
   }
   &-flex{
     display: flex;
+    @include w480{
+      flex-direction: column !important;
+    }
     img{
       width: 100px;
       height: 80px;
     }
     &-desc{
       padding: 7px 20px 5px 20px;
+      @include w480{
+        padding: 8px 0 0 0;
+      }
       &__title{
         margin-bottom: 10px;
         font-size: 14px;
         line-height: 19px;
         color: #000000;
+        @include w768{
+          font-size: 12px;
+          line-height: 16px;
+          margin-bottom: 20px;
+        }
+        @include w480{
+          margin-bottom: 10px;
+          font-size: 10px;
+          line-height: 14px;
+        }
       }
       &__date{
         color: #8A8A8A;
         font-size: 11px;
         line-height: 20px;
+        @include w768{
+          font-size: 10px;
+        }
       }
     }
   }

@@ -3,18 +3,60 @@
   margin: 40px auto 160px;
   overflow-x: auto;
   width: calc(100% - 40px);
+  @include w768{
+    width: auto;
+    overflow: visible;
+    margin: 0;
+    padding: 30px 0 20px 20px;
+  }
+  @include w480{
+    padding: 20px 10px;
+  }
 }
 .goods-track{
   height: 410px;
   max-width: 999999px;
   padding-bottom: 10px;
+  display: flex;
+  @include w768{
+    width: auto;
+    overflow: visible;
+    max-width: auto;
+    height: auto;
+  }
   .goods-item{
     height: 100%;
     margin: 0;
     position: relative;
     z-index: 200;
+    flex-shrink: 0;
     &:not(:last-child){
       margin-right: 20px;
+    }
+    @include w768{
+      height: auto;
+      width: calc(100% / 3 - 20px) !important;
+      margin-bottom: 20px;
+      &:not(:last-child){
+        margin-right: 0px;
+      }
+    }
+    @include w480{
+      width: 100% !important;
+    }
+  }
+  .lots-item-prew-half{
+    @include w768{
+      flex-direction: column;
+      align-items: flex-start;
+      .lots-item-prew__btn{
+        margin-left: 0;
+        margin-top: 28px;
+        margin-bottom: 20px;
+      }
+      &1{
+
+      }
     }
   }
   .lots-item{
@@ -23,10 +65,10 @@
       padding: 0 20px;
     }
     &__img{
-      height: 200px !important;
       background-size: contain;
       margin-bottom: 0;
     }
+    
   }
   .catalog-main-item{
     width: 335px;
@@ -34,7 +76,6 @@
     flex-direction: column;
     align-items: center;
     &__img{
-      height: 200px !important;
       background-size: contain;
       margin-bottom: 0;
       width: 100%;

@@ -449,6 +449,9 @@
             position: absolute;
             align-items: flex-end;
             &__link{
+              &:hover{
+                cursor: pointer;
+              }
               color: rgba(0, 0, 0, 0.5);
               font-size: 14px;
               line-height: 14px;

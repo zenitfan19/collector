@@ -1,6 +1,6 @@
 .search-block_auction{
   max-width: 612px;
-  @include w1024{
+  @include w768{
     margin: 30px auto 10px;
     max-width: 478px;
   }
@@ -15,7 +15,7 @@
   margin: 0 auto;
   padding: 0 20px 80px;
   box-sizing: border-box;
-  @include w1024{
+  @include w768{
     padding: 0 20px 20px;
   }
   @include w480{
@@ -39,7 +39,7 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     border-radius: 5px;
-    @include w1024{
+    @include w768{
       width: calc(50% - 20px);
       margin: 10px;
       &:last-child{
@@ -73,7 +73,7 @@
     &__num{
       font-size: 14px;
       line-height: 19px;
-      @include w1024{
+      @include w768{
         font-size: 12px;
         margin-bottom: 37px;
       }
@@ -83,7 +83,7 @@
     }
     &-desc{
       padding: 24px 20px 20px;
-      @include w1024{
+      @include w768{
         padding: 15px 10px 20px 10px;
       }
     }
@@ -91,13 +91,13 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      @include w1024{
+      @include w768{
         flex-direction: column;
         align-items: flex-start;
       }
       &-half{
         width: calc(50% - 10px);
-        @include w1024{
+        @include w768{
           width: 100%;
           &1{
             margin-bottom: 37px;
@@ -136,7 +136,7 @@
         font-size: 10px;
         line-height: 14px;
         margin-top: 5px;
-        @include w1024{
+        @include w768{
           margin-top: 0;
         }
       }
@@ -176,7 +176,7 @@
         font-weight: 600;
         font-size: 14px;
         line-height: 19px;
-        @include w1024{
+        @include w768{
           width: 138.52px;
           fint-size: 12px;
           line-height: 16px;
