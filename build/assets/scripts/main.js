@@ -71,6 +71,7 @@ $(document).ready(function(){
       $(el).find('.lots-item-prew__finish').hide();
       $(el).find('.lots-item-prew__btn').css('color', 'rgba(0, 0, 0, 0.5)');
       $(el).find('.lots-item-prew__btn').css('border', '1px solid rgba(0, 0, 0, 0.5)');
+      $(el).find('.lots-item-prew__finish-time').css('margin-top', '34px');
     }
   })
   $('.catalog-main-item').each(function(i, el){
