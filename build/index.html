@@ -10,6 +10,7 @@
     <script src="assets/scripts/jquery.min.js"></script>
     <script src="assets/scripts/slick.js"></script>
     <script src="assets/scripts/masonary.min.js"></script>
+    <script src="assets/scripts/inputmask.js"></script>
     <script src="assets/scripts/main.js"></script>
     <title>Главная </title>
   </head>
@@ -136,33 +137,32 @@
       <section class="articles">
         <h3 class="gen-title">Читайте наши публикации</h3>
         <div class="articles-wrap">
-          <div class="articles-wrap-wr">
-            <div class="articles-item articles-item_1">
+          <div class="articles-wrap-wr"><a class="articles-item articles-item_1" href="article.html">
               <div class="articles-item-img"></div>
               <div class="articles-item__date">Опубликовано: <span>21.01.2019</span></div>
-              <h3 class="articles-item__title">Банк России посвятила монеты усадьбе-музею «Архангельское» в Москве</h3><a class="articles-item__more" href="article.html">
+              <h3 class="articles-item__title">Банк России посвятила монеты усадьбе-музею «Архангельское» в Москве</h3>
+              <div class="articles-item__more">
                 Читать далее<br><svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black" fill-opacity="0.7"/>
-</svg></a>
-            </div>
-            <div class="articles-item articles-item_2">
+</svg>
+              </div></a><a class="articles-item articles-item_2" href="article.html">
               <div class="articles-item-img"></div>
               <div class="articles-item__date">Опубликовано: <span>21.01.2019</span></div>
-              <h3 class="articles-item__title">Монета Британских территорий в Индийском океане «Воительница и дракон»</h3><a class="articles-item__more" href="article.html">
+              <h3 class="articles-item__title">Монета Британских территорий в Индийском океане «Воительница и дракон»</h3>
+              <div class="articles-item__more">
                 Читать далее<br><svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black" fill-opacity="0.7"/>
-</svg></a>
-            </div>
-            <div class="articles-item articles-item_3">
+</svg>
+              </div></a><a class="articles-item articles-item_3" href="article.html">
               <div class="articles-item-img"></div>
               <div class="articles-item__date">Опубликовано: <span>21.01.2019</span></div>
               <h3 class="articles-item__title">Сан-Марино выпустили монету в честь мобильной связи 5G</h3>
-              <div class="articles-item__desc">Темы памятных монетах отличаются невероятным разнообразием...</div><a class="articles-item__more" href="article.html">
+              <div class="articles-item__desc">Темы памятных монетах отличаются невероятным разнообразием...</div>
+              <div class="articles-item__more">
                 Читать далее<br><svg width="99" height="8" viewBox="0 0 99 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M98.3536 4.35355C98.5488 4.15829 98.5488 3.84171 98.3536 3.64645L95.1716 0.464466C94.9763 0.269204 94.6597 0.269204 94.4645 0.464466C94.2692 0.659728 94.2692 0.976311 94.4645 1.17157L97.2929 4L94.4645 6.82843C94.2692 7.02369 94.2692 7.34027 94.4645 7.53553C94.6597 7.7308 94.9763 7.7308 95.1716 7.53553L98.3536 4.35355ZM0 4.5H98V3.5H0V4.5Z" fill="black" fill-opacity="0.7"/>
-</svg></a>
-            </div>
-          </div>
+</svg>
+              </div></a></div>
         </div>
       </section>
     </div>
@@ -175,7 +175,7 @@
           <h3 class="footer-col__title">Будьте в курсе новых поступлений</h3>
           <form class="footer-col-form" action="" method="get">
             <input class="footer-col-form__input" id="footer-form__name" type="text" name="footer-name" placeholder="Имя" required="required"/>
-            <input class="footer-col-form__input" id="footer-form__mail" type="email" name="footer-mail" placeholder="E-mail" required="required"/>
+            <input class="footer-col-form__input" id="footer-form__mail" type="text" name="e-mail" placeholder="E-mail" required="required"/>
             <button type="submit">Отправить</button>
           </form>
         </div>

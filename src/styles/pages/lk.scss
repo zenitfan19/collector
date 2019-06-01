@@ -59,11 +59,11 @@
       }
       &:hover{
         cursor: pointer;
-        color: rgba(0, 0, 0, 0.8);
+        color: rgba(0, 0, 0, 0.6);
         svg{
           path, rect, line{
-            stroke-opacity: 0.8;
-            fill-opacity: 0.8;
+            stroke-opacity: 0.6;
+            fill-opacity: 0.6;
           }
         }
       }
@@ -227,6 +227,7 @@
     border-radius: 5px;
     height: 46px;
     width: 166px;
+    transition: background-color .2s linear;
     @include w768{
       font-size: 12px;
       line-height: 16px;
@@ -237,8 +238,10 @@
     }
     &:hover{
       cursor: pointer;
-      animation: lightBTN 0.2s linear;
-      background-color: $lightBG;
+      background-color: rgba(198, 154, 96, 0.3);
+    }
+    &:active{
+      background-color: rgba(198, 154, 96, 0.4);
     }
   }
 }

@@ -17,7 +17,7 @@ block content
         </svg>
         | Авторизация
       form(action="", method="get").auth
-        input#login_email(type="email", name="login-email" placeholder="E-mail" required)
+        input#login_email(type="text", name="e-mail" placeholder="E-mail" required)
         input#login_pass(type="password", name="login-pass" placeholder="Пароль" required)
         button(type="submit") Вход
         .auth-flex
@@ -50,7 +50,7 @@ block content
         </svg>
         | Создать аккаунт
       form(action="", method="get").auth
-        input#login_email(type="email", name="login-email" placeholder="E-mail" required)
+        input#login_email(type="text", name="e-mail" placeholder="E-mail" required)
         input#login_pass(type="password", name="login-pass" placeholder="Пароль" required)
         input#login_pass-repeat(type="password", name="login-pass-repeat" placeholder="Повторить пароль" required)
         button(type="submit") Регистрация

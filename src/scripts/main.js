@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+  /*input mask*/
+  $(document).find('[type="tel"]').inputmask({
+    mask: "+7 (999) 999-99-99",
+    showMaskOnHover: false,
+    showMaskOnFocus: true
+  });
+  $(document).find('[name="e-mail"]').inputmask({ 
+      alias: "email",
+      showMaskOnHover: false,
+      showMaskOnFocus: true
+  });
+
   $('.fav-star').html('<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 1.26414L12.2446 6.47629L12.362 6.74897L12.6576 6.77639L18.3083 7.30047L14.0449 11.0458L13.8218 11.2418L13.8871 11.5314L15.1348 17.0675L10.2553 14.1701L10 14.0185L9.74472 14.1701L4.86519 17.0675L6.11291 11.5314L6.17818 11.2418L5.95513 11.0458L1.6917 7.30047L7.34236 6.77639L7.63799 6.74897L7.75541 6.47629L10 1.26414Z" stroke="#C69A60"/></svg>');
   
   /* для пропорциональных блоков*/
@@ -22,8 +34,7 @@ $(document).ready(function(){
   $('.head .gen-title').css('left', ($('.head').width() / 2) - ($('.head .gen-title').width() / 2) + 20);
   
   /*ширина трэка для избранного*/
-  if($('body').width() >= 1024){
-    console.log('priv');
+  if(screen.width >= 1024){
     var widthTrackFavourites =  0;
     $('.goods-item').each(function(i,elem){
       widthTrackFavourites += ($(elem).width() + 20);
@@ -32,14 +43,13 @@ $(document).ready(function(){
     $('.goods-track').css('width', widthTrackFavourites);
     $('.goods-track').css('display', 'flex');
   } else {
-    console.log('poka');
     $('.goods-track').css('width', 'auto');
     $('.goods-track').css('display', 'block');
   }
 
   
   var $container = $('.goods-track');
-  if($('body').width() < 1024 && $('body').width() >=768){
+  if(screen.width < 1024 && screen.width >=768){
     var $container = $('.goods-track');
     // Инициализация
     $container.masonry({
@@ -51,42 +61,63 @@ $(document).ready(function(){
   }
 
   /* кнопка в ЛК*/
-  if($('body').width() < 768){
+  if(screen.width < 768){
     $('.data-user').find('button').html('<svg width="19" height="15" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.5L7.5 12L18.5 1" stroke="#C69A60" stroke-linecap="round"/></svg>');
     $('.data-user').find('button').css('padding-top', '5px');
   } 
   
   /* для определения аукционных item*/
-  $('.lots-item').each(function(i, el){
-    if($(el).attr('data-lider') == 1){
-      $(el).find('.lots-item__lider').show();
+  function tags (){
+    $('.lots-item').each(function(i, el){
+      if($(el).attr('data-lider') == 1){
+        $(el).find('.lots-item__lider').show();
+      }
+      if($(el).attr('data-favourites') == 1){
+        $(el).find('svg path').css('fill', 'rgba(198,154,96, 1)');
+        $(el).css('border', '1px solid #C69A60');
+        $(el).css('box-shadow', '0px 0px 10px rgba(198, 154, 96, 0.25)');
+      } else {
+        $(el).find('svg path').css('fill', '#fff');
+        $(el).css('border', '1px solid rgba(0,0,0,0.2)');
+        $(el).css('box-shadow', '0');
+      }
+      if($(el).attr('data-finish') == 1){
+        $(el).find('.lots-item-prew__finish-time').html('Аукцион завершен');
+        $(el).find('.lots-item-prew__finish').hide();
+        $(el).find('.lots-item-prew__btn').css('color', 'rgba(0, 0, 0, 0.5)');
+        $(el).find('.lots-item-prew__btn').css('border', '1px solid rgba(0, 0, 0, 0.5)');
+        $(el).find('.lots-item-prew__finish-time').css('margin-top', '34px');
+      }
+    })
+    $('.catalog-main-item').each(function(i, el){
+      if($(el).attr('data-favourites') == 1){
+        $(el).find('svg path').css('fill', 'rgba(198,154,96, 1)');
+        $(el).css('border', '1px solid #C69A60');
+        $(el).css('box-shadow', '0px 0px 10px rgba(198, 154, 96, 0.25)');
+      } else {
+        $(el).find('svg path').css('fill', '#fff');
+        $(el).css('border', '1px solid rgba(0,0,0,0.2)');
+        $(el).css('box-shadow', '0');
+      }
+      if($(el).attr('data-new') == 1){
+        $(el).find('.catalog-main-item__new').show();
+      }
+      if($(el).attr('data-ex') == 1){
+        $(el).find('.catalog-main-item__ex').show();
+      }
+    });
+  }
+  tags();
+  /* Избранное клик */
+  $('.fav-star path').click(function(){
+    if($(this).parent().parent().parent().attr('data-favourites') == '0'){
+      $(this).parent().parent().parent().attr('data-favourites', '1');
+    } else{
+      $(this).parent().parent().parent().attr('data-favourites', '0');
     }
-    if($(el).attr('data-favourites') == 1){
-      $(el).find('svg path').css('fill', 'rgba(198,154,96, 1)');
-      $(el).css('border', '1px solid #C69A60');
-      $(el).css('box-shadow', '0px 0px 10px rgba(198, 154, 96, 0.25)');
-    }
-    if($(el).attr('data-finish') == 1){
-      $(el).find('.lots-item-prew__finish-time').html('Аукцион завершен');
-      $(el).find('.lots-item-prew__finish').hide();
-      $(el).find('.lots-item-prew__btn').css('color', 'rgba(0, 0, 0, 0.5)');
-      $(el).find('.lots-item-prew__btn').css('border', '1px solid rgba(0, 0, 0, 0.5)');
-      $(el).find('.lots-item-prew__finish-time').css('margin-top', '34px');
-    }
-  })
-  $('.catalog-main-item').each(function(i, el){
-    if($(el).attr('data-favourites') == 1){
-      $(el).find('svg path').css('fill', 'rgba(198,154,96, 1)');
-      $(el).css('border', '1px solid #C69A60');
-      $(el).css('box-shadow', '0px 0px 10px rgba(198, 154, 96, 0.25)');
-    }
-    if($(el).attr('data-new') == 1){
-      $(el).find('.catalog-main-item__new').show();
-    }
-    if($(el).attr('data-ex') == 1){
-      $(el).find('.catalog-main-item__ex').show();
-    }
+    tags();
   });
+  
 
   /*видео с ютуба*/
   $('.thumb').click(function(){
@@ -112,14 +143,14 @@ $(document).ready(function(){
     $('.article__video').css('height', $('.article__video').width() * koef6);
 
     /*swap category*/
-    if($('body').width() < 768){
+    if(screen.width < 768){
       swapCategory();
     } else {
       $('.era').show();
       $('.material').show();
     }
     /* кнопка в ЛК*/
-    if($('body').width() < 768){
+    if(screen.width < 768){
       $('.data-user').find('button').html('<svg width="19" height="15" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5.5L7.5 12L18.5 1" stroke="#C69A60" stroke-linecap="round"/></svg>');
       $('.data-user').find('button').css('padding-top', '5px');
     } else {
@@ -129,8 +160,7 @@ $(document).ready(function(){
 
 
     /*избранное */
-    if($('body').width() >= 1024){
-      console.log('priv');
+    if(screen.width >= 1024){
       var widthTrackFavourites =  0;
       $('.goods-item').each(function(i,elem){
         widthTrackFavourites += ($(elem).width() + 20);
@@ -139,11 +169,10 @@ $(document).ready(function(){
       $('.goods-track').css('width', widthTrackFavourites);
       $('.goods-track').css('display', 'flex');
     } else {
-      console.log('poka');
       $('.goods-track').css('width', 'auto');
       $('.goods-track').css('display', 'block');
     }
-    if($('body').width() < 1024 && $('body').width() >=768){
+    if(screen.width < 1024 && screen.width >=768){
       // Инициализация
       $container.masonry({
         columnWidth: '.goods-item',
@@ -152,7 +181,6 @@ $(document).ready(function(){
         transitionDuration: '0.2s'
       });
     } else { 
-      console.log('destr');
       $container.masonry('destroy');
     }
     /* для центрирования заголовка */ 
@@ -191,7 +219,7 @@ $(document).ready(function(){
       $('.era').show();
     }
   }
-  if($('body').width() < 768){
+  if(screen.width < 768){
     swapCategory();
   }
   $('.swap-category__link').click(function(){
@@ -257,9 +285,8 @@ $(document).ready(function(){
   /*меню адаптив*/
   $('.humburger').click(function(){
     $('.main-header').toggleClass('main-header_down');
-    $('.wrapper').toggleClass('wrapper_pad');
     if($('.main-header').hasClass('main-header_down') == true){
-      if($('body').width() < 768){
+      if(screen.width < 768){
         $('.wrapper').hide();
         $('.footer').hide();
       } else {
@@ -267,12 +294,18 @@ $(document).ready(function(){
         $('body').css('overflow', 'hidden');
         $('.dark-blur').fadeIn();
       }
+      if($('.main-header').hasClass('main-header_white') == true) {
+        
+      } else {
+        $('.wrapper').addClass('wrapper_pad');
+      }
     } else {
       $('.wrapper').show();
       $('.footer').show();
       $('body').css('height', 'auto');
       $('body').css('overflow', 'visible');
       $('.dark-blur').fadeOut();
+      $('.wrapper').removeClass('wrapper_pad');
     }
   })
   $('.dark-blur').click(function(){
@@ -286,8 +319,18 @@ $(document).ready(function(){
 
   /*cookie*/
   $('.cookie__ok').click(function(){
-    
     $('.cookie').fadeOut();
   })
 
+
+
+
+  /* Клик вне селектора*/
+  $(document).mouseup(function (e){ 
+		var div = $('.sort-select');
+		if (!div.is(e.target) 
+		    && div.has(e.target).length === 0) {
+			$('.sort-select-options').removeClass('open');
+		}
+	});
 });

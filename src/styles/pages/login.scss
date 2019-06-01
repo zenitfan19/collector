@@ -58,10 +58,13 @@
       line-height: 19px;
       border: none;
       margin-bottom: 25px;
+      transition: background-color .2s linear;
       &:hover{
         cursor: pointer;
-        animation: darkBTN 0.2s linear;
-        background-color: $darkBG;
+        background-color: rgba(198, 154, 96, 0.8);
+      }
+      &:active{
+        background-color: #C69A60;
       }
     }
     &-flex{

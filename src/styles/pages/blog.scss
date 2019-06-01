@@ -6,6 +6,7 @@
     
     .articles-item{
       margin: 20px 20px;
+      display: block; 
       width: calc(100% / 3 - 40px);
       @include w768{
         width: calc(100% / 3 - 20px);
@@ -32,6 +33,7 @@
       }
       &__desc{
         display: none;
+        color: black;
       }
       &__more{
         margin-top: 0;
