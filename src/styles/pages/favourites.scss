@@ -1,8 +1,7 @@
 .track-visible{
   box-sizing: border-box;
-  margin: 40px auto 160px;
+  margin: 40px auto 80px;
   overflow-x: auto;
-  width: calc(100% - 40px);
   @include w768{
     width: auto;
     overflow: visible;
@@ -16,13 +15,14 @@
 .goods-track{
   height: 410px;
   max-width: 999999px;
-  padding-bottom: 10px;
   display: flex;
+  padding: 0 20px 10px;
   @include w768{
     width: auto;
     overflow: visible;
     max-width: auto;
     height: auto;
+    padding: 0 0 10px;
   }
   .goods-item{
     height: 100%;

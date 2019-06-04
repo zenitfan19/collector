@@ -6,7 +6,7 @@
     padding: 12px 0 15px;
     border-top: 1px solid #C4C4C4;
     display: flex;
-    @include w320{
+    @include w480{
       flex-direction: column;
     }
     &_a{
@@ -38,7 +38,7 @@
       text-align: center;
       font-size: 12px;
       line-height: 16px;
-      @include w320{
+      @include w480{
         width: 100%;
         margin-bottom: 16px;
       }
@@ -48,7 +48,7 @@
       text-align: center;
       font-size: 12px;
       line-height: 16px;
-      @include w320{
+      @include w480{
         width: 100%;
       }
     }

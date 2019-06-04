@@ -5,6 +5,9 @@
   padding: 20px 20px;
   width: 100%;
   box-sizing: border-box;
+  @include w480{
+    padding: 20px 10px;
+  }
   .catalog-wrap{
     flex-wrap: wrap;
     margin: 0 -20px;
