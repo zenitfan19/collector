@@ -388,3 +388,32 @@
         }
     }
 }
+.breadcrumb {
+    z-index: 1;
+}
+.head .breadcrumb__link {
+    white-space: nowrap;
+    font-size: 14px;
+}
+.page.auction-item, .page.item-card {
+    margin-top: -92px;
+}
+@media screen and (max-width: 1200px) {
+    .page.auction-item, .page.item-card {
+        margin-top: -153px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .head .breadcrumb__link {
+        font-size: 12px;
+    }
+    .page.auction-item, .page.item-card {
+        margin-top: -42px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .head .breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

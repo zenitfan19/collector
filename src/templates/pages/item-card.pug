@@ -2,13 +2,15 @@ extends ../common/main.pug
 block title
   title Карточка товара 
 block content
-    .page.item-card
-        .breadcrumbs
-            a(href="").breadcrumbs-item Главная
-            a(href="").breadcrumbs-item Каталог
-            a(href="").breadcrumbs-item Древняя Греция
-            a(href="").breadcrumbs-item Греция и Сицилия
-            a(href="").breadcrumbs-item Gordian I Africanus. Sestertius
+    .wrapper
+        .head.head_flex-start
+            .breadcrumb
+                    a(href="").breadcrumb__link Главная
+                    a(href="").breadcrumb__link Каталог
+                    a(href="").breadcrumb__link Древняя Греция
+                    a(href="").breadcrumb__link Греция и Сицилия
+                    a(href="").breadcrumb__link Gordian I Africanus. Sestertius
+    .page.item-card        
         .item-card-main-block-wrapper
             .item-card-main-block
                 .item-card-main-block-slider

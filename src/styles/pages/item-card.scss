@@ -1,9 +1,3 @@
-.page.item-card .breadcrumbs {
-    position: absolute;
-    left: 20px;
-    top: 130px;
-    z-index: 1;
-}
 .page.item-card .item-card-popular-items, .page.auction-item .item-card-popular-items {
     margin-top: 80px;
     margin-bottom: 60px;
@@ -17,29 +11,6 @@
         & {
             margin-top: 20px;
         }
-    }
-}
-.page.item-card .breadcrumbs-item {
-    color: rgba(0, 0, 0, 0.5);
-    margin-right: 20px;
-    position: relative;
-    font-size: 14px;    
-    &:last-child {
-        margin-right: 0;
-        &:after {
-            display: none;
-        }
-    }    
-    &:after {
-        content: "";
-        width: 5px;
-        height: 5px;
-        border-top:  0.5px solid rgba(0, 0, 0, 0.75);
-        border-left:  0.5px solid rgba(0, 0, 0, 0.75);
-        position: absolute;
-        transform: rotate(135deg);        
-        top: calc(50% - 1px);
-        right: -12px;
     }
 }
 .item-card-main-block-wrapper {
