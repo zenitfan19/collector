@@ -13,19 +13,28 @@ $(document).ready(function(){
 
   $('.fav-star').html('<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 1.26414L12.2446 6.47629L12.362 6.74897L12.6576 6.77639L18.3083 7.30047L14.0449 11.0458L13.8218 11.2418L13.8871 11.5314L15.1348 17.0675L10.2553 14.1701L10 14.0185L9.74472 14.1701L4.86519 17.0675L6.11291 11.5314L6.17818 11.2418L5.95513 11.0458L1.6917 7.30047L7.34236 6.77639L7.63799 6.74897L7.75541 6.47629L10 1.26414Z" stroke="#C69A60"/></svg>');
   
+  if (document.getElementById("track-scroll")){
+		document.getElementById("track-scroll").addEventListener('wheel', function(event) {
+			horizontalScroll(this, event);
+		});
+	}
   /*функция для горизонтального скролла*/
-  function horizScroll (event){
+  function horizontalScroll(elem, event) {
     if (event.deltaMode == event.DOM_DELTA_PIXEL) {
       var modifier = 1;
       // иные режимы возможны в Firefox
     } else if (event.deltaMode == event.DOM_DELTA_LINE) {
-      var modifier = parseInt(getComputedStyle(this).lineHeight);
+      var modifier = parseInt(getComputedStyle(elem).lineHeight);
     } else if (event.deltaMode == event.DOM_DELTA_PAGE) {
-      var modifier = this.clientHeight;
+      var modifier = elem.clientHeight;
     }
     if (event.deltaY != 0) {
       // замена вертикальной прокрутки горизонтальной
-      this.scrollLeft += modifier * event.deltaY;
+      var elemOldScrollLeft = elem.scrollLeft;
+      elem.scrollLeft += modifier * event.deltaY;
+      if((elem.id != 'header-search-main') && elemOldScrollLeft == elem.scrollLeft){
+        return true;
+      }
       event.preventDefault();
     }
   }
